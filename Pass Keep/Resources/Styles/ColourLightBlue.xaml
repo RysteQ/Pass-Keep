@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key = "LightBlue50">#E3F2FD</Color>
+    <Color x:Key = "LightBlue100">#BBDEFB</Color>
+    <Color x:Key = "LightBlue200">#90CAF9</Color>
+    <Color x:Key = "LightBlue300">#64B5F6</Color>
+    <Color x:Key = "LightBlue400">#42A5F5</Color>
+    <Color x:Key = "LightBlue500">#2196F3</Color>
+    <Color x:Key = "LightBlue600">#1E88E5</Color>
+    <Color x:Key = "LightBlue700">#1976D2</Color>
+    <Color x:Key = "LightBlue800">#1565C0</Color>
+    <Color x:Key = "LightBlue900">#0D47A1</Color>
+    <Color x:Key = "LightBlueA100">#82B1FF</Color>
+    <Color x:Key = "LightBlueA200">#448AFF</Color>
+    <Color x:Key = "LightBlueA400">#2979FF</Color>
+    <Color x:Key = "LightBlueA700">#2962FF</Color>
+    
+</ResourceDictionary>
