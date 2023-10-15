@@ -52,4 +52,46 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Models\" />
+	  <Folder Include="Services\" />
+	  <Folder Include="View Models\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\Login\Login Page.xaml.cs">
+	    <DependentUpon>Login Page.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Passwords\Password Details Page.xaml.cs">
+	    <DependentUpon>Password Details Page.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Passwords\Password List Page.xaml.cs">
+	    <DependentUpon>Password List Page.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Passwords\Password Creation Page.xaml.cs">
+	    <DependentUpon>Password Creation Page.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Settings\Settings Page.xaml.cs">
+	    <DependentUpon>Settings Page.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\Login\Login Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Passwords\Password Details Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Passwords\Password List Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Passwords\Password Creation Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Settings\Settings Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

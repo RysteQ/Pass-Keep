@@ -4,11 +4,21 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Pass_Keep"
+    xmlns:login_views="clr-namespace:Pass_Keep.Views.Login"
+    xmlns:password_views="clr-namespace:Pass_Keep.Views.Passwords"
+    xmlns:settings_views="clr-namespace:Pass_Keep.Views.Settings"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title = "Login">
+            <ShellContent IsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
+        </Tab>
+        <Tab Title = "Passwords">
+            <ShellContent ContentTemplate = "{DataTemplate password_views:PasswordListPage}" />
+        </Tab>
+        <Tab Title = "Settings">
+            <ShellContent ContentTemplate = "{DataTemplate settings_views:SettingsPage}" />
+        </Tab>
+    </TabBar>
 
 </Shell>
