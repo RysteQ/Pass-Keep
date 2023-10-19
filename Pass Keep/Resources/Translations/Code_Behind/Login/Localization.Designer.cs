@@ -59,5 +59,14 @@ namespace Pass_Keep.Resources.Translations.Code_Behind.Login {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is your first time you use Pass Keep. To register please enter your desired username and password to login, you can change that later in the settings tab inside the application..
+        /// </summary>
+        internal static string First_Time_Login {
+            get {
+                return ResourceManager.GetString("First_Time_Login", resourceCulture);
+            }
+        }
     }
 }

@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Username_Or_Password_Is_Incorrect" xml:space="preserve">
-    <value>The username or password is incorrect</value>
+  <data name="FirstTimeLogin" xml:space="preserve">
+    <value>first_time_login</value>
   </data>
-  <data name="Username_Or_Password_Is_Required" xml:space="preserve">
-    <value>The username / password field are required</value>
+  <data name="Password" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>username</value>
   </data>
 </root>

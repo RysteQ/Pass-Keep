@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.View_Models.Login {
+namespace Pass_Keep.Resources.Preferences {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Pass_Keep.Resources.Translations.View_Models.Login {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Localization {
+    internal class Preference {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Localization() {
+        internal Preference() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Pass_Keep.Resources.Translations.View_Models.Login {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.View_Models.Login.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Preferences.Preference", typeof(Preference).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,29 @@ namespace Pass_Keep.Resources.Translations.View_Models.Login {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The username or password is incorrect.
+        ///   Looks up a localized string similar to first_time_login.
         /// </summary>
-        internal static string Username_Or_Password_Is_Incorrect {
+        internal static string FirstTimeLogin {
             get {
-                return ResourceManager.GetString("Username_Or_Password_Is_Incorrect", resourceCulture);
+                return ResourceManager.GetString("FirstTimeLogin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The username / password field are required.
+        ///   Looks up a localized string similar to password.
         /// </summary>
-        internal static string Username_Or_Password_Is_Required {
+        internal static string Password {
             get {
-                return ResourceManager.GetString("Username_Or_Password_Is_Required", resourceCulture);
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to username.
+        /// </summary>
+        internal static string Username {
+            get {
+                return ResourceManager.GetString("Username", resourceCulture);
             }
         }
     }
