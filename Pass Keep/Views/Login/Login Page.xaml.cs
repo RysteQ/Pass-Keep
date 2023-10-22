@@ -1,6 +1,7 @@
 using Pass_Keep.Resources.Preferences;
 using Pass_Keep.Resources.Translations.Code_Behind.Login;
 using Pass_Keep.Resources.Translations.Popup;
+using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.View_Models.Login;
 
 namespace Pass_Keep.Views.Login;

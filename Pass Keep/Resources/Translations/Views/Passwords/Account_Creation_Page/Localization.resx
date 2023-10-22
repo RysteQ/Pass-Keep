@@ -117,13 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="InitializingDBFailed" xml:space="preserve">
-    <value>Initializing the local database failed</value>
+  <data name="AccountCreationPageTitle" xml:space="preserve">
+    <value>Account Creation</value>
   </data>
-  <data name="Username_Or_Password_Is_Incorrect" xml:space="preserve">
-    <value>The username or password is incorrect</value>
+  <data name="ButtonCreateAccount" xml:space="preserve">
+    <value>Create</value>
   </data>
-  <data name="Username_Or_Password_Is_Required" xml:space="preserve">
-    <value>The username / password field are required</value>
+  <data name="EntryPlaceholderEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EntryPlaceholderPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="EntryPlaceholderUsername" xml:space="preserve">
+    <value>Username</value>
   </data>
 </root>

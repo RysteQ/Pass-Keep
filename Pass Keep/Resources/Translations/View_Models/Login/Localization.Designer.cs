@@ -61,6 +61,15 @@ namespace Pass_Keep.Resources.Translations.View_Models.Login {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Initializing the local database failed.
+        /// </summary>
+        internal static string InitializingDBFailed {
+            get {
+                return ResourceManager.GetString("InitializingDBFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The username or password is incorrect.
         /// </summary>
         internal static string Username_Or_Password_Is_Incorrect {

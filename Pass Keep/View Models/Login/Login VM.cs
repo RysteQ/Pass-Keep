@@ -3,6 +3,9 @@ using Pass_Keep.Resources.Translations.Popup;
 using System.ComponentModel;
 using Pass_Keep.Resources.Preferences;
 using Pass_Keep.Views.Passwords;
+using Pass_Keep.Services.Local_DB_Controller;
+using Pass_Keep.Services.Error_Informer;
+using Pass_Keep.Resources.Translations.View_Models.Login;
 
 namespace Pass_Keep.View_Models.Login;
 
@@ -27,6 +30,11 @@ internal class LoginVM : INotifyPropertyChanged
             await Register();
             return;
         }
+
+        try
+        {
+            await LocalDBController.InitDatabase();
+        } catch (Exception ex) { await ErrorInformer.Inform(Localization.InitializingDBFailed, ex); return; }
 
         if (this.Username == Preferences.Get(Preference.Username, string.Empty) && this.Password == Preferences.Get(Preference.Password, string.Empty))
             await Shell.Current.GoToAsync(nameof(PasswordListPage));

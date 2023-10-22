@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key = "BlueGrey50">#ECEFF1</Color>
+    <Color x:Key = "BlueGrey100">#CFD8DC</Color>
+    <Color x:Key = "BlueGrey200">#B0BEC5</Color>
+    <Color x:Key = "BlueGrey300">#90A4AE</Color>
+    <Color x:Key = "BlueGrey400">#78909C</Color>
+    <Color x:Key = "BlueGrey500">#607D8B</Color>
+    <Color x:Key = "BlueGrey600">#546E7A</Color>
+    <Color x:Key = "BlueGrey700">#455A64</Color>
+    <Color x:Key = "BlueGrey800">#37374F</Color>
+    <Color x:Key = "BlueGrey900">#263238</Color>
+    <Color x:Key = "BlueGreyA100">#90A6AE</Color>
+    <Color x:Key = "BlueGreyA200">#607E8B</Color>
+    <Color x:Key = "BlueGreyA400">#416F78</Color>
+    <Color x:Key = "BlueGreyA700">#245A64</Color>
+    
+</ResourceDictionary>

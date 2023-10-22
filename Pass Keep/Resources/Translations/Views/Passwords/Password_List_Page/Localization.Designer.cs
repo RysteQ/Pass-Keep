@@ -59,5 +59,14 @@ namespace Pass_Keep.Resources.Translations.Views.Passwords.Password_List_Page {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string EntrySearchPlaceholderText {
+            get {
+                return ResourceManager.GetString("EntrySearchPlaceholderText", resourceCulture);
+            }
+        }
     }
 }

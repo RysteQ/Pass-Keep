@@ -12,5 +12,12 @@ public partial class PasswordListPage : ContentPage
 		BindingContext = this.view_model;
 	}
 
-	private PasswordListVM view_model;
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+
+		await this.view_model.LoadAccounts();
+    }
+
+    private PasswordListVM view_model;
 }

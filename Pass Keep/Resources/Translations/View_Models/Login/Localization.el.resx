@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Username_Or_Password_Is_Incorrect" xml:space="preserve">
+  <data name="InitializingDBFailed" xml:space="preserve">
+    <value>Η δημιουργία τοπικής βάσης δεδομένων απέτυχε</value>
+  </data>
+  <data name="UsernameOrPasswordIsIncorrect" xml:space="preserve">
     <value>Το όνομα χρήστη ή ο κωδικός είναι λάθος</value>
   </data>
-  <data name="Username_Or_Password_Is_Required" xml:space="preserve">
+  <data name="UsernameOrPasswordIsRequired" xml:space="preserve">
     <value>Τα πεδία όνομα χρήστη / κωδικός είναι απαραίτητα</value>
   </data>
 </root>
