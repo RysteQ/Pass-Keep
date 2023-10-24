@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Pass_Keep"
     xmlns:login_views="clr-namespace:Pass_Keep.Views.Login"
-    xmlns:password_views="clr-namespace:Pass_Keep.Views.Passwords"
+    xmlns:account_views="clr-namespace:Pass_Keep.Views.Account"
     xmlns:settings_views="clr-namespace:Pass_Keep.Views.Settings"
     xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell"
     Shell.FlyoutBehavior="Disabled">
@@ -15,7 +15,7 @@
             <ShellContent IsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
         </Tab>
         <Tab Title = "{x:Static translations:Localization.Passwords_TabBar_Title}">
-            <ShellContent ContentTemplate = "{DataTemplate password_views:PasswordListPage}" />
+            <ShellContent ContentTemplate = "{DataTemplate account_views:AccountListPage}" />
         </Tab>
         <Tab Title = "{x:Static translations:Localization.Settings_TabBar_Title}">
             <ShellContent ContentTemplate = "{DataTemplate settings_views:SettingsPage}" />

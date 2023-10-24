@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.Views.Passwords.Password_List_Page {
+namespace Pass_Keep.Resources.Translations.Popups.Pre_Account_Creation_Page {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Pass_Keep.Resources.Translations.Views.Passwords.Password_List_Page {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.Passwords.Password_List_Page.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Popups.Pre_Account_Creation_Page.Localization", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,29 @@ namespace Pass_Keep.Resources.Translations.Views.Passwords.Password_List_Page {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search.
+        ///   Looks up a localized string similar to Create.
         /// </summary>
-        internal static string EntrySearchPlaceholderText {
+        internal static string ButtonOpenCreateAccountPageText {
             get {
-                return ResourceManager.GetString("EntrySearchPlaceholderText", resourceCulture);
+                return ResourceManager.GetString("ButtonOpenCreateAccountPageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string EntryPlaceholderPlatformNameText {
+            get {
+                return ResourceManager.GetString("EntryPlaceholderPlatformNameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Platform.
+        /// </summary>
+        internal static string LabelTitleText {
+            get {
+                return ResourceManager.GetString("LabelTitleText", resourceCulture);
             }
         }
     }

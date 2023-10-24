@@ -1,5 +1,5 @@
 ﻿using Pass_Keep.Views.Login;
-using Pass_Keep.Views.Passwords;
+using Pass_Keep.Views.Account;
 
 namespace Pass_Keep;
 
@@ -10,7 +10,7 @@ public partial class AppShell : Shell
         InitializeComponent();
 
         Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
-        Routing.RegisterRoute(nameof(PasswordListPage), typeof(PasswordListPage));
+        Routing.RegisterRoute(nameof(AccountListPage), typeof(AccountListPage));
     }
 
     protected override async void OnAppearing()

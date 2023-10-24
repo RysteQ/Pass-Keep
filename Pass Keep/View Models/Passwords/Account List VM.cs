@@ -3,33 +3,28 @@ using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using Pass_Keep.Views.Passwords;
+using Pass_Keep.Services.Converters.Account_Converters;
 
 namespace Pass_Keep.View_Models.Passwords;
 
-internal class PasswordListVM : INotifyPropertyChanged
+internal class AccountListVM : INotifyPropertyChanged
 {
-    public PasswordListVM()
-    {
-        this.CommandCreateNewPassword = new(async () => await CreateNewPassword());
-    }
+    public AccountListVM() { }
 
     public async Task LoadAccounts()
     {
         List<object> accounts = await LocalDBAccountController.Read(LocalDBController.database_connection);
-    }
 
-    private async Task CreateNewPassword()
-    {
-        await Shell.Current.Navigation.PushAsync(new PasswordCreationPage());
+        this.Accounts.Clear();
+
+        foreach (object account in accounts)
+            this.Accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
     }
 
     public virtual void OnPropertyChanged(string property_name) => this.PropertyChanged?.Invoke(property_name, new(property_name));
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public Command CommandCreateNewPassword { get; set; }
-
-    private ObservableCollection<AccountModel> accounts;
+    private ObservableCollection<AccountModel> accounts = new();
     public ObservableCollection<AccountModel> Accounts
     {
         get => this.accounts;

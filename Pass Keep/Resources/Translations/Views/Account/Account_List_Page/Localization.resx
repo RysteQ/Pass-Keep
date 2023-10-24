@@ -120,4 +120,13 @@
   <data name="EntrySearchPlaceholderText" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="SwipeTextDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="SwipeTextDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="SwipeTextEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
 </root>

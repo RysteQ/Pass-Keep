@@ -22,12 +22,12 @@
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>-->
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>-->
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>-->
+		<!--<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>-->
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>-->
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -49,6 +49,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\add_new_account.png" />
+	  <None Remove="Resources\Images\email.png" />
+	  <None Remove="Resources\Images\key_light.png" />
+	  <None Remove="Resources\Images\magnifying_glass.png" />
+	  <None Remove="Resources\Images\person_light.png" />
+	  <None Remove="Resources\Images\picture_picker.png" />
+	  <None Remove="Resources\Images\three_dots.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="6.0.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.6" />
@@ -59,107 +71,36 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Light\email.png" />
+	  <MauiImage Include="Resources\Images\Light\key.png" />
+	  <MauiImage Include="Resources\Images\Light\person.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="Resources\Preferences\Preference.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Preference.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\App_Shell\Localization.Designer.cs">
+	  <Compile Update="Resources\Translations\Popups\Pre_Account_Creation_Page\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\Code_Behind\Login\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Code_Behind\Passwords\Password_Creation_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Code_Behind\Passwords\Password_Details_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Code_Behind\Passwords\Password_List_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Code_Behind\Settings\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Popup\Popup.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Popup.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Views\Login\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Views\Passwords\Account_Creation_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Views\Passwords\Password_Details_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Views\Passwords\Password_List_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\Views\Settings\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\View_Models\Login\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\View_Models\Passwords\Password_Creation_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\View_Models\Passwords\Password_Details_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\View_Models\Passwords\Password_List_Page\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\Translations\View_Models\Settings\Localization.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Localization.resx</DependentUpon>
+	  <Compile Update="Views\Account\Popups\Pre Account Creation.xaml.cs">
+	    <DependentUpon>Pre Account Creation.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Login\Login Page.xaml.cs">
 	    <DependentUpon>Login Page.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Passwords\Password Details Page.xaml.cs">
-	    <DependentUpon>Password Details Page.xaml</DependentUpon>
+	  <Compile Update="Views\Account\Account Details Page.xaml.cs">
+	    <DependentUpon>Account Details Page.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Passwords\Password List Page.xaml.cs">
-	    <DependentUpon>Password List Page.xaml</DependentUpon>
+	  <Compile Update="Views\Account\Account List Page.xaml.cs">
+	    <DependentUpon>Account List Page.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Passwords\Password Creation Page.xaml.cs">
-	    <DependentUpon>Password Creation Page.xaml</DependentUpon>
+	  <Compile Update="Views\Account\Account Creation Page.xaml.cs">
+	    <DependentUpon>Account Creation Page.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Settings\Settings Page.xaml.cs">
 	    <DependentUpon>Settings Page.xaml</DependentUpon>
@@ -195,6 +136,10 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Popups\Pre_Account_Creation_Page\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Popup\Popup.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Popup.Designer.cs</LastGenOutput>
@@ -203,39 +148,19 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\Passwords\Account_Creation_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Views\Account\Account_Creation_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\Passwords\Password_Details_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Views\Account\Account_Details_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\Passwords\Password_List_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Views\Account\Account_List_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Views\Settings\Localization.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\View_Models\Login\Localization.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\View_Models\Passwords\Password_Creation_Page\Localization.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\View_Models\Passwords\Password_Details_Page\Localization.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\View_Models\Passwords\Password_List_Page\Localization.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\View_Models\Settings\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -251,22 +176,37 @@
 	  <MauiXaml Update="Resources\Styles\ColourLightBlue.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\ColourLime.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\ColourPink.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\ColourRed.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\PopupSpecificPreAccountCreation.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\ViewSpecificAccountCreationColours.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\ViewSpecificAccountListColours.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Login\Login Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Passwords\Password Details Page.xaml">
+	  <MauiXaml Update="Views\Account\Account Details Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Passwords\Password List Page.xaml">
+	  <MauiXaml Update="Views\Account\Account List Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Passwords\Password Creation Page.xaml">
+	  <MauiXaml Update="Views\Account\Account Creation Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\Popups\Pre Account Creation.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Settings\Settings Page.xaml">

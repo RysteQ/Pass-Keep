@@ -6,8 +6,8 @@ namespace Pass_Keep.Services.Local_DB_Controller.Interfaces;
 
 internal interface ILocalDBModelController 
 {
-    abstract static Task Create(SQLiteAsyncConnection database_connection, AccountModel account_model);
+    abstract static Task Create(SQLiteAsyncConnection database_connection, object model);
     abstract static Task<List<object>> Read(SQLiteAsyncConnection database_connection);
-    abstract static Task Update(SQLiteAsyncConnection database_connection, AccountModel account_model);
-    abstract static Task Delete(SQLiteAsyncConnection database_connection, AccountModel account_model);
+    abstract static Task Update(SQLiteAsyncConnection database_connection, object model);
+    abstract static Task Delete(SQLiteAsyncConnection database_connection, object model);
 }

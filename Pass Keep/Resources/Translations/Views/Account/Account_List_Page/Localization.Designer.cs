@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.Views.Passwords.Password_Details_Page {
+namespace Pass_Keep.Resources.Translations.Views.Account.Account_List_Page {
     using System;
     
     
@@ -39,8 +39,7 @@ namespace Pass_Keep.Resources.Translations.Views.Passwords.Password_Details_Page
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.Passwords.Password_Details_Page.Localizati" +
-                            "on", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.Account.Account_List_Page.Localization", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -58,6 +57,42 @@ namespace Pass_Keep.Resources.Translations.Views.Passwords.Password_Details_Page
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string EntrySearchPlaceholderText {
+            get {
+                return ResourceManager.GetString("EntrySearchPlaceholderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        internal static string SwipeTextDelete {
+            get {
+                return ResourceManager.GetString("SwipeTextDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        internal static string SwipeTextDetails {
+            get {
+                return ResourceManager.GetString("SwipeTextDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        internal static string SwipeTextEdit {
+            get {
+                return ResourceManager.GetString("SwipeTextEdit", resourceCulture);
             }
         }
     }

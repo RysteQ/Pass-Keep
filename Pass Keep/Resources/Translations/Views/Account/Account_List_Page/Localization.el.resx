@@ -117,19 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AccountCreationPageTitle" xml:space="preserve">
-    <value>Account Creation</value>
+  <data name="EntrySearchPlaceholderText" xml:space="preserve">
+    <value>Αναζήτηση</value>
   </data>
-  <data name="ButtonCreateAccount" xml:space="preserve">
-    <value>Create</value>
+  <data name="SwipeTextDelete" xml:space="preserve">
+    <value>Διαγραφή</value>
   </data>
-  <data name="EntryPlaceholderEmail" xml:space="preserve">
-    <value>Email</value>
+  <data name="SwipeTextDetails" xml:space="preserve">
+    <value>Λεπτομέρειες</value>
   </data>
-  <data name="EntryPlaceholderPassword" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="EntryPlaceholderUsername" xml:space="preserve">
-    <value>Username</value>
+  <data name="SwipeTextEdit" xml:space="preserve">
+    <value>Επεξεργασία</value>
   </data>
 </root>

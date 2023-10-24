@@ -2,10 +2,9 @@
 using Pass_Keep.Resources.Translations.Popup;
 using System.ComponentModel;
 using Pass_Keep.Resources.Preferences;
-using Pass_Keep.Views.Passwords;
+using Pass_Keep.Views.Account;
 using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Error_Informer;
-using Pass_Keep.Resources.Translations.View_Models.Login;
 
 namespace Pass_Keep.View_Models.Login;
 
@@ -37,7 +36,7 @@ internal class LoginVM : INotifyPropertyChanged
         } catch (Exception ex) { await ErrorInformer.Inform(Localization.InitializingDBFailed, ex); return; }
 
         if (this.Username == Preferences.Get(Preference.Username, string.Empty) && this.Password == Preferences.Get(Preference.Password, string.Empty))
-            await Shell.Current.GoToAsync(nameof(PasswordListPage));
+            await Shell.Current.GoToAsync(nameof(AccountListPage));
         else
             await Shell.Current.DisplayAlert(Popup.Warning, Localization.Username_Or_Password_Is_Incorrect, Popup.Okay);
     }
@@ -48,7 +47,7 @@ internal class LoginVM : INotifyPropertyChanged
         Preferences.Set(Preference.Username, this.Username); // Will encrypt this in later stages of the application, as of now they won't be encrypted
         Preferences.Set(Preference.Password, this.Password);
 
-        await Shell.Current.GoToAsync(nameof(PasswordListPage));
+        await Shell.Current.GoToAsync(nameof(AccountListPage));
     }
 
     private void ShowPassword()

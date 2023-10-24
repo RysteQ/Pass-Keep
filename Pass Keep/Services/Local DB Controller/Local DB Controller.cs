@@ -12,7 +12,7 @@ internal static class LocalDBController
 
         database_connection = new(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), local_database_filename), flags);
 
-        await database_connection.CreateTableAsync<AccountModel>();
+        await database_connection.CreateTableAsync<AccountModelDB>();
     }
 
     public static SQLiteAsyncConnection database_connection;

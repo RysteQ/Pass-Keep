@@ -6,6 +6,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/ViewSpecificAccountListColours.xaml" />
+                <ResourceDictionary Source="Resources/Styles/PopupSpecificPreAccountCreation.xaml" />
+                <ResourceDictionary Source="Resources/Styles/ViewSpecificAccountCreationColours.xaml" />
+                <ResourceDictionary Source="Resources/Styles/ColourLime.xaml" />
                 <ResourceDictionary Source="Resources/Styles/ColourGrey.xaml" />
                 <ResourceDictionary Source="Resources/Styles/ColourBlueGrey.xaml" />
                 <ResourceDictionary Source="Resources/Styles/ColourRed.xaml" />
