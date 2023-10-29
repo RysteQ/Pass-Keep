@@ -2,7 +2,7 @@
 
 namespace Pass_Keep.Models.Password_Models;
 
-internal class AccountModel : INotifyPropertyChanged
+public class AccountModel : INotifyPropertyChanged
 {
     public Guid GUID { get; set; }
 

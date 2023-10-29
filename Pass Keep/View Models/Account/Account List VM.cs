@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Pass_Keep.Services.Converters.Account_Converters;
 
-namespace Pass_Keep.View_Models.Passwords;
+namespace Pass_Keep.View_Models.Account;
 
 internal class AccountListVM : INotifyPropertyChanged
 {

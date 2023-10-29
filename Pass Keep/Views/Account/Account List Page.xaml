@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Passwords"
+             xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
              xmlns:account_model="clr-namespace:Pass_Keep.Models.Password_Models"
              xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Account.Account_List_Page"
              x:Class="Pass_Keep.Views.Account.AccountListPage"
@@ -11,27 +11,26 @@
 
     <VerticalStackLayout BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource AccountListPageBackgroundColour}}">
         <Frame Padding = "10" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
-            <Grid RowDefinitions = "*" ColumnDefinitions = "75*,20*" ColumnSpacing = "10">
+            <Grid RowDefinitions = "*" ColumnDefinitions = "75*,25*" ColumnSpacing = "10">
                 <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource AccountListPageSearchEntryBackgroundColour}}" BorderColor = "Black" CornerRadius = "100">
                     <Entry VerticalOptions = "Center" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
                 </Frame>
 
-                <ImageButton Grid.Row = "0" Grid.Column = "1" BackgroundColor = "Transparent" Source = "add_new_account" Clicked = "OpenPreAccountCreationPopup" />
+                <ImageButton Grid.Row = "0" Grid.Column = "1" Scale = "0.8" BackgroundColor = "Transparent" Source = "add_new_account" Clicked = "OpenPreAccountCreationPopup" />
             </Grid>
         </Frame>
 
-        <ListView Margin = "10" ItemsSource = "{Binding Accounts}" SelectionMode = "None" SeparatorVisibility = "None" HasUnevenRows="True">
+        <ListView Margin = "10" ItemsSource = "{Binding Accounts}" SelectionMode = "None" HasUnevenRows = "True" SeparatorVisibility = "None" VerticalScrollBarVisibility = "Never">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType = "account_model:AccountModel">
                     <ViewCell>
-                        <Frame Margin = "0,10,0,0" Padding = "0" BorderColor = "Transparent" CornerRadius = "20">
+                        <Frame Margin = "0,10,0,0" Padding="0" BorderColor = "Transparent" CornerRadius = "20">
                             <Grid RowDefinitions = "50,50" ColumnDefinitions = "30*,50*,10*,10*" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource AccountListPageListItemBackgroundColour}}">
-                                <Image Grid.Row = "0" Grid.Column = "0" Grid.RowSpan = "2" HeightRequest = "120" WidthRequest = "120" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
+                                <Image Grid.Row = "0" Grid.Column = "0" Grid.RowSpan = "2" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
                                 <Label Grid.Row = "0" Grid.Column = "1" Margin = "10,0,0,0" VerticalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "18" Text = "{Binding PlatformName}" />
                                 <Label Grid.Row = "1" Grid.Column = "1" Margin = "10,0,0,0" VerticalTextAlignment = "Center" Text = "{Binding Email}" />
 
-                                <ImageButton Grid.Row = "0" Grid.Column = "2" Grid.RowSpan = "2" Padding = "6" Scale = "2" Source = "magnifying_glass" />
-                                <ImageButton Grid.Row = "0" Grid.Column = "3" Grid.RowSpan = "2" Padding = "6" Scale = "2" Source = "three_dots" />
+                                <ImageButton Grid.Row = "0" Grid.Column = "3" Grid.RowSpan = "2" Padding = "6" Scale = "2" Source = "three_dots" Clicked = "OpenAccountActions" />
                             </Grid>
                         </Frame>
                     </ViewCell>

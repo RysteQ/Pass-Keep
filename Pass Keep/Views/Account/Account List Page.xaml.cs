@@ -1,4 +1,4 @@
-using Pass_Keep.View_Models.Passwords;
+using Pass_Keep.View_Models.Account;
 using Pass_Keep.Views.Account.Popups;
 using CommunityToolkit.Maui.Views;
 
@@ -29,6 +29,11 @@ public partial class AccountListPage : ContentPage
     private void OpenPreAccountCreationPopup(object sender, EventArgs e)
     {
         this.ShowPopup(new PreAccountCreation());
+    }
+
+    private async void OpenAccountActions(object sender, EventArgs e)
+    {
+        await Shell.Current.DisplayActionSheet(null, null, null, "Details", "Edit");
     }
 
     private AccountListVM view_model;

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup 
+        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+        xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Popups.Pre_Account_Creation_Page"
+        x:Class="Pass_Keep.Views.Account.Popups.AccountDetails">
+
+    <Grid RowDefinitions = "2*,Auto,Auto,Auto" ColumnDefinitions = "5*,90*,5*" Padding = "16" HeightRequest = "210" WidthRequest = "300" BackgroundColor = "{AppThemeBinding Light = {StaticResource White}, Dark = {StaticResource PreAccountCreationPopupBackgroundColour}}" RowSpacing = "15">
+        <Image x:Name = "ImagePlatformIcon" Grid.Row = "0" Grid.Column = "1" />
+        <Label x:Name = "LabelUsername" Grid.Row = "1" Grid.Column = "1" />
+        <Label x:Name = "LabelEmail" Grid.Row = "2" Grid.Column = "1" />
+        <Label x:Name = "LabelPassword" Grid.Row = "3" Grid.Column = "1" />
+    </Grid>
+
+</toolkit:Popup>

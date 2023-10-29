@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Account.Account_Creation_Page"
-             xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Passwords"
+             xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
              x:Class="Pass_Keep.Views.Account.AccountCreationPage"
              x:DataType="view_model:AccountCreationVM"
              Shell.NavBarIsVisible="True"
@@ -15,11 +15,11 @@
 
         <Grid Grid.Row = "1" Grid.Column = "0" RowDefinitions = "*" ColumnDefinitions = "10*,90*,10*">
             <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "Auto,Auto,Auto,Auto,Auto" ColumnDefinitions = "*" RowSpacing = "16">
-                <Frame Margin = "0,10,0,20" HeightRequest = "150" WidthRequest = "150" CornerRadius = "100">
+                <Frame x:Name = "FramePlatformIcon" Margin = "0,10,0,20" HeightRequest = "150" WidthRequest = "150" CornerRadius = "100">
                     <ImageButton Grid.Row = "0" Grid.Column = "0" Margin = "20" HeightRequest = "150" WidthRequest = "150" Aspect = "AspectFill" Source = "{Binding PlatformIconSource}" Command = "{Binding CommandSelectedAccountImage}" />
                 </Frame>
 
-                <Frame Grid.Row = "1" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey200}, Dark = {StaticResource AccountCreationPageEntryFieldBackgroundColour}}" CornerRadius = "16">
+                <Frame x:Name = "FrameUsername" Grid.Row = "1" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey200}, Dark = {StaticResource AccountCreationPageEntryFieldBackgroundColour}}" CornerRadius = "16">
                     <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "Auto,65*" RowSpacing = "0">
                         <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "Light/person" />
 
@@ -28,7 +28,7 @@
                     </Grid>
                 </Frame>
 
-                <Frame Grid.Row = "2" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey200}, Dark = {StaticResource AccountCreationPageEntryFieldBackgroundColour}}" CornerRadius = "16">
+                <Frame x:Name = "FrameEmail" Grid.Row = "2" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey200}, Dark = {StaticResource AccountCreationPageEntryFieldBackgroundColour}}" CornerRadius = "16">
                     <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "Auto,65*" RowSpacing = "0">
                         <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "Light/email" />
 
@@ -37,7 +37,7 @@
                     </Grid>
                 </Frame>
 
-                <Frame Grid.Row = "3" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey200}, Dark = {StaticResource AccountCreationPageEntryFieldBackgroundColour}}" CornerRadius = "16">
+                <Frame x:Name = "FramePassword" Grid.Row = "3" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey200}, Dark = {StaticResource AccountCreationPageEntryFieldBackgroundColour}}" CornerRadius = "16">
                     <Grid RowDefinitions = "*,*" ColumnDefinitions = "Auto,65*" RowSpacing = "0">
                         <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "Light/key" />
 
@@ -46,7 +46,7 @@
                     </Grid>
                 </Frame>
 
-                <Button Grid.Row = "4" Grid.Column = "1" Margin = "0,20,0,0" Padding = "22" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource Cyan200Accent}}" FontAttributes = "Bold" FontSize = "24" TextColor = "Black" Text = "{x:Static translations:Localization.ButtonCreateAccount}" Command = "{Binding CommandCreateNewAccount}" CornerRadius = "50" />
+                <Button Grid.Row = "4" Grid.Column = "1" Margin = "0,20,0,0" Padding = "22" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource Cyan200Accent}}" FontAttributes = "Bold" FontSize = "24" TextColor = "Black" Text = "{x:Static translations:Localization.ButtonCreateAccount}" Clicked = "ValidateAndCreateNewAccount" CornerRadius = "50" />
             </Grid>
         </Grid>
     </Grid>

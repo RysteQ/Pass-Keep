@@ -3,7 +3,7 @@ using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using System.ComponentModel;
 
-namespace Pass_Keep.View_Models.Passwords;
+namespace Pass_Keep.View_Models.Account;
 
 internal class AccountCreationVM : INotifyPropertyChanged
 {
@@ -24,6 +24,7 @@ internal class AccountCreationVM : INotifyPropertyChanged
 
         this.PlatformIconSource = ImageSource.FromFile(result.FullPath);
         this.platform_icon = File.ReadAllBytes(result.FullPath);
+        this.ImageSelected = true;
     }
 
     private async Task CreateNewAccount()
@@ -60,34 +61,29 @@ internal class AccountCreationVM : INotifyPropertyChanged
         set { this.platform_name = value; OnPropertyChanged(nameof(PlatformName)); }
     }
 
-    private string username;
+    private string username = string.Empty;
     public string Username
     {
         get => this.username;
         set { this.username = value; OnPropertyChanged(nameof(Username)); }
     }
 
-    private string email;
+    private string email = string.Empty;
     public string Email
     {
         get => this.email;
         set { this.email = value; OnPropertyChanged(nameof(Email)); }
     }
 
-    private string password;
+    private string password = string.Empty;
     public string Password
     {
         get => this.password;
         set { this.password = value; OnPropertyChanged(nameof(Password)); }
     }
 
-    private string comments;
-    public string Comments
-    {
-        get => this.comments;
-        set { this.comments = value; OnPropertyChanged(nameof(Comments)); }
-    }
+    public bool ImageSelected { get; private set; }
 
     private AccountModelDB new_account = new();
-    private byte[] platform_icon;
+    private byte[] platform_icon = Array.Empty<byte>();
 }
