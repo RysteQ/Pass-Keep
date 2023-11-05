@@ -21,31 +21,20 @@ public partial class AccountCreationPage : ContentPage
 
     private async void ValidateAndCreateNewAccount(object sender, EventArgs e)
     {
-        if (this.view_model.ImageSelected)
-        {
+        if (this.view_model.ImageSelected == false)
             await ShakeFrame(FramePlatformIcon);
-            return;
-        }
 
-        if (this.view_model.Username == string.Empty)
-        {
+        if (string.IsNullOrEmpty(this.view_model.Username))
             await ShakeFrame(FrameUsername);
-            return;
-        }
 
-        if (this.view_model.Email == string.Empty)
-        {
+        if (string.IsNullOrEmpty(this.view_model.Email))
             await ShakeFrame(FrameEmail);
-            return;
-        }
 
-        if (this.view_model.Password == string.Empty)
-        {
+        if (string.IsNullOrEmpty(this.view_model.Password))
             await ShakeFrame(FramePassword);
-            return;
-        }
 
-        this.view_model.CommandCreateNewAccount.Execute(null);
+        if (string.IsNullOrEmpty(this.view_model.Username) == false && string.IsNullOrEmpty(this.view_model.Email) == false && string.IsNullOrEmpty(this.view_model.Password) == false)
+            this.view_model.CommandCreateNewAccount.Execute(null);
     }
 
     private async Task ShakeFrame(Frame frame)

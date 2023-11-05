@@ -31,9 +31,9 @@ public partial class AccountListPage : ContentPage
         this.ShowPopup(new PreAccountCreation());
     }
 
-    private async void OpenAccountActions(object sender, EventArgs e)
+    private void OpenAccountActions(object sender, EventArgs e)
     {
-        await Shell.Current.DisplayActionSheet(null, null, null, "Details", "Edit");
+        this.ShowPopup(new AccountActionSelection());
     }
 
     private AccountListVM view_model;

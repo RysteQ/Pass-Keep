@@ -4,39 +4,72 @@
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
              xmlns:account_model="clr-namespace:Pass_Keep.Models.Password_Models"
              xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Account.Account_List_Page"
+             xmlns:navigation_translation="clr-namespace:Pass_Keep.Resources.Translations.Navigation"
              x:Class="Pass_Keep.Views.Account.AccountListPage"
              x:DataType="view_model:AccountListVM"
              Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
              Title="PasswordListPage">
 
-    <VerticalStackLayout BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource AccountListPageBackgroundColour}}">
-        <Frame Padding = "10" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
-            <Grid RowDefinitions = "*" ColumnDefinitions = "75*,25*" ColumnSpacing = "10">
-                <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource AccountListPageSearchEntryBackgroundColour}}" BorderColor = "Black" CornerRadius = "100">
-                    <Entry VerticalOptions = "Center" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
+    <Grid>
+        <VerticalStackLayout BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+            <Frame Padding = "10" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
+                <Grid RowDefinitions = "*" ColumnDefinitions = "*" ColumnSpacing = "10">
+                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" BorderColor = "Transparent" CornerRadius = "10">
+                        <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
+                    </Frame>
+                </Grid>
+            </Frame>
+
+            <ListView Margin = "10,0,10,10" ItemsSource = "{Binding Accounts}" SelectionMode = "None" HasUnevenRows = "True" SeparatorVisibility = "None" VerticalScrollBarVisibility = "Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType = "account_model:AccountModel">
+                        <ViewCell>
+                            <VerticalStackLayout>
+                                <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "15">
+                                    <Grid RowDefinitions = "60" ColumnDefinitions = "30*,50*,10*,10*" ColumnSpacing = "10">
+                                        <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "15">
+                                            <Image Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
+                                        </Frame>
+
+                                        <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" VerticalOptions = "Center">
+                                            <Label Grid.Row = "0" Grid.Column = "0" VerticalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "18" Text = "{Binding PlatformName}" />
+                                            <Label Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Center" TextColor = "#CCCCCC" Text = "{Binding Email}" />
+                                        </Grid>
+
+                                        <ImageButton Grid.Row = "0" Grid.Column = "3" HorizontalOptions = "End" Scale = "0.7" Opacity = "0.8" Source = "three_dots" Clicked = "OpenAccountActions" />
+                                    </Grid>
+                                </Frame>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+
+        <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand" RowDefinitions = "*,2,*" ColumnDefinitions = "*,*,*,*,*">
+            <Frame Grid.Row = "0" Grid.Column = "4" Margin = "10" Padding = "0" BackgroundColor = "Transparent">
+                <ImageButton BackgroundColor = "Red" CornerRadius = "20" Clicked = "OpenPreAccountCreationPopup" />
+            </Frame>
+
+            <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "5" HeightRequest = "2" Color = "{AppThemeBinding Light = {StaticResource White}, Dark = {StaticResource Black}}" />
+
+            <Grid Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "5" RowDefinitions = "Auto" ColumnDefinitions = "*,Auto,*" Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+                <Frame Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "Center" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "0">
+                    <Grid RowDefinitions = "*,0.5*" ColumnDefinitions = "*" RowSpacing = "5">
+                        <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center" HeightRequest = "32" WidthRequest = "32" Source = "passwords" />
+                        <Label Grid.Row = "1" Grid.Column = "0" HorizontalOptions = "Center" Text = "{x:Static navigation_translation:Localization.TabBarPasswordsPage}" />
+                    </Grid>
                 </Frame>
 
-                <ImageButton Grid.Row = "0" Grid.Column = "1" Scale = "0.8" BackgroundColor = "Transparent" Source = "add_new_account" Clicked = "OpenPreAccountCreationPopup" />
+                <Frame Grid.Row = "0" Grid.Column = "2" HorizontalOptions = "Center" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "0">
+                    <Grid RowDefinitions = "*,0.5*" ColumnDefinitions = "*" RowSpacing = "5">
+                        <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center" HeightRequest = "32" WidthRequest = "32" BackgroundColor = "Red" />
+                        <Label Grid.Row = "1" Grid.Column = "0" HorizontalOptions = "Center" Text = "{x:Static navigation_translation:Localization.TabBarSettingsPage}" />
+                    </Grid>
+                </Frame>
             </Grid>
-        </Frame>
+        </Grid>
+    </Grid>
 
-        <ListView Margin = "10" ItemsSource = "{Binding Accounts}" SelectionMode = "None" HasUnevenRows = "True" SeparatorVisibility = "None" VerticalScrollBarVisibility = "Never">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType = "account_model:AccountModel">
-                    <ViewCell>
-                        <Frame Margin = "0,10,0,0" Padding="0" BorderColor = "Transparent" CornerRadius = "20">
-                            <Grid RowDefinitions = "50,50" ColumnDefinitions = "30*,50*,10*,10*" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource AccountListPageListItemBackgroundColour}}">
-                                <Image Grid.Row = "0" Grid.Column = "0" Grid.RowSpan = "2" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
-                                <Label Grid.Row = "0" Grid.Column = "1" Margin = "10,0,0,0" VerticalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "18" Text = "{Binding PlatformName}" />
-                                <Label Grid.Row = "1" Grid.Column = "1" Margin = "10,0,0,0" VerticalTextAlignment = "Center" Text = "{Binding Email}" />
-
-                                <ImageButton Grid.Row = "0" Grid.Column = "3" Grid.RowSpan = "2" Padding = "6" Scale = "2" Source = "three_dots" Clicked = "OpenAccountActions" />
-                            </Grid>
-                        </Frame>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </VerticalStackLayout>
-    
 </ContentPage>

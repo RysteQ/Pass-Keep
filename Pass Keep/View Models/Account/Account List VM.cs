@@ -16,9 +16,22 @@ internal class AccountListVM : INotifyPropertyChanged
         List<object> accounts = await LocalDBAccountController.Read(LocalDBController.database_connection);
 
         this.Accounts.Clear();
+        this.all_accounts.Clear();
 
         foreach (object account in accounts)
+        {
             this.Accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
+            this.all_accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
+        }
+    }
+
+    private void SearchPasswords()
+    {
+        this.Accounts.Clear();
+
+        foreach (AccountModel account in this.all_accounts)
+            if (account.PlatformName.ToUpper().Contains(this.SearchPassword.ToUpper().Trim()) || account.Username.ToUpper().Contains(this.SearchPassword.ToUpper().Trim()))
+                this.Accounts.Add(account);
     }
 
     public virtual void OnPropertyChanged(string property_name) => this.PropertyChanged?.Invoke(property_name, new(property_name));
@@ -35,6 +48,19 @@ internal class AccountListVM : INotifyPropertyChanged
     public string SearchPassword
     {
         get => this.search_password;
-        set { this.search_password = value; }
+        
+        set
+        {
+            this.search_password = value;
+
+            if (string.IsNullOrEmpty(value))
+            {
+                this.Accounts.Clear();
+                this.all_accounts.ForEach(account => this.Accounts.Add(account));
+            } else
+                SearchPasswords();
+        }
     }
+
+    private List<AccountModel> all_accounts = new();
 }

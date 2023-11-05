@@ -53,6 +53,7 @@
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\key_light.png" />
 	  <None Remove="Resources\Images\magnifying_glass.png" />
+	  <None Remove="Resources\Images\passwords.png" />
 	  <None Remove="Resources\Images\person_light.png" />
 	  <None Remove="Resources\Images\picture_picker.png" />
 	  <None Remove="Resources\Images\three_dots.png" />
@@ -82,6 +83,16 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Preference.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Translations\Navigation\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Popups\Account_Action_Selection\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Translations\Popups\Pre_Account_Creation_Page\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -92,6 +103,9 @@
 	  </Compile>
 	  <Compile Update="Views\Account\Popups\Account Details.xaml.cs">
 	    <DependentUpon>Account Details.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Account\Popups\Account Action Selection.xaml.cs">
+	    <DependentUpon>Account Action Selection.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Account\Popups\Pre Account Creation.xaml.cs">
 	    <DependentUpon>Pre Account Creation.xaml</DependentUpon>
@@ -136,6 +150,14 @@
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Settings\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Navigation\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Popups\Account_Action_Selection\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -201,6 +223,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Popups\Account Details.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\Popups\Account Action Selection.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Login\Login Page.xaml">

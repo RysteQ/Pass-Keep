@@ -15,6 +15,7 @@
     <Color x:Key="Gray400">#919191</Color>
     <Color x:Key="Gray500">#6E6E6E</Color>
     <Color x:Key="Gray600">#404040</Color>
+    <Color x:Key="Gray600900mix">#313131</Color>
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
@@ -36,9 +37,11 @@
     <Color x:Key="Yellow300Accent">#FFE5B9</Color>
     <Color x:Key="Cyan100Accent">#28C2D1</Color>
     <Color x:Key="Cyan200Accent">#7BDDEF</Color>
+    <Color x:Key="DarkerCyan200Accent">#5BBDCF</Color>
     <Color x:Key="Cyan300Accent">#C3F2F4</Color>
     <Color x:Key="Blue100Accent">#3E8EED</Color>
     <Color x:Key="Blue200Accent">#72ACF1</Color>
     <Color x:Key="Blue300Accent">#A7CBF6</Color>
+    <Color x:Key="BrilliantBlue">#0065FF</Color>
 
 </ResourceDictionary>

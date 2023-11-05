@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup 
+        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+        xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Popups.Account_Action_Selection"
+        x:Class="Pass_Keep.Views.Account.Popups.AccountActionSelection">
+
+    <Grid RowDefinitions = "Auto,Auto,Auto" ColumnDefinitions = "5*,90*,5*" Padding = "16" WidthRequest = "300" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" RowSpacing = "15">
+        <Button Grid.Row = "0" Grid.Column = "1" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource DarkerCyan200Accent}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonAccountDetails}" CornerRadius = "16" />
+        <Button Grid.Row = "1" Grid.Column = "1" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource DarkerCyan200Accent}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonAccountEdit}" CornerRadius = "16" />
+        <Button Grid.Row = "2" Grid.Column = "1" BackgroundColor = "Red" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonAccountDelete}" CornerRadius = "16" />
+    </Grid>
+
+</toolkit:Popup>
