@@ -101,9 +101,6 @@
 	  <Compile Update="Views\Account\Account Edit Page.xaml.cs">
 	    <DependentUpon>Account Edit Page.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Account\Popups\Account Details.xaml.cs">
-	    <DependentUpon>Account Details.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Views\Account\Popups\Account Action Selection.xaml.cs">
 	    <DependentUpon>Account Action Selection.xaml</DependentUpon>
 	  </Compile>
@@ -210,6 +207,9 @@
 	  <MauiXaml Update="Resources\Styles\ColourRed.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\PopupSpecificAccountActionSelection.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\PopupSpecificPreAccountCreation.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -220,9 +220,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Account Edit Page.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Account\Popups\Account Details.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Popups\Account Action Selection.xaml">

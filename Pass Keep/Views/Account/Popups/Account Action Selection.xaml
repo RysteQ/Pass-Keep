@@ -6,10 +6,18 @@
         xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Popups.Account_Action_Selection"
         x:Class="Pass_Keep.Views.Account.Popups.AccountActionSelection">
 
-    <Grid RowDefinitions = "Auto,Auto,Auto" ColumnDefinitions = "5*,90*,5*" Padding = "16" WidthRequest = "300" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" RowSpacing = "15">
-        <Button Grid.Row = "0" Grid.Column = "1" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource DarkerCyan200Accent}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonAccountDetails}" CornerRadius = "16" />
-        <Button Grid.Row = "1" Grid.Column = "1" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource DarkerCyan200Accent}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonAccountEdit}" CornerRadius = "16" />
-        <Button Grid.Row = "2" Grid.Column = "1" BackgroundColor = "Red" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonAccountDelete}" CornerRadius = "16" />
+    <Grid RowDefinitions = "Auto,Auto,Auto" ColumnDefinitions = "*,*,*" Padding = "0,30,0,0" WidthRequest = "300" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" RowSpacing = "15">
+        <Frame Grid.Row = "0" Grid.Column = "1" Margin = "0" Padding = "0" CornerRadius = "100">
+            <Image x:Name = "image_account_profile_image" HeightRequest = "100" WidthRequest = "100" />
+        </Frame>
+
+        <Label x:Name = "label_account_name" Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "3" HorizontalTextAlignment = "Center" FontSize = "16" TextColor = "#888888" Text = "TEST" />
+
+        <Grid RowDefinitions = "70" ColumnDefinitions = "*,*,*" Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3">
+            <Button Grid.Row = "0" Grid.Column = "0" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDetailsBackgroundColour}" Text = "Details" Clicked = "OnDetailsButtonClicked" CornerRadius = "0" />
+            <Button Grid.Row = "0" Grid.Column = "1" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonEditBackgroundColour}" Text = "Edit" Clicked = "OnEditButtonClicked" CornerRadius = "0" />
+            <Button Grid.Row = "0" Grid.Column = "2" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDeleteBackgroundColour}" Text = "Delete" Clicked = "OnDeleteButtonClicked" CornerRadius = "0" />
+        </Grid>
     </Grid>
 
 </toolkit:Popup>

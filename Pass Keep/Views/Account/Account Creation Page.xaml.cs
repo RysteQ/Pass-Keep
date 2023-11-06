@@ -33,7 +33,7 @@ public partial class AccountCreationPage : ContentPage
         if (string.IsNullOrEmpty(this.view_model.Password))
             await ShakeFrame(FramePassword);
 
-        if (string.IsNullOrEmpty(this.view_model.Username) == false && string.IsNullOrEmpty(this.view_model.Email) == false && string.IsNullOrEmpty(this.view_model.Password) == false)
+        if (this.view_model.ImageSelected && string.IsNullOrEmpty(this.view_model.Username) == false && string.IsNullOrEmpty(this.view_model.Email) == false && string.IsNullOrEmpty(this.view_model.Password) == false)
             this.view_model.CommandCreateNewAccount.Execute(null);
     }
 
