@@ -29,7 +29,7 @@
                                 <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "15">
                                     <Grid RowDefinitions = "60" ColumnDefinitions = "20*,80*" ColumnSpacing = "10">
                                         <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "15">
-                                            <Image Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
+                                            <Image HeightRequest = "64" WidthRequest = "64" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
                                         </Frame>
 
                                         <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" VerticalOptions = "Center">
@@ -45,14 +45,14 @@
             </ListView>
         </VerticalStackLayout>
 
-        <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand" RowDefinitions = "*,2,*" ColumnDefinitions = "*,*,*,*,*">
-            <Frame Grid.Row = "0" Grid.Column = "4" Margin = "10" Padding = "0" BackgroundColor = "Transparent">
+        <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand" RowDefinitions = "*,1,*" ColumnDefinitions = "*,*,*,*,*">
+            <Frame Grid.Row = "0" Grid.Column = "4" Margin = "10" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
                 <ImageButton BackgroundColor = "Red" CornerRadius = "20" Clicked = "OpenPreAccountCreationPopup" />
             </Frame>
 
-            <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "5" HeightRequest = "2" Color = "{AppThemeBinding Light = {StaticResource White}, Dark = {StaticResource Black}}" />
+            <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "5" HeightRequest = "1" Color = "{AppThemeBinding Light = {StaticResource White}, Dark = {StaticResource Black}}" />
 
-            <Grid Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "5" RowDefinitions = "Auto" ColumnDefinitions = "*,Auto,*" Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}">
+            <Grid Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "5" RowDefinitions = "Auto" ColumnDefinitions = "*,Auto,*" Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
                 <Frame Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "Center" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "0">
                     <Grid RowDefinitions = "*,*" ColumnDefinitions = "*" RowSpacing = "5">
                         <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center" HeightRequest = "32" WidthRequest = "32" Source = "passwords" />

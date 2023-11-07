@@ -13,12 +13,5 @@ public partial class AccountDetailsPage : ContentPage
 		BindingContext = this.view_model;
 	}
 
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-
-    }
-
     private AccountDetailsVM view_model;
 }

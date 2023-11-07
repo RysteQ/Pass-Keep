@@ -59,5 +59,32 @@ namespace Pass_Keep.Resources.Translations.Views.Account.Account_Details_Page {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string AccountDetailsEmails {
+            get {
+                return ResourceManager.GetString("AccountDetailsEmails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string AccountDetailsPassword {
+            get {
+                return ResourceManager.GetString("AccountDetailsPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        internal static string AccountDetailsUsername {
+            get {
+                return ResourceManager.GetString("AccountDetailsUsername", resourceCulture);
+            }
+        }
     }
 }

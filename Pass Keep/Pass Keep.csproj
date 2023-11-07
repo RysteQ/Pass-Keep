@@ -98,6 +98,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Account\Account_Details_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Account\Account Edit Page.xaml.cs">
 	    <DependentUpon>Account Edit Page.xaml</DependentUpon>
 	  </Compile>
