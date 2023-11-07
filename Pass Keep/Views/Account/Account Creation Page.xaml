@@ -5,9 +5,8 @@
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
              x:Class="Pass_Keep.Views.Account.AccountCreationPage"
              x:DataType="view_model:AccountCreationVM"
-             Shell.NavBarIsVisible="True"
              Shell.TabBarIsVisible="False"
-             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource AccountCreationPageBackgroundColour}}"
+             Shell.BackgroundColor="Transparent"
              Title="">
 
     <Grid RowDefinitions = "50,90*" ColumnDefinitions = "*" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" RowSpacing = "20">

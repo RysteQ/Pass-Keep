@@ -101,6 +101,9 @@
 	  <Compile Update="Views\Account\Account Edit Page.xaml.cs">
 	    <DependentUpon>Account Edit Page.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Account\Account Details Page.xaml.cs">
+	    <DependentUpon>Account Details Page.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Account\Popups\Account Action Selection.xaml.cs">
 	    <DependentUpon>Account Action Selection.xaml</DependentUpon>
 	  </Compile>
@@ -220,6 +223,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Account Edit Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\Account Details Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Popups\Account Action Selection.xaml">

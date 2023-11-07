@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Account.Account_Details_Page"
+             xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
+             x:Class="Pass_Keep.Views.Account.AccountDetailsPage"
+             x:DataType="view_model:AccountDetailsVM"
+             Shell.TabBarIsVisible="False"
+             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Black}}"
+             Title="">
+
+    <Grid RowDefinitions = "15*,85*" ColumnDefinitions = "*" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Black}}">
+        <Grid Grid.Row = "2" Grid.Column = "0" RowDefinitions = "Auto,Auto,*" ColumnDefinitions = "*,*,*">
+            <Frame Grid.Row = "0" Grid.Column = "1" Grid.RowSpan = "2" ZIndex = "1" Padding = "0" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "20">
+                <Image Aspect = "AspectFill" Source = "{Binding AccountProfileImage}" />
+            </Frame>
+            
+            <Frame Grid.Row = "1" Grid.Column = "0" Grid.RowSpan = "2" Grid.ColumnSpan = "3" ZIndex = "0" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "30" />
+
+            <Frame Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" Margin = "0,40,0,0" Padding = "0" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "0">
+                <Grid>
+                    <Grid Grid.Row = "0" Grid.Column = "0" RowDefinitions = "Auto,*" ColumnDefinitions = "10*,80*,10*">
+                        <Label Grid.Row = "0" Grid.Column = "1" HorizontalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "Title" Text = "{Binding PlatformName}" />
+
+                        <Grid Grid.Row = "1" Grid.Column = "1" RowDefinitions = "*,*,*" Margin = "0" ColumnDefinitions = "*">
+                            <Label Grid.Row = "0" Grid.Column = "0" Text = "{Binding AccountUsername}" />
+                            <Label Grid.Row = "1" Grid.Column = "0" Text = "{Binding AccountEmail}" />
+                            <Label Grid.Row = "2" Grid.Column = "0" Text = "{Binding AccountPassword}" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand" RowDefinitions = "*" ColumnDefinitions = "*">
+                        <Button Grid.Row = "0" Grid.Column = "0" CornerRadius = "0" Text = "Lorem Ipsum" />
+                    </Grid>
+                </Grid>
+            </Frame>
+        </Grid>
+    </Grid>
+
+</ContentPage>

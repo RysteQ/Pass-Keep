@@ -15,9 +15,10 @@ public partial class AccountActionSelection : Popup
 		image_account_profile_image.Source = this.account.PlatformIcon;
 	}
 
-    private void OnDetailsButtonClicked(object sender, EventArgs e)
+    private async void OnDetailsButtonClicked(object sender, EventArgs e)
     {
-        // TODO
+        await Shell.Current.Navigation.PushAsync(new AccountDetailsPage(this.account));
+        await this.CloseAsync();
     }
 
     private void OnEditButtonClicked(object sender, EventArgs e)
