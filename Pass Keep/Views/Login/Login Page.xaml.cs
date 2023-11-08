@@ -20,6 +20,8 @@ public partial class LoginPage : ContentPage
     {
         base.OnAppearing();
 
+        await LocalDBController.InitDatabase();
+
         if (Preferences.Get(Preference.FirstTimeLogin, true))
             await Shell.Current.DisplayAlert(Popup.Attention, Localization.First_Time_Login, Popup.Okay);
     }

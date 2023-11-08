@@ -7,19 +7,19 @@
     xmlns:login_views="clr-namespace:Pass_Keep.Views.Login"
     xmlns:account_views="clr-namespace:Pass_Keep.Views.Account"
     xmlns:settings_views="clr-namespace:Pass_Keep.Views.Settings"
-    xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell">
 
-    <TabBar>
-        <Tab Title = "{x:Static translations:Localization.Login_TabBar_Title}">
-            <ShellContent IsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
+    <ShellContent FlyoutItemIsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
+    
+    <FlyoutItem Route = "AccountListPage" Title = "{x:Static translations:Localization.Passwords_TabBar_Title}">
+        <Tab Route = "AccountListPage">
+            <ShellContent Route = "AccountListPage" ContentTemplate = "{DataTemplate account_views:AccountListPage}" />
         </Tab>
-        <Tab Title = "{x:Static translations:Localization.Passwords_TabBar_Title}">
-            <ShellContent ContentTemplate = "{DataTemplate account_views:AccountListPage}" />
-        </Tab>
-        <Tab Title = "{x:Static translations:Localization.Settings_TabBar_Title}">
+    </FlyoutItem>
+    <FlyoutItem Title = "{x:Static translations:Localization.Settings_TabBar_Title}">
+        <Tab>
             <ShellContent ContentTemplate = "{DataTemplate settings_views:SettingsPage}" />
         </Tab>
-    </TabBar>
+    </FlyoutItem>
 
 </Shell>

@@ -10,14 +10,14 @@
              Title="">
 
     <Grid BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Black}}">
-        <Grid VerticalOptions = "EndAndExpand" RowDefinitions = "Auto,Auto,Auto" ColumnDefinitions = "*,*,*">
+        <Grid VerticalOptions = "EndAndExpand" RowDefinitions = "Auto,Auto,Auto" ColumnDefinitions = "*,*,*" RowSpacing = "24">
             <Frame Grid.Row = "0" Grid.Column = "1" Grid.RowSpan = "2" ZIndex = "1" Padding = "0" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "20">
                 <Image HeightRequest = "128" WidthRequest = "128" Aspect = "AspectFill" Source = "{Binding AccountProfileImage}" />
             </Frame>
             
             <Frame Grid.Row = "1" Grid.Column = "0" Grid.RowSpan = "2" Grid.ColumnSpan = "3" ZIndex = "0" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "30" />
 
-            <Frame Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" Margin = "0,20,0,0" Padding = "0,0,0,40" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "0">
+            <Frame Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" Padding = "0,0,0,40" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "0">
                 <Grid>
                     <Grid Grid.Row = "0" Grid.Column = "0" RowDefinitions = "Auto,Auto" ColumnDefinitions = "10*,80*,10*" RowSpacing = "24">
                         <Label Grid.Row = "0" Grid.Column = "1" HorizontalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "Title" Text = "{Binding PlatformName}" />

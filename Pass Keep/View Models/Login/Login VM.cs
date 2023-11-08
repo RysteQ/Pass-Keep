@@ -30,13 +30,8 @@ internal class LoginVM : INotifyPropertyChanged
             return;
         }
 
-        try
-        {
-            await LocalDBController.InitDatabase();
-        } catch (Exception ex) { await ErrorInformer.Inform(Localization.InitializingDBFailed, ex); return; }
-
         if (this.Username == Preferences.Get(Preference.Username, string.Empty) && this.Password == Preferences.Get(Preference.Password, string.Empty))
-            await Shell.Current.GoToAsync(nameof(AccountListPage));
+            await Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
         else
             await Shell.Current.DisplayAlert(Popup.Warning, Localization.Username_Or_Password_Is_Incorrect, Popup.Okay);
     }

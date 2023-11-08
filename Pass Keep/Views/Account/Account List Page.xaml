@@ -7,21 +7,22 @@
              xmlns:navigation_translation="clr-namespace:Pass_Keep.Resources.Translations.Navigation"
              x:Class="Pass_Keep.Views.Account.AccountListPage"
              x:DataType="view_model:AccountListVM"
-             Shell.NavBarIsVisible="False"
-             Shell.TabBarIsVisible="False"
-             Title="PasswordListPage">
+             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}"
+             Title="">
 
     <Grid>
-        <VerticalStackLayout BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
-            <Frame Padding = "10" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
-                <Grid RowDefinitions = "*" ColumnDefinitions = "*" ColumnSpacing = "10">
+        <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+            <Frame Padding = "0,10,0,10" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
+                <Grid RowDefinitions = "*" ColumnDefinitions = "*">
                     <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" BorderColor = "Transparent" CornerRadius = "10">
-                        <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
+                        <VerticalStackLayout>
+                            <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
+                        </VerticalStackLayout>
                     </Frame>
                 </Grid>
             </Frame>
 
-            <ListView Margin = "10,0,10,10" ItemsSource = "{Binding Accounts}" SelectionMode = "None" HasUnevenRows = "True" SeparatorVisibility = "None" VerticalScrollBarVisibility = "Never" ItemTapped = "AccountTapped">
+            <ListView x:Name = "ListViewAccountsList" ItemsSource = "{Binding Accounts}" SelectionMode = "None" HasUnevenRows = "True" SeparatorVisibility = "None" VerticalScrollBarVisibility = "Never" ItemTapped = "AccountTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType = "account_model:AccountModel">
                         <ViewCell>
@@ -29,7 +30,9 @@
                                 <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "15">
                                     <Grid RowDefinitions = "60" ColumnDefinitions = "20*,80*" ColumnSpacing = "10">
                                         <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "15">
-                                            <Image HeightRequest = "64" WidthRequest = "64" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
+                                            <VerticalStackLayout>
+                                                <Image HeightRequest = "64" WidthRequest = "64" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
+                                            </VerticalStackLayout>
                                         </Frame>
 
                                         <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" VerticalOptions = "Center">
@@ -44,29 +47,13 @@
                 </ListView.ItemTemplate>
             </ListView>
         </VerticalStackLayout>
-
+        
         <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand" RowDefinitions = "*,1,*" ColumnDefinitions = "*,*,*,*,*">
             <Frame Grid.Row = "0" Grid.Column = "4" Margin = "10" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
-                <ImageButton BackgroundColor = "Red" CornerRadius = "20" Clicked = "OpenPreAccountCreationPopup" />
+                <VerticalStackLayout>
+                    <ImageButton BackgroundColor = "Red" CornerRadius = "20" Clicked = "OpenPreAccountCreationPopup" />
+                </VerticalStackLayout>
             </Frame>
-
-            <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "5" HeightRequest = "1" Color = "{AppThemeBinding Light = {StaticResource White}, Dark = {StaticResource Black}}" />
-
-            <Grid Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "5" RowDefinitions = "Auto" ColumnDefinitions = "*,Auto,*" Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
-                <Frame Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "Center" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "0">
-                    <Grid RowDefinitions = "*,*" ColumnDefinitions = "*" RowSpacing = "5">
-                        <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center" HeightRequest = "32" WidthRequest = "32" Source = "passwords" />
-                        <Label Grid.Row = "1" Grid.Column = "0" HorizontalOptions = "Center" Text = "{x:Static navigation_translation:Localization.TabBarPasswordsPage}" />
-                    </Grid>
-                </Frame>
-
-                <Frame Grid.Row = "0" Grid.Column = "2" HorizontalOptions = "Center" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "0">
-                    <Grid RowDefinitions = "*,*" ColumnDefinitions = "*" RowSpacing = "5">
-                        <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center" HeightRequest = "32" WidthRequest = "32" BackgroundColor = "Red" />
-                        <Label Grid.Row = "1" Grid.Column = "0" HorizontalOptions = "Center" Text = "{x:Static navigation_translation:Localization.TabBarSettingsPage}" />
-                    </Grid>
-                </Frame>
-            </Grid>
         </Grid>
     </Grid>
 
