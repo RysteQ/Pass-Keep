@@ -6,10 +6,33 @@ public class AccountModel : INotifyPropertyChanged
 {
     public Guid GUID { get; set; }
 
-    public string PlatformName { get; set; }
-    public string Username { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
+    private string platform_name;
+    public string PlatformName
+    {
+        get => this.platform_name;
+        set { this.platform_name = value; OnPropertyChanged(nameof(PlatformName)); }
+    }
+
+    private string username;
+    public string Username
+    {
+        get => this.username;
+        set { this.username = value; OnPropertyChanged(nameof(Username)); }
+    }
+
+    private string email;
+    public string Email
+    {
+        get => this.email;
+        set { this.email = value; OnPropertyChanged(nameof(Email)); }
+    }
+
+    private string password;
+    public string Password
+    {
+        get => this.password;
+        set { this.password = value; OnPropertyChanged(nameof(Password)); }
+    }
 
     private ImageSource platform_icon;
     public ImageSource PlatformIcon

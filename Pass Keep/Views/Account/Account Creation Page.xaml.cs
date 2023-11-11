@@ -1,3 +1,5 @@
+using Pass_Keep.Resources.Translations.Code_Behind.Passwords.Password_Creation_Page;
+using Pass_Keep.Resources.Translations.Popup;
 using Pass_Keep.View_Models.Account;
 
 namespace Pass_Keep.Views.Account;
@@ -16,7 +18,18 @@ public partial class AccountCreationPage : ContentPage
     {
         base.OnAppearing();
 
-		this.view_model.PlatformIconSource = ImageSource.FromFile("picture_picker");
+		this.view_model.NewAccount.PlatformIcon = ImageSource.FromFile("picture_picker");
+    }
+
+    protected override bool OnBackButtonPressed()
+    {
+        Dispatcher.Dispatch(async () =>
+        {
+            if (await Shell.Current.DisplayAlert(Popup.Attention, Localization.PopupLeavingWithAnUnsavedAccount, Popup.Yes, Popup.No))
+                await Shell.Current.GoToAsync("..");
+        });
+
+        return true;
     }
 
     private async void ValidateAndCreateNewAccount(object sender, EventArgs e)
@@ -24,16 +37,16 @@ public partial class AccountCreationPage : ContentPage
         if (this.view_model.ImageSelected == false)
             await ShakeFrame(FramePlatformIcon);
 
-        if (string.IsNullOrEmpty(this.view_model.Username))
+        if (string.IsNullOrEmpty(this.view_model.NewAccount.Username))
             await ShakeFrame(FrameUsername);
 
-        if (string.IsNullOrEmpty(this.view_model.Email))
+        if (string.IsNullOrEmpty(this.view_model.NewAccount.Email))
             await ShakeFrame(FrameEmail);
 
-        if (string.IsNullOrEmpty(this.view_model.Password))
+        if (string.IsNullOrEmpty(this.view_model.NewAccount.Password))
             await ShakeFrame(FramePassword);
 
-        if (this.view_model.ImageSelected && string.IsNullOrEmpty(this.view_model.Username) == false && string.IsNullOrEmpty(this.view_model.Email) == false && string.IsNullOrEmpty(this.view_model.Password) == false)
+        if (this.view_model.ImageSelected && string.IsNullOrEmpty(this.view_model.NewAccount.Username) == false && string.IsNullOrEmpty(this.view_model.NewAccount.Email) == false && string.IsNullOrEmpty(this.view_model.NewAccount.Password) == false)
             this.view_model.CommandCreateNewAccount.Execute(null);
     }
 

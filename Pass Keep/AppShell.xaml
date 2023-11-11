@@ -22,4 +22,8 @@
         </Tab>
     </FlyoutItem>
 
+    <Shell.FlyoutFooter>
+        <Label HorizontalOptions = "Center" Text = "TEST" />
+    </Shell.FlyoutFooter>
+    
 </Shell>

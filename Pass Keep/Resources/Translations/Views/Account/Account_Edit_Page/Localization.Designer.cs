@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.Code_Behind.Passwords.Password_Creation_Page {
+namespace Pass_Keep.Resources.Translations.Views.Account.Account_Edit_Page {
     using System;
     
     
@@ -39,8 +39,7 @@ namespace Pass_Keep.Resources.Translations.Code_Behind.Passwords.Password_Creati
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Code_Behind.Passwords.Password_Creation_Page.Loc" +
-                            "alization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.Account.Account_Edit_Page.Localization", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -62,11 +61,56 @@ namespace Pass_Keep.Resources.Translations.Code_Behind.Passwords.Password_Creati
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You haven&apos;t saved you account, are you sure you want to leave ?.
+        ///   Looks up a localized string similar to Account Creation.
         /// </summary>
-        internal static string PopupLeavingWithAnUnsavedAccount {
+        internal static string AccountEditPageTitle {
             get {
-                return ResourceManager.GetString("PopupLeavingWithAnUnsavedAccount", resourceCulture);
+                return ResourceManager.GetString("AccountEditPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string ButtonCreateAccount {
+            get {
+                return ResourceManager.GetString("ButtonCreateAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comments.
+        /// </summary>
+        internal static string EditorPlaceholderComments {
+            get {
+                return ResourceManager.GetString("EditorPlaceholderComments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string EntryPlaceholderEmail {
+            get {
+                return ResourceManager.GetString("EntryPlaceholderEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string EntryPlaceholderPassword {
+            get {
+                return ResourceManager.GetString("EntryPlaceholderPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        internal static string EntryPlaceholderUsername {
+            get {
+                return ResourceManager.GetString("EntryPlaceholderUsername", resourceCulture);
             }
         }
     }

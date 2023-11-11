@@ -126,10 +126,16 @@
   <data name="Error" xml:space="preserve">
     <value>Σφάλμα</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>Όχι</value>
+  </data>
   <data name="Okay" xml:space="preserve">
     <value>Εντάξει</value>
   </data>
   <data name="Warning" xml:space="preserve">
     <value>Προειδοποίηση</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ναι</value>
   </data>
 </root>

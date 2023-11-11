@@ -88,6 +88,15 @@ namespace Pass_Keep.Resources.Translations.Popup {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Okay.
         /// </summary>
         internal static string Okay {
@@ -102,6 +111,15 @@ namespace Pass_Keep.Resources.Translations.Popup {
         internal static string Warning {
             get {
                 return ResourceManager.GetString("Warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        internal static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }

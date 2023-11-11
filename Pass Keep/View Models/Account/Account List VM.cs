@@ -13,7 +13,7 @@ internal class AccountListVM : INotifyPropertyChanged
 
     public async Task LoadAccounts()
     {
-        List<object> accounts = await LocalDBAccountController.Read(LocalDBController.database_connection);
+        List<object> accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
 
         this.Accounts.Clear();
         this.all_accounts.Clear();

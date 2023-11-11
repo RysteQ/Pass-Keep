@@ -16,4 +16,18 @@ internal static class AccountConverters
             Password = account_model_db.Password,
         };
     }
+
+    // I have no clue on how to convert ImageSource to a byte array
+    public static async Task<AccountModelDB> ConvertAccountToAccountDB(AccountModel account_model, byte[] image_bytes)
+    {
+        return new()
+        {
+            GUID = account_model.GUID,
+            PlatformName = account_model.PlatformName,
+            PlatformIcon = image_bytes,
+            Username = account_model.Username,
+            Email = account_model.Email,
+            Password = account_model.Password,
+        };
+    }
 }

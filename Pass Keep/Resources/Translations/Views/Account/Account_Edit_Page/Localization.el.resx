@@ -117,25 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Aknowledge" xml:space="preserve">
-    <value>Aknowledge</value>
+  <data name="AccountEditPageTitle" xml:space="preserve">
+    <value>Δημιουργία Λογαριασμού</value>
   </data>
-  <data name="Attention" xml:space="preserve">
-    <value>Attention</value>
+  <data name="ButtonCreateAccount" xml:space="preserve">
+    <value>Αποθήκευση</value>
   </data>
-  <data name="Error" xml:space="preserve">
-    <value>Error</value>
+  <data name="EditorPlaceholderComments" xml:space="preserve">
+    <value>Σχόλια</value>
   </data>
-  <data name="No" xml:space="preserve">
-    <value>No</value>
+  <data name="EntryPlaceholderEmail" xml:space="preserve">
+    <value>Email</value>
   </data>
-  <data name="Okay" xml:space="preserve">
-    <value>Okay</value>
+  <data name="EntryPlaceholderPassword" xml:space="preserve">
+    <value>Κωδικός</value>
   </data>
-  <data name="Warning" xml:space="preserve">
-    <value>Warning</value>
-  </data>
-  <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+  <data name="EntryPlaceholderUsername" xml:space="preserve">
+    <value>Όνομα χρήστη</value>
   </data>
 </root>

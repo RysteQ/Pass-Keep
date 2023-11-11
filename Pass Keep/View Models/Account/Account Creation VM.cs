@@ -1,4 +1,5 @@
 ﻿using Pass_Keep.Models.Password_Models;
+using Pass_Keep.Services.Converters.Account_Converters;
 using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ internal class AccountCreationVM : INotifyPropertyChanged
         this.CommandSelectedAccountImage = new(async () => await SelectedAccountImage());
         this.CommandCreateNewAccount = new(async () => await CreateNewAccount());
 
-        this.PlatformName = platform_name;
+        this.NewAccount.PlatformName = platform_name;
     }
 
     private async Task SelectedAccountImage()
@@ -22,22 +23,14 @@ internal class AccountCreationVM : INotifyPropertyChanged
         if (result == null)
             return;
 
-        this.PlatformIconSource = ImageSource.FromFile(result.FullPath);
+        this.NewAccount.PlatformIcon = ImageSource.FromFile(result.FullPath);
         this.platform_icon = File.ReadAllBytes(result.FullPath);
         this.ImageSelected = true;
     }
 
     private async Task CreateNewAccount()
     {
-        this.new_account.GUID = Guid.NewGuid();
-        this.new_account.PlatformIcon = this.platform_icon;
-        this.new_account.PlatformName = this.PlatformName;
-        this.new_account.Username = this.Username;
-        this.new_account.Email = this.Email;
-        this.new_account.Password = this.Password;
-        this.new_account.GCRecord = 0;
-
-        await LocalDBAccountController.Create(LocalDBController.database_connection, this.new_account);
+        await LocalDBAccountController.Create(LocalDBController.database_connection, await AccountConverters.ConvertAccountToAccountDB(this.NewAccount, platform_icon));
         await Shell.Current.Navigation.PopAsync();
     }
 
@@ -47,42 +40,8 @@ internal class AccountCreationVM : INotifyPropertyChanged
     public Command CommandSelectedAccountImage { get; set; }
     public Command CommandCreateNewAccount { get; set; }
 
-    private ImageSource platform_icon_source;
-    public ImageSource PlatformIconSource
-    {
-        get => this.platform_icon_source;
-        set { this.platform_icon_source = value; OnPropertyChanged(nameof(PlatformIconSource)); }
-    }
-
-    private string platform_name;
-    public string PlatformName
-    {
-        get => this.platform_name;
-        set { this.platform_name = value; OnPropertyChanged(nameof(PlatformName)); }
-    }
-
-    private string username = string.Empty;
-    public string Username
-    {
-        get => this.username;
-        set { this.username = value; OnPropertyChanged(nameof(Username)); }
-    }
-
-    private string email = string.Empty;
-    public string Email
-    {
-        get => this.email;
-        set { this.email = value; OnPropertyChanged(nameof(Email)); }
-    }
-
-    private string password = string.Empty;
-    public string Password
-    {
-        get => this.password;
-        set { this.password = value; OnPropertyChanged(nameof(Password)); }
-    }
-
     public bool ImageSelected { get; private set; }
+    public AccountModel NewAccount { get; set; } = new();
 
     private AccountModelDB new_account = new();
     private byte[] platform_icon = Array.Empty<byte>();

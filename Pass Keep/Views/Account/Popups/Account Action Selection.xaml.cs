@@ -21,9 +21,10 @@ public partial class AccountActionSelection : Popup
         await this.CloseAsync();
     }
 
-    private void OnEditButtonClicked(object sender, EventArgs e)
+    private async void OnEditButtonClicked(object sender, EventArgs e)
     {
-        // TODO
+        await Shell.Current.Navigation.PushAsync(new AccountEditPage(this.account));
+        await this.CloseAsync();
     }
     
     private void OnDeleteButtonClicked(object sender, EventArgs e)

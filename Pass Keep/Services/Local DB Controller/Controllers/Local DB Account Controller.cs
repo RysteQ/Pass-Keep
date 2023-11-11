@@ -10,7 +10,7 @@ internal class LocalDBAccountController : ILocalDBModelController
 
     public static async Task Delete(SQLiteAsyncConnection database_connection, object account_model) => await database_connection.DeleteAsync(account_model as AccountModelDB);
 
-    public static async Task<List<object>> Read(SQLiteAsyncConnection database_connection)
+    public static async Task<List<object>> ReadAll(SQLiteAsyncConnection database_connection)
     {
         List<object> accounts = new();
 
@@ -18,6 +18,11 @@ internal class LocalDBAccountController : ILocalDBModelController
             accounts.Add(account as object);
 
         return accounts;
+    }
+    
+    public static async Task<object> Read(SQLiteAsyncConnection database_connection, Guid GUID)
+    {
+        return (await database_connection.Table<AccountModelDB>().Where(account => account.GUID == GUID).ToListAsync()).First();
     }
 
     public static async Task Update(SQLiteAsyncConnection database_connection, object account_model) => await database_connection.UpdateAsync(account_model as AccountModelDB);

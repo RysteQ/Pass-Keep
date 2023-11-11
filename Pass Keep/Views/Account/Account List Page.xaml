@@ -27,9 +27,9 @@
                     <DataTemplate x:DataType = "account_model:AccountModel">
                         <ViewCell>
                             <VerticalStackLayout>
-                                <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "15">
+                                <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "10">
                                     <Grid RowDefinitions = "60" ColumnDefinitions = "20*,80*" ColumnSpacing = "10">
-                                        <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "15">
+                                        <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "10">
                                             <VerticalStackLayout>
                                                 <Image HeightRequest = "64" WidthRequest = "64" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
                                             </VerticalStackLayout>
@@ -48,10 +48,10 @@
             </ListView>
         </VerticalStackLayout>
         
-        <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand" RowDefinitions = "*,1,*" ColumnDefinitions = "*,*,*,*,*">
-            <Frame Grid.Row = "0" Grid.Column = "4" Margin = "10" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
+        <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "EndAndExpand">
+            <Frame Grid.Row = "0" Grid.Column = "0" Margin = "20" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "100">
                 <VerticalStackLayout>
-                    <ImageButton BackgroundColor = "Red" CornerRadius = "20" Clicked = "OpenPreAccountCreationPopup" />
+                    <ImageButton Scale = "2" BackgroundColor = "Red" Clicked = "OpenPreAccountCreationPopup" />
                 </VerticalStackLayout>
             </Frame>
         </Grid>
