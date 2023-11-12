@@ -18,7 +18,7 @@
 
                 <Frame x:Name = "FrameUsername" Grid.Row = "1" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "16">
                     <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "Auto,65*" RowSpacing = "0">
-                        <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "Light/person" />
+                        <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "person" />
 
                         <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource White}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.EntryPlaceholderUsername}" />
                         <Entry Grid.Row = "1" Grid.Column = "1" Margin = "0" TextColor = "{AppThemeBinding Light = {StaticResource Black}, Dark = {StaticResource White}}" FontAttributes = "Bold" FontSize = "18" Text = "{Binding Account.Username}" />
@@ -27,7 +27,7 @@
 
                 <Frame x:Name = "FrameEmail" Grid.Row = "2" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "16">
                     <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "Auto,65*" RowSpacing = "0">
-                        <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "Light/email" />
+                        <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "email" />
 
                         <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource White}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.EntryPlaceholderEmail}" />
                         <Entry Grid.Row = "1" Grid.Column = "1" Margin = "0" TextColor = "{AppThemeBinding Light = {StaticResource Black}, Dark = {StaticResource White}}" FontAttributes = "Bold" FontSize = "18" Text = "{Binding Account.Email}" />
@@ -36,7 +36,7 @@
 
                 <Frame x:Name = "FramePassword" Grid.Row = "3" Grid.Column = "0" Padding = "5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "16">
                     <Grid RowDefinitions = "*,*" ColumnDefinitions = "Auto,65*" RowSpacing = "0">
-                        <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "Light/key" />
+                        <Image Grid.Row = "1" Grid.Column = "0" Margin = "10,0,10,0" Aspect = "Center" Source = "key" />
 
                         <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource White}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.EntryPlaceholderPassword}" />
                         <Entry Grid.Row = "1" Grid.Column = "1" Margin = "0" TextColor = "{AppThemeBinding Light = {StaticResource Black}, Dark = {StaticResource White}}" FontAttributes = "Bold" FontSize = "18" Text = "{Binding Account.Password}" />

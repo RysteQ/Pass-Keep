@@ -9,8 +9,35 @@
              Title="">
 
     <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" Spacing = "10">
-        <Button BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource DarkerCyan200Accent}}" TextColor = "White" Text = "{x:Static translations:Localization.ButtonChangeLoginPassword}" />
+        <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}">
+            <Grid RowDefinitions = "*,1,*,*" ColumnDefinitions = "*,*" RowSpacing = "10">
+                <Label Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "2" VerticalOptions = "Center" HorizontalOptions = "Center" FontAttributes = "Bold" Text = "{x:Static translations:Localization.LabelThemeSection}" />
 
+                <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "2" Color = "Black" />
+
+                <Grid Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "2" RowDefinitions = "*" ColumnDefinitions = "90*,10*">
+                    <Label Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" Text = "{x:Static translations:Localization.LabelAutoThemeEnabled}" />
+                    <CheckBox Grid.Row = "0" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding IsAutoThemeEnabled}" />
+                </Grid>
+
+                <Button Grid.Row = "3" Grid.Column = "0" BackgroundColor = "Red" TextColor = "White" Text = "{x:Static translations:Localization.ButtonLightTheme}" IsEnabled = "{Binding CustomThemeButtonsEnabled}" />
+                <Button Grid.Row = "3" Grid.Column = "1" BackgroundColor = "Transparent" TextColor = "White" Text = "{x:Static translations:Localization.ButtonDarkTheme}" IsEnabled = "{Binding CustomThemeButtonsEnabled}" />
+            </Grid>
+        </Frame>
+
+        <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}">
+            <Grid RowDefinitions = "*,1,*,*" ColumnDefinitions = "90*,10*" RowSpacing = "10">
+                <Label Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "2" VerticalOptions = "Center" HorizontalOptions = "Center" FontAttributes = "Bold" Text = "{x:Static translations:Localization.LabelLoginSection}" />
+
+                <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "2" Color = "Black" />
+
+                <Label Grid.Row = "2" Grid.Column = "0" VerticalOptions = "Center" Text = "{x:Static translations:Localization.LabelLoginEnabled}" />
+                <CheckBox Grid.Row = "2" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding IsLoginEnabled}" />
+
+                <Button Grid.Row = "4" Grid.Column = "0" Grid.ColumnSpan = "2" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource DarkerCyan200Accent}}" TextColor = "White" Text = "{x:Static translations:Localization.ButtonChangeLoginPassword}" Command = "{Binding CommandChangePassword}" />
+            </Grid>
+        </Frame>
+        
         <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}">
             <Grid RowDefinitions = "*,1,*,*,*" ColumnDefinitions = "90*,10*" RowSpacing = "10">
                 <Label Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "2" VerticalOptions = "Center" HorizontalOptions = "Center" FontAttributes = "Bold" Text = "{x:Static translations:Localization.LabelDangerZone}" />
@@ -18,7 +45,7 @@
                 <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "2" Color = "Black" />
 
                 <Label Grid.Row = "2" Grid.Column = "0" VerticalOptions = "Center" Text = "{x:Static translations:Localization.LabelKeepDeletedAccounts}" />
-                <CheckBox Grid.Row = "2" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" />
+                <CheckBox Grid.Row = "2" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding ActuallyDeleteAccounts}" />
 
                 <Button Grid.Row = "3" Grid.Column = "0" Grid.ColumnSpan = "2" BackgroundColor = "{StaticResource Red800}" TextColor = "White" Text = "{x:Static translations:Localization.LabelDeleteHiddenAccounts}" Command = "{Binding CommandDeleteHiddenAccounts}" />
                 <Button Grid.Row = "4" Grid.Column = "0" Grid.ColumnSpan = "2" BackgroundColor = "{StaticResource Red800}" TextColor = "White" Text = "{x:Static translations:Localization.LabelDeleteAllAccounts}" Command = "{Binding CommandDeleteAllAccounts}" />

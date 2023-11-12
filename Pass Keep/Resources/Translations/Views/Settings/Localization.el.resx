@@ -120,6 +120,15 @@
   <data name="ButtonChangeLoginPassword" xml:space="preserve">
     <value>Αλλαγή κωδικού εισόδου</value>
   </data>
+  <data name="ButtonDarkTheme" xml:space="preserve">
+    <value>Dark theme</value>
+  </data>
+  <data name="ButtonLightTheme" xml:space="preserve">
+    <value>Light theme</value>
+  </data>
+  <data name="LabelAutoThemeEnabled" xml:space="preserve">
+    <value>Είναι η αυτόματη αλλαγή του θέματος ενεργή</value>
+  </data>
   <data name="LabelDangerZone" xml:space="preserve">
     <value>Επικίνδυνη ζώνη</value>
   </data>
@@ -131,5 +140,14 @@
   </data>
   <data name="LabelKeepDeletedAccounts" xml:space="preserve">
     <value>Απόλυτη διαγραφή λογαριασμών</value>
+  </data>
+  <data name="LabelLoginEnabled" xml:space="preserve">
+    <value>Είναι η είσοδος απαραίτητη</value>
+  </data>
+  <data name="LabelLoginSection" xml:space="preserve">
+    <value>Είσοδος</value>
+  </data>
+  <data name="LabelThemeSection" xml:space="preserve">
+    <value>Γραφικό περιβάλλον</value>
   </data>
 </root>

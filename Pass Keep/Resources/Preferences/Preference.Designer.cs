@@ -61,11 +61,38 @@ namespace Pass_Keep.Resources.Preferences {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to actually_delete_accounts.
+        /// </summary>
+        internal static string ActuallyDeleteAccounts {
+            get {
+                return ResourceManager.GetString("ActuallyDeleteAccounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to auto_theme_enabled.
+        /// </summary>
+        internal static string AutoThemeEnabled {
+            get {
+                return ResourceManager.GetString("AutoThemeEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to first_time_login.
         /// </summary>
         internal static string FirstTimeLogin {
             get {
                 return ResourceManager.GetString("FirstTimeLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to is_login_enabled.
+        /// </summary>
+        internal static string IsLoginEnabled {
+            get {
+                return ResourceManager.GetString("IsLoginEnabled", resourceCulture);
             }
         }
         

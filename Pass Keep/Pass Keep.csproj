@@ -48,12 +48,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\add_account.svg" />
 	  <None Remove="Resources\Images\add_new_account.png" />
 	  <None Remove="Resources\Images\email.png" />
+	  <None Remove="Resources\Images\email.svg" />
+	  <None Remove="Resources\Images\key.svg" />
 	  <None Remove="Resources\Images\key_light.png" />
 	  <None Remove="Resources\Images\passwords.png" />
+	  <None Remove="Resources\Images\person.svg" />
 	  <None Remove="Resources\Images\person_light.png" />
 	  <None Remove="Resources\Images\picture_picker.png" />
+	  <None Remove="Resources\Images\picture_picker.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -65,17 +70,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Images\Light\" />
 	  <Folder Include="Resources\Translations\Services\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiImage Include="Resources\Images\Dark\add_new_account.png" />
-	  <MauiImage Include="Resources\Images\Dark\email.png" />
-	  <MauiImage Include="Resources\Images\Dark\key.png" />
-	  <MauiImage Include="Resources\Images\Dark\passwords.png" />
-	  <MauiImage Include="Resources\Images\Dark\person.png" />
-	  <MauiImage Include="Resources\Images\Dark\picture_picker.png" />
 	</ItemGroup>
 
 	<ItemGroup>

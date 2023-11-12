@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActuallyDeleteAccounts" xml:space="preserve">
+    <value>actually_delete_accounts</value>
+  </data>
+  <data name="AutoThemeEnabled" xml:space="preserve">
+    <value>auto_theme_enabled</value>
+  </data>
   <data name="FirstTimeLogin" xml:space="preserve">
     <value>first_time_login</value>
+  </data>
+  <data name="IsLoginEnabled" xml:space="preserve">
+    <value>is_login_enabled</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>password</value>

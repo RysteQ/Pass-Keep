@@ -70,6 +70,33 @@ namespace Pass_Keep.Resources.Translations.Views.Settings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dark theme.
+        /// </summary>
+        internal static string ButtonDarkTheme {
+            get {
+                return ResourceManager.GetString("ButtonDarkTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light theme.
+        /// </summary>
+        internal static string ButtonLightTheme {
+            get {
+                return ResourceManager.GetString("ButtonLightTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is auto theme enabled.
+        /// </summary>
+        internal static string LabelAutoThemeEnabled {
+            get {
+                return ResourceManager.GetString("LabelAutoThemeEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Danger Zone.
         /// </summary>
         internal static string LabelDangerZone {
@@ -102,6 +129,33 @@ namespace Pass_Keep.Resources.Translations.Views.Settings {
         internal static string LabelKeepDeletedAccounts {
             get {
                 return ResourceManager.GetString("LabelKeepDeletedAccounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is login required.
+        /// </summary>
+        internal static string LabelLoginEnabled {
+            get {
+                return ResourceManager.GetString("LabelLoginEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string LabelLoginSection {
+            get {
+                return ResourceManager.GetString("LabelLoginSection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theme.
+        /// </summary>
+        internal static string LabelThemeSection {
+            get {
+                return ResourceManager.GetString("LabelThemeSection", resourceCulture);
             }
         }
     }

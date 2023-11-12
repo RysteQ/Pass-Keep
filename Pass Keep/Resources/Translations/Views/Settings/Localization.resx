@@ -120,6 +120,15 @@
   <data name="ButtonChangeLoginPassword" xml:space="preserve">
     <value>Change your login password</value>
   </data>
+  <data name="ButtonDarkTheme" xml:space="preserve">
+    <value>Dark theme</value>
+  </data>
+  <data name="ButtonLightTheme" xml:space="preserve">
+    <value>Light theme</value>
+  </data>
+  <data name="LabelAutoThemeEnabled" xml:space="preserve">
+    <value>Is auto theme enabled</value>
+  </data>
   <data name="LabelDangerZone" xml:space="preserve">
     <value>Danger Zone</value>
   </data>
@@ -131,5 +140,14 @@
   </data>
   <data name="LabelKeepDeletedAccounts" xml:space="preserve">
     <value>Actually delete accounts</value>
+  </data>
+  <data name="LabelLoginEnabled" xml:space="preserve">
+    <value>Is login required</value>
+  </data>
+  <data name="LabelLoginSection" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LabelThemeSection" xml:space="preserve">
+    <value>Theme</value>
   </data>
 </root>
