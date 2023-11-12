@@ -7,10 +7,15 @@
     xmlns:login_views="clr-namespace:Pass_Keep.Views.Login"
     xmlns:account_views="clr-namespace:Pass_Keep.Views.Account"
     xmlns:settings_views="clr-namespace:Pass_Keep.Views.Settings"
-    xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell">
+    xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell"
+    FlyoutBackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
 
-    <ShellContent FlyoutItemIsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
+    <Shell.FlyoutHeader>
+        <Label Margin = "20" HorizontalOptions = "Center" FontSize = "Title" FontAttributes = "Bold" Text = "Pass Keep" />
+    </Shell.FlyoutHeader>
     
+    <ShellContent FlyoutItemIsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
+
     <FlyoutItem Route = "AccountListPage" Title = "{x:Static translations:Localization.Passwords_TabBar_Title}">
         <Tab Route = "AccountListPage">
             <ShellContent Route = "AccountListPage" ContentTemplate = "{DataTemplate account_views:AccountListPage}" />

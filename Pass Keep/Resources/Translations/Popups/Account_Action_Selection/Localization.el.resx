@@ -129,4 +129,7 @@
   <data name="ButtonAccountEdit" xml:space="preserve">
     <value>Επεξεργασία</value>
   </data>
+  <data name="ErrorAccountDeletion" xml:space="preserve">
+    <value>Υπήρξε σφάλμα στην διαγραφή του λογαριασμού</value>
+  </data>
 </root>

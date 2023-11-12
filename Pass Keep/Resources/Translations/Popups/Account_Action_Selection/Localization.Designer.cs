@@ -95,5 +95,14 @@ namespace Pass_Keep.Resources.Translations.Popups.Account_Action_Selection {
                 return ResourceManager.GetString("ButtonAccountEdit", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error was encountered while deleting the account.
+        /// </summary>
+        internal static string ErrorAccountDeletion {
+            get {
+                return ResourceManager.GetString("ErrorAccountDeletion", resourceCulture);
+            }
+        }
     }
 }

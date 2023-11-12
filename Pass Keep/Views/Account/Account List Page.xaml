@@ -4,7 +4,6 @@
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
              xmlns:account_model="clr-namespace:Pass_Keep.Models.Password_Models"
              xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Accounts.Account_List_Page"
-             xmlns:navigation_translation="clr-namespace:Pass_Keep.Resources.Translations.Navigation"
              x:Class="Pass_Keep.Views.Account.AccountListPage"
              x:DataType="view_model:AccountListVM"
              Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}"
@@ -14,7 +13,7 @@
         <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
             <Frame Padding = "0,10,0,10" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
                 <Grid RowDefinitions = "*" ColumnDefinitions = "*">
-                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" BorderColor = "Transparent" CornerRadius = "10">
+                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent" CornerRadius = "10">
                         <VerticalStackLayout>
                             <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
                         </VerticalStackLayout>
@@ -27,7 +26,7 @@
                     <DataTemplate x:DataType = "account_model:AccountModel">
                         <ViewCell>
                             <VerticalStackLayout>
-                                <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "10">
+                                <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" CornerRadius = "10">
                                     <Grid RowDefinitions = "60" ColumnDefinitions = "20*,80*" ColumnSpacing = "10">
                                         <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "10">
                                             <VerticalStackLayout>

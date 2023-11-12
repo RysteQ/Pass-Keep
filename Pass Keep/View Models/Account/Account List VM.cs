@@ -27,6 +27,9 @@ internal class AccountListVM : INotifyPropertyChanged
 
         foreach (object account in accounts)
         {
+            if ((account as AccountModelDB).GCRecord != 0)
+                continue;
+
             this.Accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
             this.all_accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
         }

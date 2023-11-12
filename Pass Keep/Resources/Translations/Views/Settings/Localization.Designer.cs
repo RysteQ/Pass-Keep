@@ -59,5 +59,50 @@ namespace Pass_Keep.Resources.Translations.Views.Settings {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change your login password.
+        /// </summary>
+        internal static string ButtonChangeLoginPassword {
+            get {
+                return ResourceManager.GetString("ButtonChangeLoginPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Danger Zone.
+        /// </summary>
+        internal static string LabelDangerZone {
+            get {
+                return ResourceManager.GetString("LabelDangerZone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete ALL accounts.
+        /// </summary>
+        internal static string LabelDeleteAllAccounts {
+            get {
+                return ResourceManager.GetString("LabelDeleteAllAccounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete previously &quot;deleted&quot; accounts.
+        /// </summary>
+        internal static string LabelDeleteHiddenAccounts {
+            get {
+                return ResourceManager.GetString("LabelDeleteHiddenAccounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Actually delete accounts.
+        /// </summary>
+        internal static string LabelKeepDeletedAccounts {
+            get {
+                return ResourceManager.GetString("LabelKeepDeletedAccounts", resourceCulture);
+            }
+        }
     }
 }
