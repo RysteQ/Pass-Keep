@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pass_Keep.Views.Login.LoginPage"
-             BackgroundColor="{AppThemeBinding Light = {StaticResource BlueGrey50}, Dark = {StaticResource BlueGrey900}}"
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Login"
              xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Login"
              Shell.TabBarIsVisible="False"
              Shell.NavBarIsVisible="False"
              x:DataType="view_model:LoginVM"
+             BackgroundColor="{AppThemeBinding Light = {StaticResource BlueGrey50}, Dark = {StaticResource BlueGrey900}}"
              Title="LoginPage">
 
     <Grid RowDefinitions = "*" ColumnDefinitions = "*,8*,*">

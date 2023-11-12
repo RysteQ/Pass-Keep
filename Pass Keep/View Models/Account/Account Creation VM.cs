@@ -1,5 +1,6 @@
 ﻿using Pass_Keep.Models.Password_Models;
 using Pass_Keep.Services.Converters.Account_Converters;
+using Pass_Keep.Services.Error_Informer;
 using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using System.ComponentModel;
@@ -30,7 +31,11 @@ internal class AccountCreationVM : INotifyPropertyChanged
 
     private async Task CreateNewAccount()
     {
-        await LocalDBAccountController.Create(LocalDBController.database_connection, await AccountConverters.ConvertAccountToAccountDB(this.NewAccount, platform_icon));
+        try
+        {
+            await LocalDBAccountController.Create(LocalDBController.database_connection, await AccountConverters.ConvertAccountToAccountDB(this.NewAccount, platform_icon));
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountCreationVM), nameof(CreateNewAccount), "", ex); }
+
         await Shell.Current.Navigation.PopAsync();
     }
 

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
              xmlns:account_model="clr-namespace:Pass_Keep.Models.Password_Models"
-             xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Account.Account_List_Page"
+             xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Accounts.Account_List_Page"
              xmlns:navigation_translation="clr-namespace:Pass_Keep.Resources.Translations.Navigation"
              x:Class="Pass_Keep.Views.Account.AccountListPage"
              x:DataType="view_model:AccountListVM"

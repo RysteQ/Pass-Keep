@@ -12,10 +12,6 @@ public partial class AccountEditPage : ContentPage
 		this.view_model = new(account);
 		BindingContext = this.view_model;
 	}
-    private void OnImageButtonClicked(object sender, EventArgs e)
-    {
-
-    }
 
     private AccountEditVM view_model;
 }

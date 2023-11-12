@@ -4,6 +4,8 @@ using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Pass_Keep.Services.Converters.Account_Converters;
+using Pass_Keep.Services.Error_Informer;
+using Pass_Keep.Resources.Translations.View_Models.Accounts.Account_List_Page;
 
 namespace Pass_Keep.View_Models.Account;
 
@@ -13,7 +15,12 @@ internal class AccountListVM : INotifyPropertyChanged
 
     public async Task LoadAccounts()
     {
-        List<object> accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
+        List<object> accounts = new();
+        
+        try
+        {
+            accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountListVM), nameof(LoadAccounts), Localization.ErrorLoadingAccounts, ex); return; }
 
         this.Accounts.Clear();
         this.all_accounts.Clear();

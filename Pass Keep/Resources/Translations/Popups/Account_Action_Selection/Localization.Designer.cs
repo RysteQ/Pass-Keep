@@ -61,6 +61,15 @@ namespace Pass_Keep.Resources.Translations.Popups.Account_Action_Selection {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the account ?.
+        /// </summary>
+        internal static string AccountDeletion {
+            get {
+                return ResourceManager.GetString("AccountDeletion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         internal static string ButtonAccountDelete {

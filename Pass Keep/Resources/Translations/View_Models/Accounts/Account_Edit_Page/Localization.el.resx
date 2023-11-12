@@ -117,16 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AccountDeletion" xml:space="preserve">
-    <value>Είστε σίγουρος ότι θέλετε να διαγράψετε τον λογαριασμό;</value>
-  </data>
-  <data name="ButtonAccountDelete" xml:space="preserve">
-    <value>Διαραφή</value>
-  </data>
-  <data name="ButtonAccountDetails" xml:space="preserve">
-    <value>Λεπτομέρειες</value>
-  </data>
-  <data name="ButtonAccountEdit" xml:space="preserve">
-    <value>Επεξεργασία</value>
+  <data name="ErrorSavingEdits" xml:space="preserve">
+    <value>Υπήρξε σφάλμα στην αποθήκευση των αλλαγών σας</value>
   </data>
 </root>

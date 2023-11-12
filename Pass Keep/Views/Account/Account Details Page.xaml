@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Account.Account_Details_Page"
+             xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Accounts.Account_Details_Page"
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
              x:Class="Pass_Keep.Views.Account.AccountDetailsPage"
              x:DataType="view_model:AccountDetailsVM"
@@ -12,7 +12,7 @@
     <Grid BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Black}}">
         <Grid VerticalOptions = "EndAndExpand" RowDefinitions = "Auto,Auto,Auto" ColumnDefinitions = "*,*,*" RowSpacing = "24">
             <Frame Grid.Row = "0" Grid.Column = "1" Grid.RowSpan = "2" ZIndex = "1" Padding = "0" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "30">
-                <Image HeightRequest = "128" WidthRequest = "128" Aspect = "AspectFill" Source = "{Binding AccountProfileImage}" />
+                <Image HeightRequest = "128" WidthRequest = "128" Aspect = "AspectFill" Source = "{Binding Account.PlatformIcon}" />
             </Frame>
             
             <Frame Grid.Row = "1" Grid.Column = "0" Grid.RowSpan = "2" Grid.ColumnSpan = "3" ZIndex = "0" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "30" />
@@ -20,7 +20,7 @@
             <Frame Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" Padding = "0,0,0,40" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "0">
                 <Grid>
                     <Grid Grid.Row = "0" Grid.Column = "0" RowDefinitions = "Auto,Auto" ColumnDefinitions = "10*,80*,10*" RowSpacing = "24">
-                        <Label Grid.Row = "0" Grid.Column = "1" HorizontalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "Title" Text = "{Binding PlatformName}" />
+                        <Label Grid.Row = "0" Grid.Column = "1" HorizontalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "Title" Text = "{Binding Account.PlatformName}" />
 
                         <Grid Grid.Row = "1" Grid.Column = "1" Margin = "0" RowDefinitions = "*,*,*" ColumnDefinitions = "*" RowSpacing = "24">
                             <Frame Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey100}, Dark = {StaticResource Grey900}}" CornerRadius = "24">
@@ -30,7 +30,7 @@
                                 
                                 <Grid RowDefinitions = "*,*" ColumnDefinitions = "*" RowSpacing = "10" ColumnSpacing = "10">
                                     <Label Grid.Row = "0" Grid.Column = "0" FontSize = "13" TextColor = "{StaticResource Gray300}" Text = "{x:Static translations:Localization.AccountDetailsUsername}" />
-                                    <Label Grid.Row = "1" Grid.Column = "0" FontSize = "15" Text = "{Binding AccountUsername}" />
+                                    <Label Grid.Row = "1" Grid.Column = "0" FontSize = "15" Text = "{Binding Account.Username}" />
                                 </Grid>
                             </Frame>
 
@@ -41,7 +41,7 @@
                                 
                                 <Grid RowDefinitions = "*,*" ColumnDefinitions = "*" RowSpacing = "10" ColumnSpacing = "10">
                                     <Label Grid.Row = "0" Grid.Column = "0" FontSize = "13" TextColor = "{StaticResource Gray300}" Text = "{x:Static translations:Localization.AccountDetailsEmails}" />
-                                    <Label Grid.Row = "1" Grid.Column = "0" FontSize = "15" Text = "{Binding AccountEmail}" />
+                                    <Label Grid.Row = "1" Grid.Column = "0" FontSize = "15" Text = "{Binding Account.Email}" />
                                 </Grid>
                             </Frame>
 
@@ -52,7 +52,7 @@
                                 
                                 <Grid Grid.Row = "0" Grid.Column = "0" RowDefinitions = "*,*" ColumnDefinitions = "80*,20*" VerticalOptions = "Center" RowSpacing = "10" ColumnSpacing = "10">
                                     <Label Grid.Row = "0" Grid.Column = "0" FontSize = "13" TextColor = "{StaticResource Gray300}" Text = "{x:Static translations:Localization.AccountDetailsPassword}" />
-                                    <Entry Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Center" IsReadOnly = "True" FontSize = "15" IsPassword = "{Binding HidePassword}" Text = "{Binding AccountPassword}" />
+                                    <Entry Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Center" IsReadOnly = "True" FontSize = "15" IsPassword = "{Binding HidePassword}" Text = "{Binding Account.Password}" />
 
                                     <ImageButton Grid.Row = "1" Grid.Column = "1" BackgroundColor = "Red" Command = "{Binding CommandChangePasswordVisibility}"  />
                                 </Grid>

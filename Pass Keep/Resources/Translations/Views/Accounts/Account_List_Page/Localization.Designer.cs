@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.View_Models.Login {
+namespace Pass_Keep.Resources.Translations.Views.Accounts.Account_List_Page {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Pass_Keep.Resources.Translations.View_Models.Login {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.View_Models.Login.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.Accounts.Account_List_Page.Localization", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,11 @@ namespace Pass_Keep.Resources.Translations.View_Models.Login {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The username or password is incorrect.
+        ///   Looks up a localized string similar to Search.
         /// </summary>
-        internal static string Username_Or_Password_Is_Incorrect {
+        internal static string EntrySearchPlaceholderText {
             get {
-                return ResourceManager.GetString("Username_Or_Password_Is_Incorrect", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The username / password field are required.
-        /// </summary>
-        internal static string Username_Or_Password_Is_Required {
-            get {
-                return ResourceManager.GetString("Username_Or_Password_Is_Required", resourceCulture);
+                return ResourceManager.GetString("EntrySearchPlaceholderText", resourceCulture);
             }
         }
     }

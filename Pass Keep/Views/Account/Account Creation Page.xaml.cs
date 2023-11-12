@@ -1,4 +1,4 @@
-using Pass_Keep.Resources.Translations.Code_Behind.Passwords.Password_Creation_Page;
+using Pass_Keep.Resources.Translations.Code_Behind.Accounts.Account_Creation_Page;
 using Pass_Keep.Resources.Translations.Popup;
 using Pass_Keep.View_Models.Account;
 
@@ -26,7 +26,7 @@ public partial class AccountCreationPage : ContentPage
         Dispatcher.Dispatch(async () =>
         {
             if (await Shell.Current.DisplayAlert(Popup.Attention, Localization.PopupLeavingWithAnUnsavedAccount, Popup.Yes, Popup.No))
-                await Shell.Current.GoToAsync("..");
+                await Shell.Current.Navigation.PopAsync();
         });
 
         return true;

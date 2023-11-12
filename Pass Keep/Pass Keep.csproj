@@ -39,7 +39,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -52,11 +51,9 @@
 	  <None Remove="Resources\Images\add_new_account.png" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\key_light.png" />
-	  <None Remove="Resources\Images\magnifying_glass.png" />
 	  <None Remove="Resources\Images\passwords.png" />
 	  <None Remove="Resources\Images\person_light.png" />
 	  <None Remove="Resources\Images\picture_picker.png" />
-	  <None Remove="Resources\Images\three_dots.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -68,13 +65,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Resources\Images\Light\" />
 	  <Folder Include="Resources\Translations\Services\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Include="Resources\Images\Light\email.png" />
-	  <MauiImage Include="Resources\Images\Light\key.png" />
-	  <MauiImage Include="Resources\Images\Light\person.png" />
+	  <MauiImage Include="Resources\Images\Dark\add_new_account.png" />
+	  <MauiImage Include="Resources\Images\Dark\email.png" />
+	  <MauiImage Include="Resources\Images\Dark\key.png" />
+	  <MauiImage Include="Resources\Images\Dark\passwords.png" />
+	  <MauiImage Include="Resources\Images\Dark\person.png" />
+	  <MauiImage Include="Resources\Images\Dark\picture_picker.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -83,12 +84,32 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Preference.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\Code_Behind\Passwords\Password_Creation_Page\Localization.Designer.cs">
+	  <Compile Update="Resources\Translations\Code_Behind\Accounts\Account_List_Page\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\Navigation\Localization.Designer.cs">
+	  <Compile Update="Resources\Translations\Code_Behind\Accounts\Account_Details_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Code_Behind\Accounts\Account_Creation_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\App_Shell\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Code_Behind\Settings\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Code_Behind\Login\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
@@ -108,12 +129,62 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Popup.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\Views\Account\Account_Details_Page\Localization.Designer.cs">
+	  <Compile Update="Resources\Translations\Views\Accounts\Account_Creation_Page\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\Views\Account\Account_Edit_Page\Localization.Designer.cs">
+	  <Compile Update="Resources\Translations\Views\Accounts\Account_Details_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Accounts\Account_Edit_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Accounts\Account_List_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Settings\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Login\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Accounts\Account_Creation_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Accounts\Account_Details_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Accounts\Account_Edit_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Accounts\Account_List_Page\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Login\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Settings\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
@@ -157,23 +228,19 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Passwords\Password_Creation_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Accounts\Account_Creation_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Passwords\Password_Details_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Accounts\Account_Details_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Passwords\Password_List_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Accounts\Account_List_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Settings\Localization.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Navigation\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -189,7 +256,11 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Popup.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\Account\Account_Edit_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Views\Accounts\Account_Creation_Page\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\Accounts\Account_Edit_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -197,19 +268,39 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\Account\Account_Creation_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Views\Accounts\Account_Details_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\Account\Account_Details_Page\Localization.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\Account\Account_List_Page\Localization.resx">
+	  <EmbeddedResource Update="Resources\Translations\Views\Accounts\Account_List_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Views\Settings\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Accounts\Account_Creation_Page\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Accounts\Account_Details_Page\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Accounts\Account_Edit_Page\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Accounts\Account_List_Page\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Login\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Settings\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>

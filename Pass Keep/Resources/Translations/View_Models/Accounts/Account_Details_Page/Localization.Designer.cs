@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.View_Models.Login {
+namespace Pass_Keep.Resources.Translations.View_Models.Accounts.Account_Details_Page {
     using System;
     
     
@@ -39,7 +39,8 @@ namespace Pass_Keep.Resources.Translations.View_Models.Login {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.View_Models.Login.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.View_Models.Accounts.Account_Details_Page.Locali" +
+                            "zation", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,24 +58,6 @@ namespace Pass_Keep.Resources.Translations.View_Models.Login {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The username or password is incorrect.
-        /// </summary>
-        internal static string Username_Or_Password_Is_Incorrect {
-            get {
-                return ResourceManager.GetString("Username_Or_Password_Is_Incorrect", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The username / password field are required.
-        /// </summary>
-        internal static string Username_Or_Password_Is_Required {
-            get {
-                return ResourceManager.GetString("Username_Or_Password_Is_Required", resourceCulture);
             }
         }
     }

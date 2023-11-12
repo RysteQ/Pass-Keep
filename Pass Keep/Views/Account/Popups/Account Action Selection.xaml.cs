@@ -1,5 +1,8 @@
 using CommunityToolkit.Maui.Views;
 using Pass_Keep.Models.Password_Models;
+using Pass_Keep.Resources.Translations.Popups.Account_Action_Selection;
+using Pass_Keep.Services.Local_DB_Controller;
+using Pass_Keep.Services.Local_DB_Controller.Controllers;
 
 namespace Pass_Keep.Views.Account.Popups;
 
@@ -27,9 +30,16 @@ public partial class AccountActionSelection : Popup
         await this.CloseAsync();
     }
     
-    private void OnDeleteButtonClicked(object sender, EventArgs e)
+    private async void OnDeleteButtonClicked(object sender, EventArgs e)
     {
-        // TODO
+        if (await Shell.Current.DisplayAlert(Pass_Keep.Resources.Translations.Popup.Popup.Warning, Localization.AccountDeletion, Pass_Keep.Resources.Translations.Popup.Popup.Yes, Pass_Keep.Resources.Translations.Popup.Popup.No) == false)
+            return;
+
+        AccountModelDB to_delete = await LocalDBAccountController.Read(LocalDBController.database_connection, this.account.GUID) as AccountModelDB;
+
+        to_delete.GCRecord = new Random().Next();
+
+        await LocalDBAccountController.Update(LocalDBController.database_connection, to_delete);
     }
 
     private AccountModel account;

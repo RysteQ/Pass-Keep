@@ -7,7 +7,7 @@ internal class AccountDetailsVM : INotifyPropertyChanged
 {
     public AccountDetailsVM(AccountModel account)
     {
-        this.account = account;
+        this.Account = account;
 
         this.CommandCopyUsername = new(async () => await CopyUsername());
         this.CommandCopyEmail = new(async () => await CopyEmail());
@@ -17,17 +17,17 @@ internal class AccountDetailsVM : INotifyPropertyChanged
 
     private async Task CopyUsername()
     {
-        await Clipboard.SetTextAsync(this.account.Username);
+        await Clipboard.SetTextAsync(this.Account.Username);
     }
 
     private async Task CopyEmail()
     {
-        await Clipboard.SetTextAsync(this.account.Username);
+        await Clipboard.SetTextAsync(this.Account.Username);
     }
 
     private async Task CopyPassword()
     {
-        await Clipboard.SetTextAsync(this.account.Username);
+        await Clipboard.SetTextAsync(this.Account.Username);
     }
 
     private void ChangePasswordVisibility()
@@ -44,11 +44,7 @@ internal class AccountDetailsVM : INotifyPropertyChanged
     public Command CommandCopyPassword { get; set; }
     public Command CommandChangePasswordVisibility { get; set; }
 
-    public ImageSource AccountProfileImage { get => this.account.PlatformIcon; }
-    public string PlatformName { get => this.account.PlatformName; }
-    public string AccountUsername { get => this.account.Username; }
-    public string AccountEmail { get => this.account.Email; }
-    public string AccountPassword { get => this.account.Password; }
+    public AccountModel Account { get; set; }
 
     private bool hide_password = true;
     public bool HidePassword
@@ -56,6 +52,4 @@ internal class AccountDetailsVM : INotifyPropertyChanged
         get => this.hide_password;
         set { this.hide_password = value; OnPropertyChanged(nameof(HidePassword)); }
     }
-
-    private AccountModel account;
 }
