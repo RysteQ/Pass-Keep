@@ -13,7 +13,7 @@
             <Entry x:Name = "EntryPlatformName" FontAttributes = "Bold" FontSize = "18" TextColor = "{AppThemeBinding Light = {StaticResource Black}, Dark = {StaticResource White}}" Placeholder = "{x:Static translations:Localization.EntryPlaceholderPlatformNameText}" />
         </Frame>
 
-        <Button Grid.Row = "2" Grid.Column = "1" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource DarkerCyan200Accent}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Clicked = "ShowCreateNewAccountPage" Text = "{x:Static translations:Localization.ButtonOpenCreateAccountPageText}" CornerRadius = "16" />
+        <Button Grid.Row = "2" Grid.Column = "1" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource LightBlue500}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Clicked = "ShowCreateNewAccountPage" Text = "{x:Static translations:Localization.ButtonOpenCreateAccountPageText}" CornerRadius = "16" />
     </Grid>
 
 </toolkit:Popup>

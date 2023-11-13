@@ -31,6 +31,8 @@ internal class AccountCreationVM : INotifyPropertyChanged
 
     private async Task CreateNewAccount()
     {
+        this.NewAccount.GUID = Guid.NewGuid();
+
         try
         {
             await LocalDBAccountController.Create(LocalDBController.database_connection, await AccountConverters.ConvertAccountToAccountDB(this.NewAccount, platform_icon));

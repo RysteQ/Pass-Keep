@@ -15,8 +15,9 @@ public partial class AccountActionSelection : Popup
 
 		this.account = account;
 
-		label_account_name.Text = this.account.Username;
-		image_account_profile_image.Source = this.account.PlatformIcon;
+        LabelPlatformName.Text = this.account.PlatformName;
+		LabelAccountName.Text = this.account.Username;
+		ImageAccountProfileImage.Source = this.account.PlatformIcon;
 	}
 
     private async void OnDetailsButtonClicked(object sender, EventArgs e)

@@ -8,7 +8,7 @@
     xmlns:account_views="clr-namespace:Pass_Keep.Views.Account"
     xmlns:settings_views="clr-namespace:Pass_Keep.Views.Settings"
     xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell"
-    FlyoutBackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+    FlyoutBackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}">
 
     <Shell.FlyoutHeader>
         <Label Margin = "20" HorizontalOptions = "Center" FontSize = "Title" FontAttributes = "Bold" Text = "Pass Keep" />
@@ -16,19 +16,19 @@
     
     <ShellContent FlyoutItemIsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
 
-    <FlyoutItem Route = "AccountListPage" Title = "{x:Static translations:Localization.Passwords_TabBar_Title}">
+    <FlyoutItem Route = "AccountListPage" Icon = "accounts" Title = "{x:Static translations:Localization.Passwords_TabBar_Title}">
         <Tab Route = "AccountListPage">
             <ShellContent Route = "AccountListPage" ContentTemplate = "{DataTemplate account_views:AccountListPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title = "{x:Static translations:Localization.Settings_TabBar_Title}">
+    <FlyoutItem Icon = "settings" Title = "{x:Static translations:Localization.Settings_TabBar_Title}">
         <Tab>
             <ShellContent ContentTemplate = "{DataTemplate settings_views:SettingsPage}" />
         </Tab>
     </FlyoutItem>
 
     <Shell.FlyoutFooter>
-        <Label HorizontalOptions = "Center" Text = "TEST" />
+        <Label x:Name = "LabelVersion" HorizontalOptions = "Center" />
     </Shell.FlyoutFooter>
     
 </Shell>

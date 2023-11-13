@@ -43,7 +43,7 @@
                     </Grid>
                 </Frame>
 
-                <Button Grid.Row = "4" Grid.Column = "1" Margin = "0,20,0,0" Padding = "22" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource DarkerCyan200Accent}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonCreateAccount}" CornerRadius = "16" Command = "{Binding CommandSaveEdits}" />
+                <Button Grid.Row = "4" Grid.Column = "1" Margin = "0,20,0,0" Padding = "22" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource LightBlue500}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonCreateAccount}" CornerRadius = "16" Command = "{Binding CommandSaveEdits}" />
             </Grid>
         </Grid>
     </Grid>

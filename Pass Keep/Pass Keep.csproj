@@ -48,6 +48,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\accounts.svg" />
 	  <None Remove="Resources\Images\add_account.svg" />
 	  <None Remove="Resources\Images\add_new_account.png" />
 	  <None Remove="Resources\Images\email.png" />
@@ -59,6 +60,7 @@
 	  <None Remove="Resources\Images\person_light.png" />
 	  <None Remove="Resources\Images\picture_picker.png" />
 	  <None Remove="Resources\Images\picture_picker.svg" />
+	  <None Remove="Resources\Images\settings.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -95,6 +97,11 @@
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Translations\App_Shell\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Code_Behind\Deleted_Accounts\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
@@ -144,6 +151,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Deleted_Accounts\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Translations\Views\Settings\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -174,6 +186,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Deleted_Accounts\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Translations\View_Models\Login\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -196,6 +213,9 @@
 	  <Compile Update="Views\Account\Popups\Pre Account Creation.xaml.cs">
 	    <DependentUpon>Pre Account Creation.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Deleted Accounts\Deleted Accounts.xaml.cs">
+	    <DependentUpon>Deleted Accounts.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Login\Login Page.xaml.cs">
 	    <DependentUpon>Login Page.xaml</DependentUpon>
 	  </Compile>
@@ -216,6 +236,10 @@
 	    <LastGenOutput>Preference.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\App_Shell\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Deleted_Accounts\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -259,6 +283,10 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\Deleted_Accounts\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Views\Login\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
@@ -288,6 +316,10 @@
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\View_Models\Accounts\Account_List_Page\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Deleted_Accounts\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -339,6 +371,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Popups\Account Action Selection.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Deleted Accounts\Deleted Accounts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Login\Login Page.xaml">
