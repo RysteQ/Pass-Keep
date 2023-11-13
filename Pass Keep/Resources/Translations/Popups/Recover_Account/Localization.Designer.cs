@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
+namespace Pass_Keep.Resources.Translations.Popups.Recover_Account {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.Deleted_Accounts.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Popups.Recover_Account.Localization", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,15 +57,6 @@ namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Search.
-        /// </summary>
-        internal static string EntrySearchPlaceholderText {
-            get {
-                return ResourceManager.GetString("EntrySearchPlaceholderText", resourceCulture);
             }
         }
     }

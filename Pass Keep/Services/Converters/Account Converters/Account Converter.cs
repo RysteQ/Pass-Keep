@@ -18,7 +18,7 @@ internal static class AccountConverters
     }
 
     // I have no clue on how to convert ImageSource to a byte array
-    public static async Task<AccountModelDB> ConvertAccountToAccountDB(AccountModel account_model, byte[] image_bytes)
+    public static AccountModelDB ConvertAccountToAccountDB(AccountModel account_model, byte[] image_bytes)
     {
         return new()
         {

@@ -59,5 +59,14 @@ namespace Pass_Keep.Resources.Translations.View_Models.Deleted_Accounts {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error was encountered while loading your accounts.
+        /// </summary>
+        internal static string ErrorLoadingAccounts {
+            get {
+                return ResourceManager.GetString("ErrorLoadingAccounts", resourceCulture);
+            }
+        }
     }
 }

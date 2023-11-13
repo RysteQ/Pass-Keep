@@ -36,7 +36,7 @@ internal class AccountCreationVM : INotifyPropertyChanged
 
         try
         {
-            await LocalDBAccountController.Create(LocalDBController.database_connection, await AccountConverters.ConvertAccountToAccountDB(this.NewAccount, platform_icon));
+            await LocalDBAccountController.Create(LocalDBController.database_connection, AccountConverters.ConvertAccountToAccountDB(this.NewAccount, platform_icon));
         } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountCreationVM), nameof(CreateNewAccount), "", ex); }
 
         await Shell.Current.Navigation.PopAsync();

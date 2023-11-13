@@ -129,6 +129,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Translations\Popups\Recover_Account\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Translations\Popup\Popup.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -219,6 +224,9 @@
 	  <Compile Update="Views\Deleted Accounts\Deleted Accounts.xaml.cs">
 	    <DependentUpon>Deleted Accounts.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Deleted Accounts\Popups\Recover Account.xaml.cs">
+	    <DependentUpon>Recover Account.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Login\Login Page.xaml.cs">
 	    <DependentUpon>Login Page.xaml</DependentUpon>
 	  </Compile>
@@ -271,6 +279,10 @@
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Popups\Pre_Account_Creation_Page\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Popups\Recover_Account\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -377,6 +389,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Deleted Accounts\Deleted Accounts.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Deleted Accounts\Popups\Recover Account.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Login\Login Page.xaml">

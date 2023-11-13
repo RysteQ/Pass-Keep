@@ -59,5 +59,14 @@ namespace Pass_Keep.Resources.Translations.Code_Behind.Deleted_Accounts {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore selected account ?.
+        /// </summary>
+        internal static string QuestionRestoreAccount {
+            get {
+                return ResourceManager.GetString("QuestionRestoreAccount", resourceCulture);
+            }
+        }
     }
 }

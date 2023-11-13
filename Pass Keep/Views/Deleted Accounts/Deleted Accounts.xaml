@@ -1,12 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Deleted_Accounts"
+             xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Deleted_Accounts"
+             xmlns:account_model="clr-namespace:Pass_Keep.Models.Password_Models"
              x:Class="Pass_Keep.Views.Deleted_Accounts.DeletedAccounts"
+             x:DataType="view_model:DeletedAccountsVM"
              Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}"
              Title="">
 
-    <VerticalStackLayout Spacing = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
-        
+    <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+        <Frame Padding = "0,0,0,10" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
+            <Grid RowDefinitions = "*" ColumnDefinitions = "*">
+                <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent" CornerRadius = "10">
+                    <VerticalStackLayout>
+                        <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+        </Frame>
+
+        <ListView x:Name = "ListViewAccountsList" ItemsSource = "{Binding Accounts}" SelectionMode = "None" HasUnevenRows = "True" SeparatorVisibility = "None" VerticalScrollBarVisibility = "Never" ItemTapped = "AccountTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType = "account_model:AccountModel">
+                    <ViewCell>
+                        <VerticalStackLayout>
+                            <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" CornerRadius = "10">
+                                <Grid RowDefinitions = "60" ColumnDefinitions = "20*,80*" ColumnSpacing = "10">
+                                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "10">
+                                        <VerticalStackLayout>
+                                            <Image HeightRequest = "64" WidthRequest = "64" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
+                                        </VerticalStackLayout>
+                                    </Frame>
+
+                                    <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" VerticalOptions = "Center">
+                                        <Label Grid.Row = "0" Grid.Column = "0" VerticalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "18" Text = "{Binding PlatformName}" />
+                                        <Label Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Center" TextColor = "#CCCCCC" Text = "{Binding Email}" />
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </VerticalStackLayout>
 
 </ContentPage>

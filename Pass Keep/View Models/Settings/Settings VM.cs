@@ -17,7 +17,7 @@ class SettingsVM : INotifyPropertyChanged
 
     private async Task ChangePassword()
     {
-
+        // TODO
     }
 
     private async Task DeleteHiddenAccounts()
