@@ -58,5 +58,16 @@ public partial class AccountCreationPage : ContentPage
         await frame.TranslateTo(0, 0, 50, Easing.Linear);
     }
 
+    private async void OnPasswordVisibilityImageButtonClicked(object sender, EventArgs e)
+    {
+        if (this.view_model.HidePassword)
+            ImageButtonPasswordVisibility.Source = ImageSource.FromFile("visibility_on.svg");
+        else
+            ImageButtonPasswordVisibility.Source = ImageSource.FromFile("visibility_off.svg");
+
+        await ImageButtonPasswordVisibility.ScaleTo(0.75, 50, Easing.Linear);
+        await ImageButtonPasswordVisibility.ScaleTo(1, 50, Easing.Linear);
+    }
+
     private AccountCreationVM view_model;
 }

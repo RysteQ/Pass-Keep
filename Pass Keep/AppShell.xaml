@@ -22,7 +22,7 @@
             <ShellContent Route = "AccountListPage" ContentTemplate = "{DataTemplate account_views:AccountListPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Icon = "accounts" Title = "{x:Static translations:Localization.Deleted_Accounts_Title}">
+    <FlyoutItem Icon = "deleted_account" Title = "{x:Static translations:Localization.Deleted_Accounts_Title}">
         <Tab>
             <ShellContent ContentTemplate = "{DataTemplate deleted_account_views:DeletedAccounts}" />
         </Tab>

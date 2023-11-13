@@ -27,8 +27,11 @@ public partial class AccountListPage : ContentPage
         return true;
     }
 
-    private void OpenPreAccountCreationPopup(object sender, EventArgs e)
+    private async void OpenPreAccountCreationPopup(object sender, EventArgs e)
     {
+        await FrameCreateNewAccount.ScaleTo(0.8, 35, Easing.Linear);
+        await FrameCreateNewAccount.ScaleTo(1, 35, Easing.Linear);
+
         this.ShowPopup(new PreAccountCreation());
     }
 

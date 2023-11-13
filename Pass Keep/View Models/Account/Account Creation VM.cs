@@ -13,6 +13,7 @@ internal class AccountCreationVM : INotifyPropertyChanged
     {
         this.CommandSelectedAccountImage = new(async () => await SelectedAccountImage());
         this.CommandCreateNewAccount = new(async () => await CreateNewAccount());
+        this.CommandHidePassword = new(HidePasswordMethod);
 
         this.NewAccount.PlatformName = platform_name;
     }
@@ -41,14 +42,27 @@ internal class AccountCreationVM : INotifyPropertyChanged
         await Shell.Current.Navigation.PopAsync();
     }
 
+    private void HidePasswordMethod()
+    {
+        this.HidePassword = !this.HidePassword;
+    }
+
     public virtual void OnPropertyChanged(string property_name) => this.PropertyChanged?.Invoke(property_name, new(property_name));
     public event PropertyChangedEventHandler PropertyChanged;
 
     public Command CommandSelectedAccountImage { get; set; }
     public Command CommandCreateNewAccount { get; set; }
+    public Command CommandHidePassword { get; set; }
 
-    public bool ImageSelected { get; private set; }
+    public bool ImageSelected { get; set; }
     public AccountModel NewAccount { get; set; } = new();
+
+    private bool hide_password = true;
+    public bool HidePassword
+    {
+        get => this.hide_password;
+        set { this.hide_password = value; OnPropertyChanged(nameof(HidePassword)); }
+    }
 
     private AccountModelDB new_account = new();
     private byte[] platform_icon = Array.Empty<byte>();

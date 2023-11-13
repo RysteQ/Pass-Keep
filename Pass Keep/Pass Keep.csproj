@@ -51,6 +51,7 @@
 	  <None Remove="Resources\Images\accounts.svg" />
 	  <None Remove="Resources\Images\add_account.svg" />
 	  <None Remove="Resources\Images\add_new_account.png" />
+	  <None Remove="Resources\Images\deleted_account.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\email.svg" />
 	  <None Remove="Resources\Images\key.svg" />
@@ -61,6 +62,8 @@
 	  <None Remove="Resources\Images\picture_picker.png" />
 	  <None Remove="Resources\Images\picture_picker.svg" />
 	  <None Remove="Resources\Images\settings.svg" />
+	  <None Remove="Resources\Images\visibility_off.svg" />
+	  <None Remove="Resources\Images\visibility_on.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

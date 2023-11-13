@@ -48,7 +48,7 @@
         </VerticalStackLayout>
         
         <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "EndAndExpand">
-            <Frame Grid.Row = "0" Grid.Column = "0" Margin = "20" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "100">
+            <Frame x:Name = "FrameCreateNewAccount" Grid.Row = "0" Grid.Column = "0" Margin = "20" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "100">
                 <VerticalStackLayout>
                     <ImageButton HeightRequest = "64" WidthRequest = "64" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" Scale = "1.2" Aspect = "Center" Source = "add_account" Clicked = "OpenPreAccountCreationPopup" />
                 </VerticalStackLayout>

@@ -13,6 +13,7 @@ internal class AccountEditVM : INotifyPropertyChanged
     {
         this.CommandSaveEdits = new(async () => await SaveEdit());
         this.CommandChangeImage = new(async () => await ChangeImage());
+        this.CommandHidePassword = new(HidePasswordMethod);
 
         this.Account = account;
     }
@@ -52,11 +53,24 @@ internal class AccountEditVM : INotifyPropertyChanged
         await Shell.Current.Navigation.PopAsync();
     }
 
+    private void HidePasswordMethod()
+    {
+        this.HidePassword = !this.HidePassword;
+    }
+
     public event PropertyChangedEventHandler PropertyChanged;
     public virtual void OnPropertyChanged(string property_name) => this.PropertyChanged?.Invoke(this, new(property_name));
 
     public Command CommandChangeImage { get; set; }
     public Command CommandSaveEdits { get; set; }
+    public Command CommandHidePassword { get; set; }
+
+    private bool hide_password = true;
+    public bool HidePassword
+    {
+        get => this.hide_password;
+        set { this.hide_password = value; OnPropertyChanged(nameof(HidePassword)); }
+    }
 
     private AccountModel account;
     public AccountModel Account
