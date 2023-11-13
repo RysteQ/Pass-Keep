@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:Pass_Keep"
     xmlns:login_views="clr-namespace:Pass_Keep.Views.Login"
     xmlns:account_views="clr-namespace:Pass_Keep.Views.Account"
+    xmlns:deleted_account_views="clr-namespace:Pass_Keep.Views.Deleted_Accounts"
     xmlns:settings_views="clr-namespace:Pass_Keep.Views.Settings"
     xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell"
     FlyoutBackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}">
@@ -21,6 +22,11 @@
             <ShellContent Route = "AccountListPage" ContentTemplate = "{DataTemplate account_views:AccountListPage}" />
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Icon = "accounts" Title = "{x:Static translations:Localization.Deleted_Accounts_Title}">
+        <Tab>
+            <ShellContent ContentTemplate = "{DataTemplate deleted_account_views:DeletedAccounts}" />
+        </Tab>
+    </FlyoutItem>
     <FlyoutItem Icon = "settings" Title = "{x:Static translations:Localization.Settings_TabBar_Title}">
         <Tab>
             <ShellContent ContentTemplate = "{DataTemplate settings_views:SettingsPage}" />
@@ -28,7 +34,7 @@
     </FlyoutItem>
 
     <Shell.FlyoutFooter>
-        <Label x:Name = "LabelVersion" HorizontalOptions = "Center" />
+        <Label x:Name = "LabelVersion" Margin = "10" HorizontalOptions = "Center" FontAttributes = "Bold" />
     </Shell.FlyoutFooter>
     
 </Shell>

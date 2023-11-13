@@ -61,6 +61,15 @@ namespace Pass_Keep.Resources.Translations.App_Shell {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deleted Accounts.
+        /// </summary>
+        internal static string Deleted_Accounts_Title {
+            get {
+                return ResourceManager.GetString("Deleted_Accounts_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Passwords.
         /// </summary>
         internal static string Passwords_TabBar_Title {
