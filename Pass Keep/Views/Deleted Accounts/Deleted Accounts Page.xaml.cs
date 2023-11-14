@@ -7,9 +7,9 @@ using Pass_Keep.Models.Password_Models;
 
 namespace Pass_Keep.Views.Deleted_Accounts;
 
-public partial class DeletedAccounts : ContentPage
+public partial class DeletedAccountsPage : ContentPage
 {
-	public DeletedAccounts()
+	public DeletedAccountsPage()
 	{
 		InitializeComponent();
 
@@ -24,9 +24,10 @@ public partial class DeletedAccounts : ContentPage
         await this.view_model.LoadAccounts();
     }
     
-    private void AccountTapped(object sender, ItemTappedEventArgs e)
+    private async void AccountTapped(object sender, ItemTappedEventArgs e)
     {
-        this.ShowPopup(new RecoverAccount(e.Item as AccountModel));
+        await this.ShowPopupAsync(new RecoverAccount(e.Item as AccountModel));
+        await this.view_model.LoadAccounts();
     }
 
     private DeletedAccountsVM view_model;

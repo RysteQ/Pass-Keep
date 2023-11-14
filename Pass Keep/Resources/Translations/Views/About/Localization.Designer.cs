@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.App_Shell {
+namespace Pass_Keep.Resources.Translations.Views.About {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Pass_Keep.Resources.Translations.App_Shell {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.App_Shell.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.About.Localization", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,42 +57,6 @@ namespace Pass_Keep.Resources.Translations.App_Shell {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to About.
-        /// </summary>
-        internal static string AboutTitle {
-            get {
-                return ResourceManager.GetString("AboutTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Deleted Accounts.
-        /// </summary>
-        internal static string DeletedAccountsTitle {
-            get {
-                return ResourceManager.GetString("DeletedAccountsTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Passwords.
-        /// </summary>
-        internal static string PasswordsTitle {
-            get {
-                return ResourceManager.GetString("PasswordsTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Settings.
-        /// </summary>
-        internal static string SettingsTitle {
-            get {
-                return ResourceManager.GetString("SettingsTitle", resourceCulture);
             }
         }
     }

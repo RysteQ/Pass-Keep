@@ -117,13 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Deleted_Accounts_Title" xml:space="preserve">
+  <data name="AboutTitle" xml:space="preserve">
+    <value>Πληροφορίες</value>
+  </data>
+  <data name="DeletedAccountsTitle" xml:space="preserve">
     <value>Διαγραμμένοι λογαριασμοί</value>
   </data>
-  <data name="Passwords_TabBar_Title" xml:space="preserve">
+  <data name="PasswordsTitle" xml:space="preserve">
     <value>Κωδικοί</value>
   </data>
-  <data name="Settings_TabBar_Title" xml:space="preserve">
+  <data name="SettingsTitle" xml:space="preserve">
     <value>Ρυθμίσεις</value>
   </data>
 </root>

@@ -63,6 +63,12 @@ class SettingsVM : INotifyPropertyChanged
         set { Preferences.Set(Preference.IsLoginEnabled, value); OnPropertyChanged(nameof(IsLoginEnabled)); }
     }
 
+    public bool IsReLoginEnabled
+    {
+        get => Preferences.Get(Preference.IsReLoginEnabled, true);
+        set { Preferences.Set(Preference.IsReLoginEnabled, value); OnPropertyChanged(nameof(IsReLoginEnabled)); }
+    }
+
     public bool ActuallyDeleteAccounts
     {
         get => Preferences.Get(Preference.ActuallyDeleteAccounts, false);

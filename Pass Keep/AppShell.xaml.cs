@@ -15,8 +15,6 @@ public partial class AppShell : Shell
     {
         base.OnAppearing();
 
-        LabelVersion.Text = $"Version {AppInfo.VersionString}";
-
         await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
     }
 }

@@ -4,7 +4,7 @@
              xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Deleted_Accounts"
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Deleted_Accounts"
              xmlns:account_model="clr-namespace:Pass_Keep.Models.Password_Models"
-             x:Class="Pass_Keep.Views.Deleted_Accounts.DeletedAccounts"
+             x:Class="Pass_Keep.Views.Deleted_Accounts.DeletedAccountsPage"
              x:DataType="view_model:DeletedAccountsVM"
              Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}"
              Title="">

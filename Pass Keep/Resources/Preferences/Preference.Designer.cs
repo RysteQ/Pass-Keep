@@ -97,6 +97,15 @@ namespace Pass_Keep.Resources.Preferences {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to is_relogin_enabled.
+        /// </summary>
+        internal static string IsReLoginEnabled {
+            get {
+                return ResourceManager.GetString("IsReLoginEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to password.
         /// </summary>
         internal static string Password {

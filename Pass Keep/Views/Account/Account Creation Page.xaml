@@ -10,7 +10,7 @@
              Title="">
 
     <ScrollView>
-        <Grid RowDefinitions = "Auto,90*" ColumnDefinitions = "*" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" RowSpacing = "20">
+        <Grid RowDefinitions = "Auto,*" ColumnDefinitions = "*" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" RowSpacing = "20">
             <Label Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center" FontAttributes = "Bold" FontSize = "40" Text = "{Binding NewAccount.PlatformName}" />
 
             <Grid Grid.Row = "1" Grid.Column = "0" RowDefinitions = "*" ColumnDefinitions = "5*,90*,5*">

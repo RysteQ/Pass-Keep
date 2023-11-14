@@ -138,6 +138,9 @@
   <data name="LabelDeleteHiddenAccounts" xml:space="preserve">
     <value>Delete previously "deleted" accounts</value>
   </data>
+  <data name="LabelIsLoginAfterSleepRequired" xml:space="preserve">
+    <value>Is login after sleep required ?</value>
+  </data>
   <data name="LabelKeepDeletedAccounts" xml:space="preserve">
     <value>Actually delete accounts</value>
   </data>

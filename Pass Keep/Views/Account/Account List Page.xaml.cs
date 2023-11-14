@@ -35,9 +35,10 @@ public partial class AccountListPage : ContentPage
         this.ShowPopup(new PreAccountCreation());
     }
 
-    private void AccountTapped(object sender, ItemTappedEventArgs e)
+    private async void AccountTapped(object sender, ItemTappedEventArgs e)
     {
-        this.ShowPopup(new AccountActionSelection(e.Item as AccountModel));
+        await this.ShowPopupAsync(new AccountActionSelection(e.Item as AccountModel));
+        await this.view_model.LoadAccounts();
     }
 
     private AccountListVM view_model;

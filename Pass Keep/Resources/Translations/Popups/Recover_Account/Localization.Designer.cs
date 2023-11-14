@@ -59,5 +59,50 @@ namespace Pass_Keep.Resources.Translations.Popups.Recover_Account {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        internal static string ButtonPermanentDelete {
+            get {
+                return ResourceManager.GetString("ButtonPermanentDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recover.
+        /// </summary>
+        internal static string ButtonRecover {
+            get {
+                return ResourceManager.GetString("ButtonRecover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occured while permanently deleting the account.
+        /// </summary>
+        internal static string ErrorPermanentDeleteAccount {
+            get {
+                return ResourceManager.GetString("ErrorPermanentDeleteAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occured while recovering the account.
+        /// </summary>
+        internal static string ErrorRecoverAccount {
+            get {
+                return ResourceManager.GetString("ErrorRecoverAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to permanently delete your account ?.
+        /// </summary>
+        internal static string QuestionPermanentlyDeleteAccount {
+            get {
+                return ResourceManager.GetString("QuestionPermanentlyDeleteAccount", resourceCulture);
+            }
+        }
     }
 }

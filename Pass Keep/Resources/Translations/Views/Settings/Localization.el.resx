@@ -138,6 +138,9 @@
   <data name="LabelDeleteHiddenAccounts" xml:space="preserve">
     <value>Διαγραφή κρυφών λογαριασμών</value>
   </data>
+  <data name="LabelIsLoginAfterSleepRequired" xml:space="preserve">
+    <value>Είναι απαραίτητο η είσοδος μετά την ελαχιστοποίηση</value>
+  </data>
   <data name="LabelKeepDeletedAccounts" xml:space="preserve">
     <value>Απόλυτη διαγραφή λογαριασμών</value>
   </data>

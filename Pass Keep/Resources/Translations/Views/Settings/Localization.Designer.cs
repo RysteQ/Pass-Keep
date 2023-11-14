@@ -124,6 +124,15 @@ namespace Pass_Keep.Resources.Translations.Views.Settings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is login after sleep required ?.
+        /// </summary>
+        internal static string LabelIsLoginAfterSleepRequired {
+            get {
+                return ResourceManager.GetString("LabelIsLoginAfterSleepRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Actually delete accounts.
         /// </summary>
         internal static string LabelKeepDeletedAccounts {

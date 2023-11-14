@@ -8,6 +8,7 @@
     xmlns:account_views="clr-namespace:Pass_Keep.Views.Account"
     xmlns:deleted_account_views="clr-namespace:Pass_Keep.Views.Deleted_Accounts"
     xmlns:settings_views="clr-namespace:Pass_Keep.Views.Settings"
+    xmlns:about_views="clr-namespace:Pass_Keep.Views.About"
     xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell"
     FlyoutBackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}">
 
@@ -17,24 +18,25 @@
     
     <ShellContent FlyoutItemIsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
 
-    <FlyoutItem Route = "AccountListPage" Icon = "accounts" Title = "{x:Static translations:Localization.Passwords_TabBar_Title}">
+    <FlyoutItem Route = "AccountListPage" Icon = "accounts" Title = "{x:Static translations:Localization.PasswordsTitle}">
         <Tab Route = "AccountListPage">
             <ShellContent Route = "AccountListPage" ContentTemplate = "{DataTemplate account_views:AccountListPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Icon = "deleted_account" Title = "{x:Static translations:Localization.Deleted_Accounts_Title}">
+    <FlyoutItem Icon = "deleted_account" Title = "{x:Static translations:Localization.DeletedAccountsTitle}">
         <Tab>
-            <ShellContent ContentTemplate = "{DataTemplate deleted_account_views:DeletedAccounts}" />
+            <ShellContent ContentTemplate = "{DataTemplate deleted_account_views:DeletedAccountsPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Icon = "settings" Title = "{x:Static translations:Localization.Settings_TabBar_Title}">
+    <FlyoutItem Icon = "settings" Title = "{x:Static translations:Localization.SettingsTitle}">
         <Tab>
             <ShellContent ContentTemplate = "{DataTemplate settings_views:SettingsPage}" />
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Icon = "about" Title = "{x:Static translations:Localization.AboutTitle}">
+        <Tab>
+            <ShellContent ContentTemplate = "{DataTemplate about_views:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
 
-    <Shell.FlyoutFooter>
-        <Label x:Name = "LabelVersion" Margin = "10" HorizontalOptions = "Center" FontAttributes = "Bold" />
-    </Shell.FlyoutFooter>
-    
 </Shell>

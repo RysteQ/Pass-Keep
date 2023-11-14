@@ -48,6 +48,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\about.svg" />
 	  <None Remove="Resources\Images\accounts.svg" />
 	  <None Remove="Resources\Images\add_account.svg" />
 	  <None Remove="Resources\Images\add_new_account.png" />
@@ -83,6 +84,11 @@
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Preference.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Code_Behind\About\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Translations\Code_Behind\Accounts\Account_List_Page\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
@@ -139,6 +145,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Popup.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Translations\Views\About\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Translations\Views\Accounts\Account_Creation_Page\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -170,6 +181,11 @@
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Translations\Views\Login\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\About\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
@@ -209,6 +225,9 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\About\About Page.xaml.cs">
+	    <DependentUpon>About Page.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Account\Account Edit Page.xaml.cs">
 	    <DependentUpon>Account Edit Page.xaml</DependentUpon>
 	  </Compile>
@@ -221,8 +240,8 @@
 	  <Compile Update="Views\Account\Popups\Pre Account Creation.xaml.cs">
 	    <DependentUpon>Pre Account Creation.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Deleted Accounts\Deleted Accounts.xaml.cs">
-	    <DependentUpon>Deleted Accounts.xaml</DependentUpon>
+	  <Compile Update="Views\Deleted Accounts\Deleted Accounts Page.xaml.cs">
+	    <DependentUpon>Deleted Accounts Page.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Deleted Accounts\Popups\Recover Account.xaml.cs">
 	    <DependentUpon>Recover Account.xaml</DependentUpon>
@@ -236,6 +255,9 @@
 	  <Compile Update="Views\Account\Account Creation Page.xaml.cs">
 	    <DependentUpon>Account Creation Page.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Settings\Popups\Change Password Popup.xaml.cs">
+	    <DependentUpon>Change Password Popup.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Settings\Settings Page.xaml.cs">
 	    <DependentUpon>Settings Page.xaml</DependentUpon>
 	  </Compile>
@@ -247,6 +269,10 @@
 	    <LastGenOutput>Preference.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\App_Shell\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\About\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -290,6 +316,10 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Popup.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\About\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Views\Accounts\Account_Creation_Page\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
@@ -315,6 +345,10 @@
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Views\Settings\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\About\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -379,6 +413,9 @@
 	  <MauiXaml Update="Resources\Styles\ViewSpecificAccountListColours.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\About\About Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Account Edit Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -388,7 +425,7 @@
 	  <MauiXaml Update="Views\Account\Popups\Account Action Selection.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Deleted Accounts\Deleted Accounts.xaml">
+	  <MauiXaml Update="Views\Deleted Accounts\Deleted Accounts Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Deleted Accounts\Popups\Recover Account.xaml">
@@ -404,6 +441,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Popups\Pre Account Creation.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Settings\Popups\Change Password Popup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Settings\Settings Page.xaml">
