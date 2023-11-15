@@ -130,6 +130,16 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localization.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Translations\Popups\Change_Password\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Popups\Countdown_Popup\Localization.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localization.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Translations\Popups\Pre_Account_Creation_Page\Localization.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -255,6 +265,9 @@
 	  <Compile Update="Views\Account\Account Creation Page.xaml.cs">
 	    <DependentUpon>Account Creation Page.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Settings\Popups\Countdown Popup.xaml.cs">
+	    <DependentUpon>Countdown Popup.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Settings\Popups\Change Password Popup.xaml.cs">
 	    <DependentUpon>Change Password Popup.xaml</DependentUpon>
 	  </Compile>
@@ -301,6 +314,14 @@
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Popups\Account_Action_Selection\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Popups\Change_Password\Localization.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Popups\Countdown_Popup\Localization.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localization.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -441,6 +462,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Popups\Pre Account Creation.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Settings\Popups\Countdown Popup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Settings\Popups\Change Password Popup.xaml">

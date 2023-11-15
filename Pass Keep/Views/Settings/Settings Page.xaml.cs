@@ -39,5 +39,10 @@ public partial class SettingsPage : ContentPage
         await this.ShowPopupAsync(new ChangePasswordPopup());
     }
 
+    private async void OnDeleteAllAccountsButtonClicked(object sender, EventArgs e)
+    {
+        await this.ShowPopupAsync(new CountdownPopup());
+    }
+
     private SettingsVM view_model;
 }

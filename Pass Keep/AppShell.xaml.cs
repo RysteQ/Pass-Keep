@@ -1,4 +1,7 @@
-﻿using Pass_Keep.Views.Login;
+﻿using Pass_Keep.Resources.Preferences;
+using Pass_Keep.Services.Local_DB_Controller;
+using Pass_Keep.Views.Account;
+using Pass_Keep.Views.Login;
 
 namespace Pass_Keep;
 
@@ -11,10 +14,15 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
     }
 
-    protected override async void OnAppearing()
+    protected override void OnAppearing()
     {
         base.OnAppearing();
 
-        await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
+        LocalDBController.InitDatabase();
+
+        if (Preferences.Get(Preference.IsLoginEnabled, true))
+            Shell.Current.GoToAsync($"{nameof(LoginPage)}");
+        else
+            Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
     }
 }
