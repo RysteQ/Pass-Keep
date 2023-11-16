@@ -61,15 +61,6 @@ namespace Pass_Keep.Resources.Preferences {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to actually_delete_accounts.
-        /// </summary>
-        internal static string ActuallyDeleteAccounts {
-            get {
-                return ResourceManager.GetString("ActuallyDeleteAccounts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to auto_theme_enabled.
         /// </summary>
         internal static string AutoThemeEnabled {

@@ -68,5 +68,14 @@ namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
                 return ResourceManager.GetString("EntrySearchPlaceholderText", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You don&apos;t have any deleted accounts.
+        /// </summary>
+        internal static string LabelNoDeletedAccounts {
+            get {
+                return ResourceManager.GetString("LabelNoDeletedAccounts", resourceCulture);
+            }
+        }
     }
 }

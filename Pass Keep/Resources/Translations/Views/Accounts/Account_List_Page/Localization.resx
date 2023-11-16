@@ -120,4 +120,7 @@
   <data name="EntrySearchPlaceholderText" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="LabelNoAccountsDetected" xml:space="preserve">
+    <value>You have no accouts, go ahead and create one</value>
+  </data>
 </root>

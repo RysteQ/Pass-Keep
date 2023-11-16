@@ -1,6 +1,7 @@
 ﻿using Pass_Keep.Models.Password_Models;
 using Pass_Keep.Services.Converters.Account_Converters;
 using Pass_Keep.Services.Error_Informer;
+using Pass_Keep.Services.Image_Picker;
 using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ internal class AccountCreationVM : INotifyPropertyChanged
 
     private async Task SelectedAccountImage()
     {
-        FileResult result = await MediaPicker.PickPhotoAsync();
+        FileResult result = await ImagePicker.PickImage();
 
         if (result == null)
             return;

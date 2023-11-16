@@ -11,24 +11,12 @@ class SettingsVM : INotifyPropertyChanged
     public SettingsVM()
     {
         this.CommandChangePassword = new(async () => await ChangePassword());
-        this.CommandDeleteHiddenAccounts = new(async () => await DeleteHiddenAccounts());
         this.CommandDeleteAllAccounts = new(async () => await DeleteAllAccounts());
     }
 
     private async Task ChangePassword()
     {
         // TODO
-    }
-
-    private async Task DeleteHiddenAccounts()
-    {
-        if (await Shell.Current.DisplayAlert(Popup.Warning, Localization.PopupDeleteHiddenAccounts, Popup.Yes, Popup.No))
-        {
-            try
-            {
-                // TODO
-            } catch (Exception ex) { await ErrorInformer.Inform(nameof(SettingsVM), nameof(DeleteAllAccounts), Localization.ErrorDeletingHiddenAccounts, ex); }
-        }
     }
 
     private async Task DeleteAllAccounts()
@@ -46,7 +34,6 @@ class SettingsVM : INotifyPropertyChanged
     public virtual void OnPropertyChanged(string property_name) => this.PropertyChanged?.Invoke(this, new(property_name));
 
     public Command CommandChangePassword { get; set; }
-    public Command CommandDeleteHiddenAccounts { get; set; }
     public Command CommandDeleteAllAccounts { get; set; }
 
     public bool IsAutoThemeEnabled
@@ -67,11 +54,5 @@ class SettingsVM : INotifyPropertyChanged
     {
         get => Preferences.Get(Preference.IsReLoginEnabled, true);
         set { Preferences.Set(Preference.IsReLoginEnabled, value); OnPropertyChanged(nameof(IsReLoginEnabled)); }
-    }
-
-    public bool ActuallyDeleteAccounts
-    {
-        get => Preferences.Get(Preference.ActuallyDeleteAccounts, false);
-        set { Preferences.Set(Preference.ActuallyDeleteAccounts, value); OnPropertyChanged(nameof(ActuallyDeleteAccounts)); }
     }
 }

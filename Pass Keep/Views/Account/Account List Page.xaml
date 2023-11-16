@@ -46,6 +46,10 @@
                 </ListView.ItemTemplate>
             </ListView>
         </VerticalStackLayout>
+
+        <Grid VerticalOptions = "Center" HorizontalOptions = "Center">
+            <Label x:Name = "LabelNoAccountsDetected" IsVisible = "{Binding NoAccountsLoaded}" Text = "{x:Static translation:Localization.LabelNoAccountsDetected}" />
+        </Grid>
         
         <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "EndAndExpand">
             <Frame x:Name = "FrameCreateNewAccount" Grid.Row = "0" Grid.Column = "0" Margin = "20" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "100">

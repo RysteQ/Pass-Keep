@@ -120,4 +120,7 @@
   <data name="EntrySearchPlaceholderText" xml:space="preserve">
     <value>Αναζήτηση</value>
   </data>
+  <data name="LabelNoDeletedAccounts" xml:space="preserve">
+    <value>Δεν έχετε διαγραμμένους λογαριασμούς</value>
+  </data>
 </root>

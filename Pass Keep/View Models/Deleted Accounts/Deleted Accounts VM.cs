@@ -30,9 +30,11 @@ class DeletedAccountsVM : INotifyPropertyChanged
             if ((account as AccountModelDB).GCRecord == 0)
                 continue;
 
-            this.Accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
             this.all_accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
+            this.Accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
         }
+
+        this.NoAccountsLoaded = !this.Accounts.Any();
     }
 
     private void SearchPasswords()
@@ -42,6 +44,8 @@ class DeletedAccountsVM : INotifyPropertyChanged
         foreach (AccountModel account in this.all_accounts)
             if (account.PlatformName.ToUpper().Contains(this.SearchPassword.ToUpper().Trim()) || account.Username.ToUpper().Contains(this.SearchPassword.ToUpper().Trim()))
                 this.Accounts.Add(account);
+
+        this.NoAccountsLoaded = !this.Accounts.Any();
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
@@ -70,6 +74,13 @@ class DeletedAccountsVM : INotifyPropertyChanged
             } else
                 SearchPasswords();
         }
+    }
+    
+    private bool no_accounts_loaded;
+    public bool NoAccountsLoaded
+    {
+        get => this.no_accounts_loaded;
+        set { this.no_accounts_loaded = value; OnPropertyChanged(nameof(NoAccountsLoaded)); }
     }
 
     private List<AccountModel> all_accounts = new();

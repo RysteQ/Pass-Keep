@@ -68,5 +68,14 @@ namespace Pass_Keep.Resources.Translations.Views.Accounts.Account_List_Page {
                 return ResourceManager.GetString("EntrySearchPlaceholderText", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have no accouts, go ahead and create one.
+        /// </summary>
+        internal static string LabelNoAccountsDetected {
+            get {
+                return ResourceManager.GetString("LabelNoAccountsDetected", resourceCulture);
+            }
+        }
     }
 }

@@ -6,6 +6,7 @@
              xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Login"
              Shell.TabBarIsVisible="False"
              Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
              x:DataType="view_model:LoginVM"
              BackgroundColor="{AppThemeBinding Light = {StaticResource BlueGrey50}, Dark = {StaticResource BlueGrey900}}"
              Title="LoginPage">

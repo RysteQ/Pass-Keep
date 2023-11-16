@@ -43,13 +43,10 @@
             </Frame>
 
             <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}">
-                <Grid RowDefinitions = "*,1,*,*" ColumnDefinitions = "90*,10*" RowSpacing = "10">
+                <Grid RowDefinitions = "*,1,*" ColumnDefinitions = "90*,10*" RowSpacing = "10">
                     <Label Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "2" VerticalOptions = "Center" HorizontalOptions = "Center" FontSize = "16" Text = "{x:Static translations:Localization.LabelDangerZone}" />
 
                     <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "2" Margin = "20,0,20,0" Color = "#55000000" />
-
-                    <Label Grid.Row = "2" Grid.Column = "0" VerticalOptions = "Center" TextColor = "{StaticResource Grey300}" Text = "{x:Static translations:Localization.LabelKeepDeletedAccounts}" />
-                    <CheckBox Grid.Row = "2" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding ActuallyDeleteAccounts}" />
 
                     <Button Grid.Row = "3" Grid.Column = "0" Grid.ColumnSpan = "2" CornerRadius = "16" BackgroundColor = "{StaticResource Red800}" TextColor = "White" Text = "{x:Static translations:Localization.LabelDeleteAllAccounts}" Clicked = "OnDeleteAllAccountsButtonClicked" />
                 </Grid>

@@ -33,6 +33,8 @@ internal class AccountListVM : INotifyPropertyChanged
             this.Accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
             this.all_accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
         }
+
+        this.NoAccountsLoaded = !this.Accounts.Any();
     }
 
     private void SearchPasswords()
@@ -42,6 +44,8 @@ internal class AccountListVM : INotifyPropertyChanged
         foreach (AccountModel account in this.all_accounts)
             if (account.PlatformName.ToUpper().Contains(this.SearchPassword.ToUpper().Trim()) || account.Username.ToUpper().Contains(this.SearchPassword.ToUpper().Trim()))
                 this.Accounts.Add(account);
+
+        this.NoAccountsLoaded = !this.Accounts.Any();
     }
 
     public virtual void OnPropertyChanged(string property_name) => this.PropertyChanged?.Invoke(property_name, new(property_name));
@@ -70,6 +74,13 @@ internal class AccountListVM : INotifyPropertyChanged
             } else
                 SearchPasswords();
         }
+    }
+
+    private bool no_accounts_loaded;
+    public bool NoAccountsLoaded
+    {
+        get => this.no_accounts_loaded;
+        set { this.no_accounts_loaded = value; OnPropertyChanged(nameof(NoAccountsLoaded)); }
     }
 
     private List<AccountModel> all_accounts = new();

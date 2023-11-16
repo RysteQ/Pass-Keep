@@ -4,6 +4,7 @@ using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using System.ComponentModel;
 using Pass_Keep.Resources.Translations.View_Models.Accounts.Account_Edit_Page;
+using Pass_Keep.Services.Image_Picker;
 
 namespace Pass_Keep.View_Models.Account;
 
@@ -20,7 +21,7 @@ internal class AccountEditVM : INotifyPropertyChanged
 
     private async Task ChangeImage()
     {
-        FileResult image = await MediaPicker.PickPhotoAsync();
+        FileResult image = await ImagePicker.PickImage();
 
         if (image == null)
             return;
