@@ -4,6 +4,8 @@ using Pass_Keep.Services.Error_Informer;
 using Pass_Keep.Services.Image_Picker;
 using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Local_DB_Controller.Controllers;
+using Microsoft.Maui.Graphics.Platform;
+using IImage = Microsoft.Maui.Graphics.IImage;
 using System.ComponentModel;
 
 namespace Pass_Keep.View_Models.Account;
@@ -22,12 +24,23 @@ internal class AccountCreationVM : INotifyPropertyChanged
     private async Task SelectedAccountImage()
     {
         FileResult result = await ImagePicker.PickImage();
+        byte[] image_data = Array.Empty<byte>();
+        IImage image;
 
         if (result == null)
             return;
 
+        using (MemoryStream stream = new(File.ReadAllBytes(result.FullPath)))
+            image = PlatformImage.FromStream(stream);
+
+        using (Stream stream = image.Resize(256, 256, ResizeMode.Bleed).AsStream())
+        {
+            image_data = new byte[stream.Length];
+            await stream.ReadAsync(image_data, 0, image_data.Length);
+        }
+
         this.NewAccount.PlatformIcon = ImageSource.FromFile(result.FullPath);
-        this.platform_icon = File.ReadAllBytes(result.FullPath);
+        this.platform_icon = image_data;
         this.ImageSelected = true;
     }
 

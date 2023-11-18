@@ -9,49 +9,47 @@
              Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}"
              Title="">
 
-    <Grid>
-        <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
-            <Frame Padding = "0" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
-                <Grid RowDefinitions = "*" ColumnDefinitions = "*">
-                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent" CornerRadius = "10">
+    <Grid RowDefinitions = "Auto,*" ColumnDefinitions = "*" Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+        <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
+            <Grid RowDefinitions = "*" ColumnDefinitions = "*">
+                <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent" CornerRadius = "10">
+                    <VerticalStackLayout>
+                        <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+        </Frame>
+
+        <ListView Grid.Row = "1" Grid.Column = "0" ItemsSource = "{Binding Accounts}" SelectionMode = "None" RowHeight = "100" SeparatorVisibility = "None" Scrolled="ListView_Scrolled" ItemTapped = "AccountTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType = "account_model:AccountModel">
+                    <ViewCell>
                         <VerticalStackLayout>
-                            <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
-                        </VerticalStackLayout>
-                    </Frame>
-                </Grid>
-            </Frame>
+                            <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" CornerRadius = "10">
+                                <Grid RowDefinitions = "60" ColumnDefinitions = "64,*" ColumnSpacing = "10">
+                                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "10">
+                                        <VerticalStackLayout>
+                                            <Image HeightRequest = "64" WidthRequest = "64" Aspect = "AspectFill" Source = "{Binding PlatformIcon, Mode = OneTime}" />
+                                        </VerticalStackLayout>
+                                    </Frame>
 
-            <ListView x:Name = "ListViewAccountsList" ItemsSource = "{Binding Accounts}" SelectionMode = "None" HasUnevenRows = "True" SeparatorVisibility = "None" VerticalScrollBarVisibility = "Never" ItemTapped = "AccountTapped">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType = "account_model:AccountModel">
-                        <ViewCell>
-                            <VerticalStackLayout>
-                                <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" CornerRadius = "10">
-                                    <Grid RowDefinitions = "60" ColumnDefinitions = "20*,80*" ColumnSpacing = "10">
-                                        <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "10">
-                                            <VerticalStackLayout>
-                                                <Image HeightRequest = "64" WidthRequest = "64" Aspect = "AspectFill" Source = "{Binding PlatformIcon}" />
-                                            </VerticalStackLayout>
-                                        </Frame>
-
-                                        <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" VerticalOptions = "Center">
-                                            <Label Grid.Row = "0" Grid.Column = "0" VerticalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "18" Text = "{Binding PlatformName}" />
-                                            <Label Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Center" TextColor = "#CCCCCC" Text = "{Binding Email}" />
-                                        </Grid>
+                                    <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "32,32" ColumnDefinitions = "*" VerticalOptions = "Center">
+                                        <Label Grid.Row = "0" Grid.Column = "0" VerticalTextAlignment = "End" FontAttributes = "Bold" FontSize = "18" Text = "{Binding PlatformName, Mode = OneTime}" />
+                                        <Label Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Start" TextColor = "#CCCCCC" Text = "{Binding Email, Mode = OneTime}" />
                                     </Grid>
-                                </Frame>
-                            </VerticalStackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
-        <Grid VerticalOptions = "Center" HorizontalOptions = "Center">
+        <Grid Grid.Row = "1" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center">
             <Label x:Name = "LabelNoAccountsDetected" IsVisible = "{Binding NoAccountsLoaded}" Text = "{x:Static translation:Localization.LabelNoAccountsDetected}" />
         </Grid>
-        
-        <Grid VerticalOptions = "EndAndExpand" HorizontalOptions = "EndAndExpand">
+
+        <Grid Grid.Row = "1" Grid.Column = "0" VerticalOptions = "EndAndExpand" HorizontalOptions = "EndAndExpand">
             <Frame x:Name = "FrameCreateNewAccount" Grid.Row = "0" Grid.Column = "0" Margin = "20" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "100">
                 <VerticalStackLayout>
                     <ImageButton HeightRequest = "64" WidthRequest = "64" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" Scale = "1.2" Aspect = "Center" Source = "add_account" Clicked = "OpenPreAccountCreationPopup" />

@@ -58,6 +58,7 @@
 	  <None Remove="Resources\Images\deleted_account.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\email.svg" />
+	  <None Remove="Resources\Images\github.svg" />
 	  <None Remove="Resources\Images\key.svg" />
 	  <None Remove="Resources\Images\key_light.png" />
 	  <None Remove="Resources\Images\passwords.png" />
@@ -240,6 +241,9 @@
 	  </Compile>
 	  <Compile Update="Views\About\About Page.xaml.cs">
 	    <DependentUpon>About Page.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\About\Popups\Change Password Popup.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Account\Account Edit Page.xaml.cs">
 	    <DependentUpon>Account Edit Page.xaml</DependentUpon>
@@ -438,6 +442,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\About\About Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\About\Popups\Change Password Popup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Account Edit Page.xaml">

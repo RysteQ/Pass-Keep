@@ -42,4 +42,9 @@ public partial class AccountListPage : ContentPage
     }
 
     private AccountListVM view_model;
+
+    private void ListView_Scrolled(object sender, ScrolledEventArgs e)
+    {
+        // TO TEST
+    }
 }

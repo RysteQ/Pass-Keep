@@ -4,7 +4,10 @@ using Pass_Keep.Services.Local_DB_Controller;
 using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using System.ComponentModel;
 using Pass_Keep.Resources.Translations.View_Models.Accounts.Account_Edit_Page;
+using Microsoft.Maui.Graphics.Platform;
+using IImage = Microsoft.Maui.Graphics.IImage;
 using Pass_Keep.Services.Image_Picker;
+using static SQLite.SQLite3;
 
 namespace Pass_Keep.View_Models.Account;
 
@@ -21,13 +24,24 @@ internal class AccountEditVM : INotifyPropertyChanged
 
     private async Task ChangeImage()
     {
-        FileResult image = await ImagePicker.PickImage();
+        FileResult result = await ImagePicker.PickImage();
+        byte[] image_data = Array.Empty<byte>();
+        IImage image;
 
-        if (image == null)
+        if (result == null)
             return;
 
-        this.Account.PlatformIcon = ImageSource.FromFile(image.FullPath);
-        this.new_platform_image = File.ReadAllBytes(image.FullPath);
+        using (MemoryStream stream = new(File.ReadAllBytes(result.FullPath)))
+            image = PlatformImage.FromStream(stream);
+
+        using (Stream stream = image.Resize(256, 256, ResizeMode.Bleed).AsStream())
+        {
+            image_data = new byte[stream.Length];
+            await stream.ReadAsync(image_data, 0, image_data.Length);
+        }
+
+        this.Account.PlatformIcon = ImageSource.FromFile(result.FullPath);
+        this.new_platform_image = image_data;
     }
 
     private async Task SaveEdit()
