@@ -1,4 +1,7 @@
 using CommunityToolkit.Maui.Views;
+using Pass_Keep.Models.Password_Models;
+using Pass_Keep.Services.Local_DB_Controller;
+using Pass_Keep.Services.Local_DB_Controller.Controllers;
 
 namespace Pass_Keep.Views.Settings.Popups;
 
@@ -26,6 +29,16 @@ public partial class CountdownPopup : Popup
             Dispatcher.Dispatch(() => ButtonDeleteDatabase.IsEnabled = true);
             Dispatcher.Dispatch(() => ButtonDeleteDatabase.FadeTo(1, 150, Easing.Linear));
         }).Start();
+    }
+    
+    private async void OnButtonDeleteDatabaseClicked(object sender, EventArgs e)
+    {
+        List<object> all_accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
+
+        foreach (object account in all_accounts)
+            await LocalDBAccountController.Delete(LocalDBController.database_connection, account);
+
+        await CloseAsync();
     }
 
     private int seconds_remaining = 11;

@@ -14,6 +14,7 @@ public partial class SettingsPage : ContentPage
 		this.view_model = new();
 		BindingContext = this.view_model;
     }
+
     private void OnLightThemeButtonClicked(object sender, EventArgs e)
     {
         DarkThemeButton.BackgroundColorTo(Color.FromArgb("#00000000"), 160, 200, Easing.Linear);

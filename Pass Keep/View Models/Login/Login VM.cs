@@ -40,7 +40,7 @@ internal class LoginVM : INotifyPropertyChanged
         Preferences.Set(Preference.Username, this.Username); // Will encrypt this in later stages of the application, as of now they won't be encrypted
         Preferences.Set(Preference.Password, this.Password);
 
-        await Shell.Current.GoToAsync(nameof(AccountListPage));
+        await Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
     }
 
     private void ShowPassword()

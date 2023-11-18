@@ -6,8 +6,20 @@
              Title="">
 
     <ScrollView>
-        <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
-            
+        <VerticalStackLayout Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" Spacing = "16">
+            <Grid RowDefinitions = "*" ColumnDefinitions = "*,*">
+                <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" CornerRadius = "100">
+                    <Image Source = "https://avatars.githubusercontent.com/u/34135554?v=4" Aspect = "AspectFit" />
+                </Frame>
+
+                <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "*,*" ColumnDefinitions = "*" VerticalOptions = "Center" HorizontalOptions = "Center">
+                    <Label Grid.Row = "0" Grid.Column = "0" FontAttributes = "Bold" FontSize = "30" Text = "RysteQ" />
+                    <Label Grid.Row = "1" Grid.Column = "0" FontSize = "12" Text = "Junior Developer" />
+                </Grid>
+            </Grid>
+
+            <Label Text = "Hello there, I am RysteQ, a 21 year old junior developer in Greece that works with .NET MAUI and Dev Express tools on the daily. I create open source software to make life a little bit easier and because quite frankly I enjoy the process of it." />
+            <Label Text = "I have been programming for over half a decade now and I mainly program in C# but I do code in C or x86 sometimes just for the fun on making something as barebones as possible." />
         </VerticalStackLayout>
     </ScrollView>
     

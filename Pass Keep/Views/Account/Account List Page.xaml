@@ -11,7 +11,7 @@
 
     <Grid>
         <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
-            <Frame Padding = "0,0,0,10" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
+            <Frame Padding = "0" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
                 <Grid RowDefinitions = "*" ColumnDefinitions = "*">
                     <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent" CornerRadius = "10">
                         <VerticalStackLayout>

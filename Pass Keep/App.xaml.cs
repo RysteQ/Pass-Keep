@@ -1,5 +1,6 @@
 ﻿using Pass_Keep.Resources.Preferences;
 using Pass_Keep.Services.Image_Picker;
+using Pass_Keep.Views.Account;
 using Pass_Keep.Views.Login;
 
 namespace Pass_Keep;
@@ -21,6 +22,9 @@ public partial class App : Application
             return;
 
         if (Preferences.Get(Preference.IsLoginEnabled, true) && Preferences.Get(Preference.IsReLoginEnabled, true))
+        {
+            await Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
             await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
+        }
     }
 }
