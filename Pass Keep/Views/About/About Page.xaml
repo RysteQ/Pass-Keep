@@ -24,7 +24,7 @@
             </VerticalStackLayout>
 
             <Grid Grid.Row = "1" Grid.Column = "0" RowDefinitions = "*,*" ColumnDefinitions = "*" RowSpacing = "10">
-                <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "End" HeightRequest = "64" WidthRequest = "64" Source = "github" />
+                <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "End" HeightRequest = "64" WidthRequest = "64" Source = "github" Clicked = "OnGithubAccountClicked" />
                 <Label Grid.Row = "1" Grid.Column = "0" HorizontalTextAlignment = "Center" FontAttributes = "Bold" Text = "Github Account" />
             </Grid>
         </Grid>

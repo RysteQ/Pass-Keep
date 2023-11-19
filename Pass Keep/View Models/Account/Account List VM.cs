@@ -15,26 +15,30 @@ internal class AccountListVM : INotifyPropertyChanged
 
     public async Task LoadAccounts()
     {
-        List<object> accounts = new();
-        
-        try
+        new Thread(async () =>
         {
-            accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
-        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountListVM), nameof(LoadAccounts), Localization.ErrorLoadingAccounts, ex); return; }
+            List<object> accounts = new();
 
-        this.Accounts.Clear();
-        this.all_accounts.Clear();
+            try
+            {
+                accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
+            }
+            catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountListVM), nameof(LoadAccounts), Localization.ErrorLoadingAccounts, ex); return; }
 
-        foreach (object account in accounts)
-        {
-            if ((account as AccountModelDB).GCRecord != 0)
-                continue;
+            this.Accounts.Clear();
+            this.all_accounts.Clear();
 
-            this.Accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
-            this.all_accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
-        }
+            foreach (object account in accounts)
+            {
+                if ((account as AccountModelDB).GCRecord != 0)
+                    continue;
 
-        this.NoAccountsLoaded = !this.Accounts.Any();
+                this.Accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
+                this.all_accounts.Add(AccountConverters.ConvertAccountDBToAccount(account as AccountModelDB));
+            }
+
+            this.NoAccountsLoaded = !this.Accounts.Any();
+        }).Start();
     }
 
     private void SearchPasswords()

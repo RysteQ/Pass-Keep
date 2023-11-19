@@ -13,4 +13,9 @@ public partial class AboutPage : ContentPage
 
         LabelFirstParagraph.Text = string.Format(LabelFirstParagraph.Text, Convert.ToInt16((DateTime.Now - new DateTime(2002, 10, 15)).TotalDays / 365));
     }
+
+    private async void OnGithubAccountClicked(object sender, EventArgs e)
+    {
+        await Browser.Default.OpenAsync("https://github.com/RysteQ");
+    }
 }
