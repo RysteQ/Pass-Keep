@@ -11,37 +11,21 @@
              BackgroundColor="{AppThemeBinding Light = {StaticResource BlueGrey50}, Dark = {StaticResource BlueGrey900}}"
              Title="LoginPage">
 
-    <Grid RowDefinitions = "*" ColumnDefinitions = "*,8*,*">
-        <Frame Grid.Row = "0" Grid.Column = "1" HorizontalOptions = "Fill" VerticalOptions = "Center" Margin = "10" Padding = "0">
-            <Grid RowDefinitions = "75,Auto" ColumnDefinitions = "*">
-                <Frame Grid.Row = "0" Grid.Column = "0" Margin = "0" BackgroundColor = "Firebrick" BorderColor = "Transparent" CornerRadius = "0">
-                    <Grid>
-                        <Label HorizontalOptions = "Center" VerticalOptions = "Center" TextColor = "White" FontAttributes = "Bold" FontSize = "Title"  Text = "{x:Static translations:Localization.Label_Login_Title}" />
-                    </Grid>
-                </Frame>
+    <Grid BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}">
+        <Grid VerticalOptions = "Center" Margin = "20">
+            <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}" Padding = "20">
+                <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" RowSpacing = "20">
+                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BorderColor = "Black" BackgroundColor = "Transparent" CornerRadius = "100">
+                        <Grid RowDefinitions = "*" ColumnDefinitions = "*,Auto">
+                            <Entry x:Name = "EntryPassword" Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "FillAndExpand" IsPassword = "True" TextColor = "White" Placeholder = "{x:Static translations:Localization.Entry_Password_Placeholder}" Text = "{Binding Password}" />
+                            <ImageButton x:Name = "ImageButtonPasswordVisibility" Grid.Row = "0" Grid.Column = "1" HorizontalOptions = "End" HeightRequest = "32" WidthRequest = "32" Source = "visibility_on" Clicked = "OnPasswordVisibilityImageButtonClicked" />
+                        </Grid>
+                    </Frame>
 
-                <Frame Grid.Row = "1" Grid.Column = "0" BorderColor = "Transparent" Padding = "10">
-                    <Grid RowDefinitions = "*" ColumnDefinitions = "0.25*,9*,0.25*" BackgroundColor = "Transparent">
-                        <VerticalStackLayout Grid.Row = "0" Grid.Column = "1" Spacing = "10">
-                            <VerticalStackLayout Spacing = "10">
-                                <Frame Padding = "10,5,10,5" BorderColor = "Black" BackgroundColor = "Transparent" CornerRadius = "100">
-                                    <Entry BackgroundColor = "Transparent" TextColor = "Black" Placeholder = "{x:Static translations:Localization.Entry_Username_Placeholder}" Text = "{Binding Username}" />
-                                </Frame>
-                                
-                                <Frame Padding = "10,5,10,5" BorderColor = "Black" BackgroundColor = "Transparent" CornerRadius = "100">
-                                    <Grid RowDefinitions = "*" ColumnDefinitions = "8*,2*">
-                                        <Entry Grid.Row = "0" Grid.Column = "0" BackgroundColor = "Transparent" TextColor = "Black" Placeholder = "{x:Static translations:Localization.Entry_Password_Placeholder}" IsPassword = "{Binding IsPasswordVisible}" Text = "{Binding Password}" />
-                                        <ImageButton Grid.Row = "0" Grid.Column = "1" Command = "{Binding CommandShowPassword}" />
-                                    </Grid>
-                                </Frame>
-                            </VerticalStackLayout>
-
-                            <Button BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource RedA700}}" TextColor = "White" FontAttributes = "Bold" FontSize = "Medium" Text = "{x:Static translations:Localization.Button_Login_Text}" Command = "{Binding CommandLogin}" />
-                        </VerticalStackLayout>
-                    </Grid>
-                </Frame>
-            </Grid>
-        </Frame>
+                    <Button Grid.Row = "1" Grid.Column = "0" CornerRadius = "100" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue300}, Dark = {StaticResource LightBlue500}}" TextColor = "White" FontAttributes = "Bold" FontSize = "Medium" Text = "{x:Static translations:Localization.Button_Login_Text}" Command = "{Binding CommandLogin}" />
+                </Grid>
+            </Frame>
+        </Grid>
     </Grid>
 
 </ContentPage>

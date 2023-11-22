@@ -106,6 +106,15 @@ namespace Pass_Keep.Resources.Preferences {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to preferred_theme.
+        /// </summary>
+        internal static string PreferredTheme {
+            get {
+                return ResourceManager.GetString("PreferredTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to username.
         /// </summary>
         internal static string Username {

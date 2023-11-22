@@ -1,7 +1,5 @@
-﻿using Pass_Keep.Resources.Preferences;
-using Pass_Keep.Resources.Translations.Popup;
-using Pass_Keep.Resources.Translations.View_Models.Settings;
-using Pass_Keep.Services.Error_Informer;
+﻿using Pass_Keep.Resources.Constants.Themes;
+using Pass_Keep.Resources.Preferences;
 using System.ComponentModel;
 
 namespace Pass_Keep.View_Models.Settings;
@@ -10,39 +8,43 @@ class SettingsVM : INotifyPropertyChanged
 {
     public SettingsVM()
     {
-        this.CommandChangePassword = new(async () => await ChangePassword());
-        this.CommandDeleteAllAccounts = new(async () => await DeleteAllAccounts());
+        this.CommandChangeToLightTheme = new(ChangeToLightTheme);
+        this.CommandChangeToDarkTheme = new(ChangeToDarkTheme);
+
+        this.IsAutoThemeEnabled = Preferences.Get(Preference.AutoThemeEnabled, true);
     }
 
-    private async Task ChangePassword()
+    private void ChangeToLightTheme()
     {
-        // TODO
+        Preferences.Set(Preference.PreferredTheme, Themes.Light_Theme);
+        App.Current.UserAppTheme = AppTheme.Light;
     }
 
-    private async Task DeleteAllAccounts()
+    private void ChangeToDarkTheme()
     {
-        if (await Shell.Current.DisplayAlert(Popup.Warning, Localization.PopupDeleteAllAccounts, Popup.Yes, Popup.No))
-        {
-            try
-            {
-                // TODO
-            } catch (Exception ex) { await ErrorInformer.Inform(nameof(SettingsVM), nameof(DeleteAllAccounts), Localization.ErrorDeletingAccounts, ex); }
-        }
+        Preferences.Set(Preference.PreferredTheme, Themes.Dark_Theme);
+        App.Current.UserAppTheme = AppTheme.Dark;
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
     public virtual void OnPropertyChanged(string property_name) => this.PropertyChanged?.Invoke(this, new(property_name));
 
-    public Command CommandChangePassword { get; set; }
-    public Command CommandDeleteAllAccounts { get; set; }
+    public Command CommandChangeToLightTheme { get; set; }
+    public Command CommandChangeToDarkTheme { get; set; }
 
+    private bool is_auto_theme_enabled;
     public bool IsAutoThemeEnabled
     {
-        get => Preferences.Get(Preference.AutoThemeEnabled, true);
-        set { Preferences.Set(Preference.AutoThemeEnabled, value); OnPropertyChanged(nameof(IsAutoThemeEnabled)); OnPropertyChanged(nameof(CustomThemeButtonsEnabled)); }
+        get => this.is_auto_theme_enabled;
+        
+        set
+        {
+            this.is_auto_theme_enabled = value;
+            Preferences.Set(Preference.AutoThemeEnabled, value); 
+            
+            OnPropertyChanged(nameof(IsAutoThemeEnabled));
+        }
     }
-
-    public bool CustomThemeButtonsEnabled { get => !this.IsAutoThemeEnabled; }
 
     public bool IsLoginEnabled
     {

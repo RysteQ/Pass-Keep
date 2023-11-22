@@ -17,6 +17,7 @@
                 <ResourceDictionary Source="Resources/Styles/ColourRed.xaml" />
                 <ResourceDictionary Source="Resources/Styles/ColourLightBlue.xaml" />
                 <ResourceDictionary Source="Resources/Styles/ColourPink.xaml" />
+                <ResourceDictionary Source="Resources/Styles/ColourOrange.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>

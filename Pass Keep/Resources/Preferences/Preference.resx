@@ -132,6 +132,9 @@
   <data name="Password" xml:space="preserve">
     <value>password</value>
   </data>
+  <data name="PreferredTheme" xml:space="preserve">
+    <value>preferred_theme</value>
+  </data>
   <data name="Username" xml:space="preserve">
     <value>username</value>
   </data>

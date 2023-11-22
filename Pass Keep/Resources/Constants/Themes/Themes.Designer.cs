@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.Popups.Change_Password {
+namespace Pass_Keep.Resources.Constants.Themes {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Pass_Keep.Resources.Translations.Popups.Change_Password {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Localization {
+    internal class Themes {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Localization() {
+        internal Themes() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Pass_Keep.Resources.Translations.Popups.Change_Password {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Popups.Change_Password.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Constants.Themes.Themes", typeof(Themes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,20 @@ namespace Pass_Keep.Resources.Translations.Popups.Change_Password {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Change password.
+        ///   Looks up a localized string similar to dark_theme.
         /// </summary>
-        internal static string ButtonChangePassword {
+        internal static string Dark_Theme {
             get {
-                return ResourceManager.GetString("ButtonChangePassword", resourceCulture);
+                return ResourceManager.GetString("Dark_Theme", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Password.
+        ///   Looks up a localized string similar to light_theme.
         /// </summary>
-        internal static string EntryPasswordPlaceholder {
+        internal static string Light_Theme {
             get {
-                return ResourceManager.GetString("EntryPasswordPlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Repeat password.
-        /// </summary>
-        internal static string EntryRepeatPasswordPlaceholder {
-            get {
-                return ResourceManager.GetString("EntryRepeatPasswordPlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Passwords do not match.
-        /// </summary>
-        internal static string ErrorNewPasswordIsNotTheSameWithRepeatPassword {
-            get {
-                return ResourceManager.GetString("ErrorNewPasswordIsNotTheSameWithRepeatPassword", resourceCulture);
+                return ResourceManager.GetString("Light_Theme", resourceCulture);
             }
         }
     }

@@ -6,15 +6,15 @@
              xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Accounts.Account_List_Page"
              x:Class="Pass_Keep.Views.Account.AccountListPage"
              x:DataType="view_model:AccountListVM"
-             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}"
+             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Grey900}}"
              Title="">
 
-    <Grid RowDefinitions = "Auto,*" ColumnDefinitions = "*" Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+    <Grid RowDefinitions = "Auto,*" ColumnDefinitions = "*" Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}">
         <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" CornerRadius = "0" BackgroundColor = "Transparent" BorderColor = "Transparent">
             <Grid RowDefinitions = "*" ColumnDefinitions = "*">
-                <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent" CornerRadius = "10">
+                <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Grey900}}" BorderColor = "Transparent" CornerRadius = "10">
                     <VerticalStackLayout>
-                        <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
+                        <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" PlaceholderColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey500}}" TextColor = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource Grey50}}" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
                     </VerticalStackLayout>
                 </Frame>
             </Grid>
@@ -25,7 +25,7 @@
                 <DataTemplate x:DataType = "account_model:AccountModel">
                     <ViewCell>
                         <VerticalStackLayout>
-                            <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}" CornerRadius = "10">
+                            <Frame Margin = "0,10,0,0" Padding = "15" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Grey900}}" CornerRadius = "10">
                                 <Grid RowDefinitions = "60" ColumnDefinitions = "64,*" ColumnSpacing = "10">
                                     <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" BorderColor = "Transparent" CornerRadius = "10">
                                         <VerticalStackLayout>
@@ -34,8 +34,8 @@
                                     </Frame>
 
                                     <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "32,32" ColumnDefinitions = "*" VerticalOptions = "Center">
-                                        <Label Grid.Row = "0" Grid.Column = "0" VerticalTextAlignment = "End" FontAttributes = "Bold" FontSize = "18" Text = "{Binding PlatformName, Mode = OneTime}" />
-                                        <Label Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Start" TextColor = "#CCCCCC" Text = "{Binding Email, Mode = OneTime}" />
+                                        <Label Grid.Row = "0" Grid.Column = "0" VerticalTextAlignment = "End" FontAttributes = "Bold" FontSize = "18" TextColor = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource Grey100}}" Text = "{Binding PlatformName, Mode = OneTime}" />
+                                        <Label Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Start" TextColor = "{AppThemeBinding Light = {StaticResource Grey700}, Dark = {StaticResource Grey100}}" Text = "{Binding Email, Mode = OneTime}" />
                                     </Grid>
                                 </Grid>
                             </Frame>
@@ -46,13 +46,13 @@
         </ListView>
 
         <Grid Grid.Row = "1" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center">
-            <Label x:Name = "LabelNoAccountsDetected" IsVisible = "{Binding NoAccountsLoaded}" Text = "{x:Static translation:Localization.LabelNoAccountsDetected}" />
+            <Label x:Name = "LabelNoAccountsDetected" IsVisible = "{Binding NoAccountsLoaded}" TextColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey100}}" Text = "{x:Static translation:Localization.LabelNoAccountsDetected}" />
         </Grid>
 
         <Grid Grid.Row = "1" Grid.Column = "0" VerticalOptions = "EndAndExpand" HorizontalOptions = "EndAndExpand">
             <Frame x:Name = "FrameCreateNewAccount" Grid.Row = "0" Grid.Column = "0" Margin = "20" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "100">
                 <VerticalStackLayout>
-                    <ImageButton HeightRequest = "64" WidthRequest = "64" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}" Scale = "1.2" Aspect = "Center" Source = "add_account" Clicked = "OpenPreAccountCreationPopup" />
+                    <ImageButton HeightRequest = "64" WidthRequest = "64" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray600900mix}}" Scale = "1.2" Aspect = "Center" Source = "add_account" Clicked = "OpenPreAccountCreationPopup" />
                 </VerticalStackLayout>
             </Frame>
         </Grid>

@@ -10,7 +10,7 @@
     xmlns:settings_views="clr-namespace:Pass_Keep.Views.Settings"
     xmlns:about_views="clr-namespace:Pass_Keep.Views.About"
     xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.App_Shell"
-    FlyoutBackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray600900mix}}">
+    FlyoutBackgroundColor="{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray600900mix}}">
 
     <Shell.FlyoutHeader>
         <Label Margin = "20" HorizontalOptions = "Center" FontSize = "Title" FontAttributes = "Bold" Text = "Pass Keep" />

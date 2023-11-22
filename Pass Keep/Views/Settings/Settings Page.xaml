@@ -5,44 +5,44 @@
              xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Settings"
              x:Class="Pass_Keep.Views.Settings.SettingsPage"
              x:DataType="view_model:SettingsVM"
-             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}"
+             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}"
              Title="">
 
     <ScrollView>
-        <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" Spacing = "10">
-            <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}">
+        <VerticalStackLayout Padding = "10" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}" Spacing = "10">
+            <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent">
                 <Grid RowDefinitions = "*,1,*,*" ColumnDefinitions = "*,*" RowSpacing = "10" ColumnSpacing = "10">
                     <Label Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "2" VerticalOptions = "Center" HorizontalOptions = "Center" FontSize = "16" Text = "{x:Static translations:Localization.LabelThemeSection}" />
 
                     <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "2" Margin = "20,0,20,0" Color = "#55000000" />
 
                     <Grid Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "2" RowDefinitions = "*" ColumnDefinitions = "90*,10*">
-                        <Label Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" TextColor = "{StaticResource Grey300}" Text = "{x:Static translations:Localization.LabelAutoThemeEnabled}" />
-                        <CheckBox Grid.Row = "0" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding IsAutoThemeEnabled}" />
+                        <Label Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.LabelAutoThemeEnabled}" />
+                        <CheckBox x:Name = "CheckboxAutoThemeEnabled" Grid.Row = "0" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" Color = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource White}}" IsChecked = "{Binding IsAutoThemeEnabled}" CheckedChanged = "OnCheckboxAutoThemeEnabledCheckedChanged" />
                     </Grid>
 
-                    <Button x:Name = "LightThemeButton" Grid.Row = "3" Grid.Column = "0" CornerRadius = "16" BackgroundColor = "Red" TextColor = "White" Text = "{x:Static translations:Localization.ButtonLightTheme}" IsEnabled = "{Binding CustomThemeButtonsEnabled}" Clicked = "OnLightThemeButtonClicked" />
-                    <Button x:Name = "DarkThemeButton" Grid.Row = "3" Grid.Column = "1" CornerRadius = "16" BackgroundColor = "Transparent" TextColor = "White" Text = "{x:Static translations:Localization.ButtonDarkTheme}" IsEnabled = "{Binding CustomThemeButtonsEnabled}" Clicked = "OnDarkThemeButtonClicked" />
+                    <Button x:Name = "LightThemeButton" Grid.Row = "3" Grid.Column = "0" CornerRadius = "16" BackgroundColor = "Transparent" TextColor = "White" Text = "{x:Static translations:Localization.ButtonLightTheme}" Clicked = "OnLightThemeButtonClicked" Command = "{Binding CommandChangeToLightTheme}" />
+                    <Button x:Name = "DarkThemeButton" Grid.Row = "3" Grid.Column = "1" CornerRadius = "16" BackgroundColor = "Transparent" TextColor = "White" Text = "{x:Static translations:Localization.ButtonDarkTheme}" Clicked = "OnDarkThemeButtonClicked" Command = "{Binding CommandChangeToDarkTheme}" />
                 </Grid>
             </Frame>
 
-            <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}">
+            <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent">
                 <Grid RowDefinitions = "*,1,*,*,*" ColumnDefinitions = "90*,10*" RowSpacing = "10">
                     <Label Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "2" VerticalOptions = "Center" HorizontalOptions = "Center" FontSize = "16" Text = "{x:Static translations:Localization.LabelLoginSection}" />
 
                     <BoxView Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "2" Margin = "20,0,20,0" Color = "#55000000" />
 
-                    <Label Grid.Row = "2" Grid.Column = "0" VerticalOptions = "Center" TextColor = "{StaticResource Grey300}" Text = "{x:Static translations:Localization.LabelLoginEnabled}" />
-                    <CheckBox Grid.Row = "2" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding IsLoginEnabled}" />
+                    <Label Grid.Row = "2" Grid.Column = "0" VerticalOptions = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.LabelLoginEnabled}" />
+                    <CheckBox Grid.Row = "2" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding IsLoginEnabled}" Color = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource White}}" />
 
-                    <Label Grid.Row = "3" Grid.Column = "0" VerticalOptions = "Center" TextColor = "{StaticResource Grey300}" Text = "{x:Static translations:Localization.LabelIsLoginAfterSleepRequired}" />
-                    <CheckBox Grid.Row = "3" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding IsReLoginEnabled}" />
+                    <Label Grid.Row = "3" Grid.Column = "0" VerticalOptions = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.LabelIsLoginAfterSleepRequired}" />
+                    <CheckBox Grid.Row = "3" Grid.Column = "1" Margin = "0" HorizontalOptions = "End" IsChecked = "{Binding IsReLoginEnabled}" Color = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource White}}" />
 
-                    <Button Grid.Row = "4" Grid.Column = "0" Grid.ColumnSpan = "2" CornerRadius = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue400}, Dark = {StaticResource LightBlue500}}" TextColor = "White" Text = "{x:Static translations:Localization.ButtonChangeLoginPassword}" Clicked = "OnChangePasswordButtonClicked" />
+                    <Button Grid.Row = "4" Grid.Column = "0" Grid.ColumnSpan = "2" CornerRadius = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue300}, Dark = {StaticResource LightBlue500}}" TextColor = "White" Text = "{x:Static translations:Localization.ButtonChangeLoginPassword}" Clicked = "OnChangePasswordButtonClicked" />
                 </Grid>
             </Frame>
 
-            <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}">
+            <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}" BorderColor = "Transparent">
                 <Grid RowDefinitions = "*,1,*" ColumnDefinitions = "90*,10*" RowSpacing = "10">
                     <Label Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "2" VerticalOptions = "Center" HorizontalOptions = "Center" FontSize = "16" Text = "{x:Static translations:Localization.LabelDangerZone}" />
 

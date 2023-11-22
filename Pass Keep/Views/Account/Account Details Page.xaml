@@ -6,54 +6,54 @@
              x:Class="Pass_Keep.Views.Account.AccountDetailsPage"
              x:DataType="view_model:AccountDetailsVM"
              Shell.TabBarIsVisible="False"
-             Shell.BackgroundColor="Transparent"
+             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}"
              Title="">
 
     <ScrollView>
-        <StackLayout Spacing = "20" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+        <StackLayout Spacing = "20" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}">
             <Label Grid.Row = "0" Grid.Column = "1" HorizontalTextAlignment = "Center" FontAttributes = "Bold" FontSize = "40" Text = "{Binding Account.PlatformName}" />
 
             <Frame Padding = "0" HeightRequest = "128" WidthRequest = "128" CornerRadius = "100">
                 <Image Aspect = "AspectFill" Source = "{Binding Account.PlatformIcon}" />
             </Frame>
 
-            <Frame Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" Padding = "0,0,0,40" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" CornerRadius = "0">
+            <Frame Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" Padding = "0,0,0,40" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}" BorderColor = "Transparent" CornerRadius = "0">
                 <Grid Grid.Row = "1" Grid.Column = "1" Margin = "0" RowDefinitions = "*,*,*" ColumnDefinitions = "5*,90*,5*" RowSpacing = "16">
-                    <Frame Grid.Row = "0" Grid.Column = "1" VerticalOptions = "Center" Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey100}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "24">
+                    <Frame Grid.Row = "0" Grid.Column = "1" VerticalOptions = "Center" Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray600900mix}}" BorderColor = "Transparent" CornerRadius = "24">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command = "{Binding CommandCopyUsername}" />
                         </Frame.GestureRecognizers>
 
                         <Grid RowDefinitions = "*,*" ColumnDefinitions = "Auto,*,Auto" RowSpacing = "10" ColumnSpacing = "10">
                             <Image Grid.Row = "1" Grid.Column = "0" HeightRequest = "32" WidthRequest = "32" Aspect = "Fill" Source = "person" />
-                            
-                            <Label Grid.Row = "0" Grid.Column = "1" FontSize = "13" TextColor = "{StaticResource Gray300}" Text = "{x:Static translations:Localization.AccountDetailsUsername}" />
+
+                            <Label Grid.Row = "0" Grid.Column = "1" FontSize = "13" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.AccountDetailsUsername}" />
                             <Label Grid.Row = "1" Grid.Column = "1" FontSize = "15" Text = "{Binding Account.Username}" />
                         </Grid>
                     </Frame>
 
-                    <Frame Grid.Row = "1" Grid.Column = "1" VerticalOptions = "Center" Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey100}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "24">
+                    <Frame Grid.Row = "1" Grid.Column = "1" VerticalOptions = "Center" Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray600900mix}}" BorderColor = "Transparent" CornerRadius = "24">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command = "{Binding CommandCopyEmail}" />
                         </Frame.GestureRecognizers>
 
                         <Grid RowDefinitions = "*,*" ColumnDefinitions = "Auto,*" RowSpacing = "10" ColumnSpacing = "10">
                             <Image Grid.Row = "1" Grid.Column = "0" HeightRequest = "32" WidthRequest = "32" Aspect = "Fill" Source = "email" />
-                            
-                            <Label Grid.Row = "0" Grid.Column = "1" FontSize = "13" TextColor = "{StaticResource Gray300}" Text = "{x:Static translations:Localization.AccountDetailsEmails}" />
+
+                            <Label Grid.Row = "0" Grid.Column = "1" FontSize = "13" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.AccountDetailsEmails}" />
                             <Label Grid.Row = "1" Grid.Column = "1" FontSize = "15" Text = "{Binding Account.Email}" />
                         </Grid>
                     </Frame>
 
-                    <Frame Grid.Row = "2" Grid.Column = "1" VerticalOptions = "Center" Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey100}, Dark = {StaticResource Gray600900mix}}" CornerRadius = "24">
+                    <Frame Grid.Row = "2" Grid.Column = "1" VerticalOptions = "Center" Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray600900mix}}" BorderColor = "Transparent" CornerRadius = "24">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command = "{Binding CommandCopyPassword}" />
                         </Frame.GestureRecognizers>
 
                         <Grid Grid.Row = "0" Grid.Column = "0" RowDefinitions = "*,*" ColumnDefinitions = "Auto,*,Auto" VerticalOptions = "Center" RowSpacing = "10" ColumnSpacing = "10">
                             <Image Grid.Row = "1" Grid.Column = "0" HeightRequest = "32" WidthRequest = "32" Aspect = "Fill" Source = "key" />
-                            
-                            <Label Grid.Row = "0" Grid.Column = "1" FontSize = "13" TextColor = "{StaticResource Gray300}" Text = "{x:Static translations:Localization.AccountDetailsPassword}" />
+
+                            <Label Grid.Row = "0" Grid.Column = "1" FontSize = "13" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.AccountDetailsPassword}" />
                             <Entry Grid.Row = "1" Grid.Column = "1" VerticalTextAlignment = "Center" IsReadOnly = "True" IsPassword = "{Binding HidePassword}" FontSize = "15" Text = "{Binding Account.Password}" />
 
                             <ImageButton x:Name = "ImageButtonPasswordVisibility" Grid.Row = "1" Grid.Column = "2" HeightRequest = "32" WidthRequest = "32" Source = "visibility_on" Clicked = "OnPasswordVisibilityImageButtonClicked" Command = "{Binding CommandChangePasswordVisibility}"  />

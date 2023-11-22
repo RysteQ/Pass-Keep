@@ -16,7 +16,7 @@ internal class LoginVM : INotifyPropertyChanged
 
     private async Task Login()
     {
-        if (string.IsNullOrWhiteSpace(this.Username) || string.IsNullOrWhiteSpace(this.Password))
+        if (string.IsNullOrWhiteSpace(this.Password))
         {
             await Shell.Current.DisplayAlert(Popup.Warning, Localization.Username_Or_Password_Is_Required, Popup.Okay);
             return;
@@ -28,7 +28,7 @@ internal class LoginVM : INotifyPropertyChanged
             return;
         }
 
-        if (this.Username == Preferences.Get(Preference.Username, string.Empty) && this.Password == Preferences.Get(Preference.Password, string.Empty))
+        if (this.Password == Preferences.Get(Preference.Password, string.Empty))
             await Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
         else
             await Shell.Current.DisplayAlert(Popup.Warning, Localization.Username_Or_Password_Is_Incorrect, Popup.Okay);
@@ -37,7 +37,6 @@ internal class LoginVM : INotifyPropertyChanged
     private async Task Register()
     {
         Preferences.Set(Preference.FirstTimeLogin, false);
-        Preferences.Set(Preference.Username, this.Username); // Will encrypt this in later stages of the application, as of now they won't be encrypted
         Preferences.Set(Preference.Password, this.Password);
 
         await Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
@@ -53,13 +52,6 @@ internal class LoginVM : INotifyPropertyChanged
 
     public Command CommandLogin { get; set; }
     public Command CommandShowPassword { get; set; }
-
-    private string username;
-    public string Username
-    {
-        get => this.username;
-        set { this.username = value.Trim(); OnPropertyChanged(nameof(Username)); }
-    }
 
     private string password;
     public string Password

@@ -1,4 +1,5 @@
-﻿using Pass_Keep.Resources.Preferences;
+﻿using Pass_Keep.Resources.Constants.Themes;
+using Pass_Keep.Resources.Preferences;
 using Pass_Keep.Services.Image_Picker;
 using Pass_Keep.Views.Account;
 using Pass_Keep.Views.Login;
@@ -12,6 +13,19 @@ public partial class App : Application
         InitializeComponent();
 
         MainPage = new AppShell();
+    }
+
+    protected override void OnStart()
+    {
+        base.OnStart();
+
+        if (Preferences.Get(Preference.AutoThemeEnabled, true) == false)
+        {
+            if (Preferences.Get(Preference.PreferredTheme, Themes.Dark_Theme) == Themes.Dark_Theme)
+                App.Current.UserAppTheme = AppTheme.Dark;
+            else
+                App.Current.UserAppTheme = AppTheme.Light;
+        }
     }
 
     protected override async void OnResume()

@@ -6,14 +6,14 @@
         xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Popups.Recover_Account"
         x:Class="Pass_Keep.Views.Deleted_Accounts.Popups.RecoverAccount">
 
-    <Grid RowDefinitions = "Auto,Auto,Auto,Auto" ColumnDefinitions = "*,*,*" Padding = "0,15,0,0" WidthRequest = "300" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}" RowSpacing = "20">
-        <Label x:Name = "LabelPlatformName" Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "3" Margin = "0" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" FontSize = "Title" FontAttributes = "Bold" />
+    <Grid RowDefinitions = "Auto,Auto,Auto,Auto" ColumnDefinitions = "*,*,*" Padding = "0,15,0,0" WidthRequest = "300" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}" RowSpacing = "20">
+        <Label x:Name = "LabelPlatformName" Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "3" Margin = "0" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" FontSize = "Title" FontAttributes = "Bold" TextColor = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource Gray100}}" />
 
         <Frame Grid.Row = "1" Grid.Column = "1" Margin = "0" Padding = "0" CornerRadius = "100">
             <Image x:Name = "ImageAccountProfileImage" HeightRequest = "100" WidthRequest = "100" Aspect = "AspectFill" />
         </Frame>
 
-        <Label x:Name = "LabelAccountName" Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" HorizontalTextAlignment = "Center" FontSize = "16" TextColor = "#888888" />
+        <Label x:Name = "LabelAccountName" Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" HorizontalTextAlignment = "Center" FontSize = "16" TextColor = "{AppThemeBinding Light = {StaticResource Grey700}, Dark = {StaticResource Grey100}}" />
 
         <Grid RowDefinitions = "60" ColumnDefinitions = "*,*" Grid.Row = "3" Grid.Column = "0" Grid.ColumnSpan = "3">
             <Button Grid.Row = "0" Grid.Column = "0" CornerRadius = "0" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDetailsBackgroundColour}" Text = "{x:Static translations:Localization.ButtonRecover}" Clicked = "OnRecoverButtonClicked" />

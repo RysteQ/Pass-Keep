@@ -71,6 +71,7 @@ class DeletedAccountsVM : INotifyPropertyChanged
             {
                 this.Accounts.Clear();
                 this.all_accounts.ForEach(account => this.Accounts.Add(account));
+                this.NoAccountsLoaded = !this.Accounts.Any();
             } else
                 SearchPasswords();
         }

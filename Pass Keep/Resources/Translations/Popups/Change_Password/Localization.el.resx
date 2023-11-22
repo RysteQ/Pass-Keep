@@ -123,7 +123,7 @@
   <data name="EntryPasswordPlaceholder" xml:space="preserve">
     <value>Κωδικός</value>
   </data>
-  <data name="EntryRepearPasswordPlaceholder" xml:space="preserve">
+  <data name="EntryRepeatPasswordPlaceholder" xml:space="preserve">
     <value>Επανάληψη κωδικού</value>
   </data>
   <data name="ErrorNewPasswordIsNotTheSameWithRepeatPassword" xml:space="preserve">

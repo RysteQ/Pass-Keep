@@ -58,7 +58,8 @@
 	  <None Remove="Resources\Images\deleted_account.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\email.svg" />
-	  <None Remove="Resources\Images\github.svg" />
+	  <None Remove="Resources\Images\github_black.svg" />
+	  <None Remove="Resources\Images\github_light.svg" />
 	  <None Remove="Resources\Images\key.svg" />
 	  <None Remove="Resources\Images\key_light.png" />
 	  <None Remove="Resources\Images\passwords.png" />
@@ -84,6 +85,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Resources\Constants\Themes\Themes.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Themes.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Preferences\Preference.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -242,9 +248,6 @@
 	  <Compile Update="Views\About\About Page.xaml.cs">
 	    <DependentUpon>About Page.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\About\Popups\Change Password Popup.xaml.cs">
-	    <DependentUpon>%(Filename)</DependentUpon>
-	  </Compile>
 	  <Compile Update="Views\Account\Account Edit Page.xaml.cs">
 	    <DependentUpon>Account Edit Page.xaml</DependentUpon>
 	  </Compile>
@@ -284,6 +287,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Update="Resources\Constants\Themes\Themes.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Themes.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Preferences\Preference.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Preference.Designer.cs</LastGenOutput>
@@ -417,6 +424,9 @@
 	  <MauiXaml Update="Resources\Styles\ColourBlueGrey.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\ColourOrange.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\ColourLightBlue.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -442,9 +452,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\About\About Page.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\About\Popups\Change Password Popup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\Account Edit Page.xaml">

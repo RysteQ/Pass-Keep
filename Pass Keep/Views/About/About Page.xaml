@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pass_Keep.Views.About.AboutPage"
-             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray900}}"
+             Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}"
              Title="">
 
     <ScrollView>
-        <Grid RowDefinitions = "Auto,*" ColumnDefinitions = "*" BackgroundColor = "{AppThemeBinding Light = {StaticResource Grey50}, Dark = {StaticResource Gray950}}">
+        <Grid RowDefinitions = "Auto,*" ColumnDefinitions = "*" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}">
             <VerticalStackLayout Grid.Row = "0" Grid.Column = "0" Padding = "16" Spacing = "16">
                 <Grid RowDefinitions = "*" ColumnDefinitions = "*,*">
                     <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" CornerRadius = "100">
@@ -24,7 +24,7 @@
             </VerticalStackLayout>
 
             <Grid Grid.Row = "1" Grid.Column = "0" RowDefinitions = "*,*" ColumnDefinitions = "*" RowSpacing = "10">
-                <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "End" HeightRequest = "64" WidthRequest = "64" Source = "github" Clicked = "OnGithubAccountClicked" />
+                <ImageButton Grid.Row = "0" Grid.Column = "0" VerticalOptions = "End" HeightRequest = "64" WidthRequest = "64" Source = "{AppThemeBinding Light = github_black, Dark = github_light}" Clicked = "OnGithubAccountClicked" />
                 <Label Grid.Row = "1" Grid.Column = "0" HorizontalTextAlignment = "Center" FontAttributes = "Bold" Text = "Github Account" />
             </Grid>
         </Grid>

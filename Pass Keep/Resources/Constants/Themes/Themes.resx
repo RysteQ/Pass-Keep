@@ -117,16 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonChangePassword" xml:space="preserve">
-    <value>Change password</value>
+  <data name="Dark_Theme" xml:space="preserve">
+    <value>dark_theme</value>
   </data>
-  <data name="EntryPasswordPlaceholder" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="EntryRepeatPasswordPlaceholder" xml:space="preserve">
-    <value>Repeat password</value>
-  </data>
-  <data name="ErrorNewPasswordIsNotTheSameWithRepeatPassword" xml:space="preserve">
-    <value>Passwords do not match</value>
+  <data name="Light_Theme" xml:space="preserve">
+    <value>light_theme</value>
   </data>
 </root>
