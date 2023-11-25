@@ -63,27 +63,27 @@ namespace Pass_Keep.Resources.Translations.Popups.Pre_Account_Creation_Page {
         /// <summary>
         ///   Looks up a localized string similar to Create.
         /// </summary>
-        internal static string ButtonOpenCreateAccountPageText {
+        internal static string Button_Open_Create_Account_Page_Text {
             get {
-                return ResourceManager.GetString("ButtonOpenCreateAccountPageText", resourceCulture);
+                return ResourceManager.GetString("Button_Open_Create_Account_Page_Text", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        internal static string EntryPlaceholderPlatformNameText {
+        internal static string Entry_Placeholder_Platform_Name_Text {
             get {
-                return ResourceManager.GetString("EntryPlaceholderPlatformNameText", resourceCulture);
+                return ResourceManager.GetString("Entry_Placeholder_Platform_Name_Text", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Platform.
         /// </summary>
-        internal static string LabelTitleText {
+        internal static string Label_Title_Text {
             get {
-                return ResourceManager.GetString("LabelTitleText", resourceCulture);
+                return ResourceManager.GetString("Label_Title_Text", resourceCulture);
             }
         }
     }

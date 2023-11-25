@@ -7,9 +7,9 @@ using Pass_Keep.Views.Settings.Popups;
 
 namespace Pass_Keep.Views.Settings;
 
-public partial class SettingsPage : ContentPage
+public partial class SettingsView : ContentPage
 {
-	public SettingsPage()
+	public SettingsView()
 	{
 		InitializeComponent();
 

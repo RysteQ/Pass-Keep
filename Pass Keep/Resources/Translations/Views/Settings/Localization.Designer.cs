@@ -63,108 +63,90 @@ namespace Pass_Keep.Resources.Translations.Views.Settings {
         /// <summary>
         ///   Looks up a localized string similar to Change your login password.
         /// </summary>
-        internal static string ButtonChangeLoginPassword {
+        internal static string Button_Change_Login_Password {
             get {
-                return ResourceManager.GetString("ButtonChangeLoginPassword", resourceCulture);
+                return ResourceManager.GetString("Button_Change_Login_Password", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Dark theme.
         /// </summary>
-        internal static string ButtonDarkTheme {
+        internal static string Button_Dark_Theme {
             get {
-                return ResourceManager.GetString("ButtonDarkTheme", resourceCulture);
+                return ResourceManager.GetString("Button_Dark_Theme", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Light theme.
         /// </summary>
-        internal static string ButtonLightTheme {
+        internal static string Button_Light_Theme {
             get {
-                return ResourceManager.GetString("ButtonLightTheme", resourceCulture);
+                return ResourceManager.GetString("Button_Light_Theme", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Is auto theme enabled.
         /// </summary>
-        internal static string LabelAutoThemeEnabled {
+        internal static string Label_Auto_Theme_Enabled {
             get {
-                return ResourceManager.GetString("LabelAutoThemeEnabled", resourceCulture);
+                return ResourceManager.GetString("Label_Auto_Theme_Enabled", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Danger Zone.
         /// </summary>
-        internal static string LabelDangerZone {
+        internal static string Label_Danger_Zone {
             get {
-                return ResourceManager.GetString("LabelDangerZone", resourceCulture);
+                return ResourceManager.GetString("Label_Danger_Zone", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Delete ALL accounts.
         /// </summary>
-        internal static string LabelDeleteAllAccounts {
+        internal static string Label_Delete_All_Accounts {
             get {
-                return ResourceManager.GetString("LabelDeleteAllAccounts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Delete previously &quot;deleted&quot; accounts.
-        /// </summary>
-        internal static string LabelDeleteHiddenAccounts {
-            get {
-                return ResourceManager.GetString("LabelDeleteHiddenAccounts", resourceCulture);
+                return ResourceManager.GetString("Label_Delete_All_Accounts", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Is login after sleep required ?.
         /// </summary>
-        internal static string LabelIsLoginAfterSleepRequired {
+        internal static string Label_Is_Login_After_Sleep_Required {
             get {
-                return ResourceManager.GetString("LabelIsLoginAfterSleepRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Actually delete accounts.
-        /// </summary>
-        internal static string LabelKeepDeletedAccounts {
-            get {
-                return ResourceManager.GetString("LabelKeepDeletedAccounts", resourceCulture);
+                return ResourceManager.GetString("Label_Is_Login_After_Sleep_Required", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Is login required.
         /// </summary>
-        internal static string LabelLoginEnabled {
+        internal static string Label_Login_Enabled {
             get {
-                return ResourceManager.GetString("LabelLoginEnabled", resourceCulture);
+                return ResourceManager.GetString("Label_Login_Enabled", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
-        internal static string LabelLoginSection {
+        internal static string Label_Login_Section {
             get {
-                return ResourceManager.GetString("LabelLoginSection", resourceCulture);
+                return ResourceManager.GetString("Label_Login_Section", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Theme.
         /// </summary>
-        internal static string LabelThemeSection {
+        internal static string Label_Theme_Section {
             get {
-                return ResourceManager.GetString("LabelThemeSection", resourceCulture);
+                return ResourceManager.GetString("Label_Theme_Section", resourceCulture);
             }
         }
     }

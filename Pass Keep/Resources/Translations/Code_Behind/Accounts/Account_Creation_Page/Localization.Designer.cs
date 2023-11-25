@@ -64,9 +64,9 @@ namespace Pass_Keep.Resources.Translations.Code_Behind.Accounts.Account_Creation
         /// <summary>
         ///   Looks up a localized string similar to You haven&apos;t saved you account, are you sure you want to leave ?.
         /// </summary>
-        internal static string PopupLeavingWithAnUnsavedAccount {
+        internal static string Popup_Leaving_With_An_Unsaved_Account {
             get {
-                return ResourceManager.GetString("PopupLeavingWithAnUnsavedAccount", resourceCulture);
+                return ResourceManager.GetString("Popup_Leaving_With_An_Unsaved_Account", resourceCulture);
             }
         }
     }

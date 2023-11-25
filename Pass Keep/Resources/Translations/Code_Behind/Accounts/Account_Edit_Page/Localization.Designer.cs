@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
+namespace Pass_Keep.Resources.Translations.Code_Behind.Accounts.Account_Edit_Page {
     using System;
     
     
@@ -39,7 +39,8 @@ namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.Deleted_Accounts.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Code_Behind.Accounts.Account_Edit_Page.Localizat" +
+                            "ion", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,24 +58,6 @@ namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Search.
-        /// </summary>
-        internal static string Entry_Search_Placeholder_Text {
-            get {
-                return ResourceManager.GetString("Entry_Search_Placeholder_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You don&apos;t have any deleted accounts.
-        /// </summary>
-        internal static string Label_No_Deleted_Accounts {
-            get {
-                return ResourceManager.GetString("Label_No_Deleted_Accounts", resourceCulture);
             }
         }
     }

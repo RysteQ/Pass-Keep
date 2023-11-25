@@ -4,9 +4,9 @@ using Pass_Keep.View_Models.Account;
 
 namespace Pass_Keep.Views.Account;
 
-public partial class AccountCreationPage : ContentPage
+public partial class AccountCreationView : ContentPage
 {
-	public AccountCreationPage(string platform_name)
+	public AccountCreationView(string platform_name)
 	{
 		InitializeComponent();
 
@@ -25,7 +25,7 @@ public partial class AccountCreationPage : ContentPage
     {
         Dispatcher.Dispatch(async () =>
         {
-            if (await Shell.Current.DisplayAlert(Popup.Attention, Localization.PopupLeavingWithAnUnsavedAccount, Popup.Yes, Popup.No))
+            if (await Shell.Current.DisplayAlert(Popup.Attention, Localization.Popup_Leaving_With_An_Unsaved_Account, Popup.Yes, Popup.No))
                 await Shell.Current.Navigation.PopAsync();
         });
 

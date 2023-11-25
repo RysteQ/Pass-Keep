@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Pass_Keep.Views.Login.LoginPage"
+             x:Class="Pass_Keep.Views.Login.LoginView"
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Login"
              xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Login"
              Shell.TabBarIsVisible="False"
@@ -9,7 +9,7 @@
              Shell.FlyoutBehavior="Disabled"
              x:DataType="view_model:LoginVM"
              BackgroundColor="{AppThemeBinding Light = {StaticResource BlueGrey50}, Dark = {StaticResource BlueGrey900}}"
-             Title="LoginPage">
+             Title="">
 
     <Grid BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}">
         <Grid VerticalOptions = "Center" Margin = "20">

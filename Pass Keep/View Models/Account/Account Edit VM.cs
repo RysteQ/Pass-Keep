@@ -51,7 +51,7 @@ internal class AccountEditVM : INotifyPropertyChanged
         try
         {
             account_model_db = await LocalDBAccountController.Read(LocalDBController.database_connection, this.Account.GUID) as AccountModelDB;
-        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountEditVM), nameof(SaveEdit), Localization.ErrorSavingEdits, ex); return; }
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountEditVM), nameof(SaveEdit), Localization.Error_Saving_Edits, ex); return; }
 
         if (this.new_platform_image != Array.Empty<byte>())
             account_model_db.PlatformIcon = this.new_platform_image;
@@ -63,7 +63,7 @@ internal class AccountEditVM : INotifyPropertyChanged
         try
         {
             await LocalDBAccountController.Update(LocalDBController.database_connection, account_model_db);
-        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountEditVM), nameof(SaveEdit), Localization.ErrorSavingEdits, ex); return; }
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountEditVM), nameof(SaveEdit), Localization.Error_Saving_Edits, ex); return; }
 
         await Shell.Current.Navigation.PopAsync();
     }

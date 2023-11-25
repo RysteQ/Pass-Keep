@@ -8,7 +8,7 @@
 
     <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" WidthRequest = "300" Padding = "16" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}" RowSpacing = "20">
         <Label x:Name = "LabelCountdown" Grid.Row = "0" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center" FontAttributes = "Bold" FontSize = "44" />
-        <Button x:Name = "ButtonDeleteDatabase" Grid.Row = "1" Grid.Column = "0" IsEnabled = "False" BackgroundColor = "{StaticResource Red800}" Opacity = "0.5" FontAttributes = "Bold" TextColor = "White" Text = "{x:Static translations:Localization.ButtonDeleteDatabase}" Clicked = "OnButtonDeleteDatabaseClicked" />
+        <Button x:Name = "ButtonDeleteDatabase" Grid.Row = "1" Grid.Column = "0" IsEnabled = "False" BackgroundColor = "{StaticResource Red800}" Opacity = "0.5" FontAttributes = "Bold" TextColor = "White" Text = "{x:Static translations:Localization.Button_Delete_Database}" Clicked = "OnButtonDeleteDatabaseClicked" />
     </Grid>
 
 </toolkit:Popup>

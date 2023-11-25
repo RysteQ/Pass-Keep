@@ -7,9 +7,9 @@ using Pass_Keep.Models.Password_Models;
 
 namespace Pass_Keep.Views.Deleted_Accounts;
 
-public partial class DeletedAccountsPage : ContentPage
+public partial class DeletedAccountsView : ContentPage
 {
-	public DeletedAccountsPage()
+	public DeletedAccountsView()
 	{
 		InitializeComponent();
 

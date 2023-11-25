@@ -4,7 +4,7 @@
              xmlns:translation="clr-namespace:Pass_Keep.Resources.Translations.Views.Deleted_Accounts"
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Deleted_Accounts"
              xmlns:account_model="clr-namespace:Pass_Keep.Models.Password_Models"
-             x:Class="Pass_Keep.Views.Deleted_Accounts.DeletedAccountsPage"
+             x:Class="Pass_Keep.Views.Deleted_Accounts.DeletedAccountsView"
              x:DataType="view_model:DeletedAccountsVM"
              Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Grey900}}"
              Title="">
@@ -14,7 +14,7 @@
             <Grid RowDefinitions = "*" ColumnDefinitions = "*">
                 <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Grey900}}" BorderColor = "Transparent" CornerRadius = "10">
                     <VerticalStackLayout>
-                        <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" PlaceholderColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey500}}" TextColor = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource Grey50}}" Placeholder = "{x:Static translation:Localization.EntrySearchPlaceholderText}" FontSize = "16" Text = "{Binding SearchPassword}" />
+                        <Entry VerticalOptions = "Center" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" BackgroundColor = "Transparent" PlaceholderColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey500}}" TextColor = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource Grey50}}" Placeholder = "{x:Static translation:Localization.Entry_Search_Placeholder_Text}" FontSize = "16" Text = "{Binding SearchPassword}" />
                     </VerticalStackLayout>
                 </Frame>
             </Grid>
@@ -46,7 +46,7 @@
         </ListView>
 
         <Grid Grid.Row = "1" Grid.Column = "0" VerticalOptions = "Center" HorizontalOptions = "Center">
-            <Label x:Name = "LabelNoAccountsDetected" IsVisible = "{Binding NoAccountsLoaded}" TextColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey100}}" Text = "{x:Static translation:Localization.LabelNoDeletedAccounts}" />
+            <Label x:Name = "LabelNoAccountsDetected" IsVisible = "{Binding NoAccountsLoaded}" TextColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey100}}" Text = "{x:Static translation:Localization.Label_No_Deleted_Accounts}" />
         </Grid>
     </Grid>
 

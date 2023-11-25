@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AccountDeletion" xml:space="preserve">
+  <data name="Account_Deletion" xml:space="preserve">
     <value>Are you sure you want to delete the account ?</value>
   </data>
-  <data name="ButtonAccountDelete" xml:space="preserve">
+  <data name="Button_Account_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="ButtonAccountDetails" xml:space="preserve">
+  <data name="Button_Account_Details" xml:space="preserve">
     <value>Details</value>
   </data>
-  <data name="ButtonAccountEdit" xml:space="preserve">
+  <data name="Button_Account_Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
-  <data name="ErrorAccountDeletion" xml:space="preserve">
+  <data name="Error_Account_Deletion" xml:space="preserve">
     <value>An error was encountered while deleting the account</value>
   </data>
 </root>

@@ -16,9 +16,9 @@
         <Label x:Name = "LabelAccountName" Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" HorizontalTextAlignment = "Center" FontSize = "16" TextColor = "{AppThemeBinding Light = {StaticResource Grey700}, Dark = {StaticResource Grey100}}" />
 
         <Grid RowDefinitions = "60" ColumnDefinitions = "*,*,*" Grid.Row = "3" Grid.Column = "0" Grid.ColumnSpan = "3">
-            <Button Grid.Row = "0" Grid.Column = "0" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDetailsBackgroundColour}" Text = "{x:Static translations:Localization.ButtonAccountDetails}" Clicked = "OnDetailsButtonClicked" CornerRadius = "0" />
-            <Button Grid.Row = "0" Grid.Column = "1" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonEditBackgroundColour}" Text = "{x:Static translations:Localization.ButtonAccountEdit}" Clicked = "OnEditButtonClicked" CornerRadius = "0" />
-            <Button Grid.Row = "0" Grid.Column = "2" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDeleteBackgroundColour}" Text = "{x:Static translations:Localization.ButtonAccountDelete}" Clicked = "OnDeleteButtonClicked" CornerRadius = "0" />
+            <Button Grid.Row = "0" Grid.Column = "0" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDetailsBackgroundColour}" Text = "{x:Static translations:Localization.Button_Account_Details}" Clicked = "OnDetailsButtonClicked" CornerRadius = "0" />
+            <Button Grid.Row = "0" Grid.Column = "1" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonEditBackgroundColour}" Text = "{x:Static translations:Localization.Button_Account_Edit}" Clicked = "OnEditButtonClicked" CornerRadius = "0" />
+            <Button Grid.Row = "0" Grid.Column = "2" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDeleteBackgroundColour}" Text = "{x:Static translations:Localization.Button_Account_Delete}" Clicked = "OnDeleteButtonClicked" CornerRadius = "0" />
         </Grid>
     </Grid>
 

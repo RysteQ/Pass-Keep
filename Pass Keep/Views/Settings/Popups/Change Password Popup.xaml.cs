@@ -42,7 +42,7 @@ public partial class ChangePasswordPopup : Popup
     {
         if (EntryPassword.Text != EntryRepeatPassword.Text)
         {
-            await Shell.Current.DisplayAlert(PopupLocalization.Error, ChangePasswordPopupLocalization.ErrorNewPasswordIsNotTheSameWithRepeatPassword, PopupLocalization.Aknowledge);
+            await Shell.Current.DisplayAlert(PopupLocalization.Error, ChangePasswordPopupLocalization.Error_New_Password_Is_Not_The_Same_With_Repeat_Password, PopupLocalization.Aknowledge);
             return;
         }
 

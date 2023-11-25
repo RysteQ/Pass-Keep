@@ -63,45 +63,45 @@ namespace Pass_Keep.Resources.Translations.Popups.Account_Action_Selection {
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to delete the account ?.
         /// </summary>
-        internal static string AccountDeletion {
+        internal static string Account_Deletion {
             get {
-                return ResourceManager.GetString("AccountDeletion", resourceCulture);
+                return ResourceManager.GetString("Account_Deletion", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        internal static string ButtonAccountDelete {
+        internal static string Button_Account_Delete {
             get {
-                return ResourceManager.GetString("ButtonAccountDelete", resourceCulture);
+                return ResourceManager.GetString("Button_Account_Delete", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
-        internal static string ButtonAccountDetails {
+        internal static string Button_Account_Details {
             get {
-                return ResourceManager.GetString("ButtonAccountDetails", resourceCulture);
+                return ResourceManager.GetString("Button_Account_Details", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
-        internal static string ButtonAccountEdit {
+        internal static string Button_Account_Edit {
             get {
-                return ResourceManager.GetString("ButtonAccountEdit", resourceCulture);
+                return ResourceManager.GetString("Button_Account_Edit", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to An error was encountered while deleting the account.
         /// </summary>
-        internal static string ErrorAccountDeletion {
+        internal static string Error_Account_Deletion {
             get {
-                return ResourceManager.GetString("ErrorAccountDeletion", resourceCulture);
+                return ResourceManager.GetString("Error_Account_Deletion", resourceCulture);
             }
         }
     }

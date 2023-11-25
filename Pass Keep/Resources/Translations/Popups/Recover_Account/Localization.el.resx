@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonPermanentDelete" xml:space="preserve">
+  <data name="Button_Permanent_Delete" xml:space="preserve">
     <value>Διαγραφή</value>
   </data>
-  <data name="ButtonRecover" xml:space="preserve">
+  <data name="Button_Recover" xml:space="preserve">
     <value>Επαναφορά</value>
   </data>
-  <data name="ErrorPermanentDeleteAccount" xml:space="preserve">
+  <data name="Error_Permanent_Delete_Account" xml:space="preserve">
     <value>Υπήρξε σφάλμα στην μόνιμη διαγραφή του λογαριασμού</value>
   </data>
-  <data name="ErrorRecoverAccount" xml:space="preserve">
+  <data name="Error_Recover_Account" xml:space="preserve">
     <value>Υπήρξε σφάλμα στην επαναφορά του λογαριασμού</value>
   </data>
-  <data name="QuestionPermanentlyDeleteAccount" xml:space="preserve">
+  <data name="Question_Permanently_Delete_Account" xml:space="preserve">
     <value>Είστε σίγουρος ότι θέλετε να διαγράψετε μόνιμα τον λογαριασμό σας;</value>
   </data>
 </root>

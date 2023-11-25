@@ -63,45 +63,45 @@ namespace Pass_Keep.Resources.Translations.Popups.Recover_Account {
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        internal static string ButtonPermanentDelete {
+        internal static string Button_Permanent_Delete {
             get {
-                return ResourceManager.GetString("ButtonPermanentDelete", resourceCulture);
+                return ResourceManager.GetString("Button_Permanent_Delete", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Recover.
         /// </summary>
-        internal static string ButtonRecover {
+        internal static string Button_Recover {
             get {
-                return ResourceManager.GetString("ButtonRecover", resourceCulture);
+                return ResourceManager.GetString("Button_Recover", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to An error occured while permanently deleting the account.
         /// </summary>
-        internal static string ErrorPermanentDeleteAccount {
+        internal static string Error_Permanent_Delete_Account {
             get {
-                return ResourceManager.GetString("ErrorPermanentDeleteAccount", resourceCulture);
+                return ResourceManager.GetString("Error_Permanent_Delete_Account", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to An error occured while recovering the account.
         /// </summary>
-        internal static string ErrorRecoverAccount {
+        internal static string Error_Recover_Account {
             get {
-                return ResourceManager.GetString("ErrorRecoverAccount", resourceCulture);
+                return ResourceManager.GetString("Error_Recover_Account", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to permanently delete your account ?.
         /// </summary>
-        internal static string QuestionPermanentlyDeleteAccount {
+        internal static string Question_Permanently_Delete_Account {
             get {
-                return ResourceManager.GetString("QuestionPermanentlyDeleteAccount", resourceCulture);
+                return ResourceManager.GetString("Question_Permanently_Delete_Account", resourceCulture);
             }
         }
     }

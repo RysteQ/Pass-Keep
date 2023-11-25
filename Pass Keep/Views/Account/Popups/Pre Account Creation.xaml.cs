@@ -21,7 +21,7 @@ public partial class PreAccountCreation : Popup
             return;
 		}
 
-		await Shell.Current.Navigation.PushAsync(new AccountCreationPage(EntryPlatformName.Text));
+		await Shell.Current.Navigation.PushAsync(new AccountCreationView(EntryPlatformName.Text));
 		this.Close();
     }
 }

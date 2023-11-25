@@ -59,41 +59,5 @@ namespace Pass_Keep.Resources.Translations.View_Models.Settings {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error was encountered while deleting your accounts.
-        /// </summary>
-        internal static string ErrorDeletingAccounts {
-            get {
-                return ResourceManager.GetString("ErrorDeletingAccounts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error was encountered while deleting your hidden accounts.
-        /// </summary>
-        internal static string ErrorDeletingHiddenAccounts {
-            get {
-                return ResourceManager.GetString("ErrorDeletingHiddenAccounts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete ALL of your accounts ?.
-        /// </summary>
-        internal static string PopupDeleteAllAccounts {
-            get {
-                return ResourceManager.GetString("PopupDeleteAllAccounts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete all of your hidden accounts ?.
-        /// </summary>
-        internal static string PopupDeleteHiddenAccounts {
-            get {
-                return ResourceManager.GetString("PopupDeleteHiddenAccounts", resourceCulture);
-            }
-        }
     }
 }

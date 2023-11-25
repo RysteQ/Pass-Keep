@@ -117,16 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ErrorDeletingAccounts" xml:space="preserve">
-    <value>An error was encountered while deleting your accounts</value>
-  </data>
-  <data name="ErrorDeletingHiddenAccounts" xml:space="preserve">
-    <value>An error was encountered while deleting your hidden accounts</value>
-  </data>
-  <data name="PopupDeleteAllAccounts" xml:space="preserve">
-    <value>Are you sure you want to delete ALL of your accounts ?</value>
-  </data>
-  <data name="PopupDeleteHiddenAccounts" xml:space="preserve">
-    <value>Are you sure you want to delete all of your hidden accounts ?</value>
-  </data>
 </root>

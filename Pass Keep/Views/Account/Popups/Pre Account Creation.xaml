@@ -7,13 +7,13 @@
         x:Class="Pass_Keep.Views.Account.Popups.PreAccountCreation">
 
     <Grid RowDefinitions = "Auto,Auto,Auto" ColumnDefinitions = "5*,90*,5*" Padding = "16" HeightRequest = "210" WidthRequest = "300" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}" RowSpacing = "15">
-        <Label Grid.Row = "0" Grid.Column = "1" VerticalTextAlignment = "Center" HorizontalOptions = "Center" FontAttributes = "Bold" FontSize = "26" Text = "{x:Static translations:Localization.LabelTitleText}" />
+        <Label Grid.Row = "0" Grid.Column = "1" VerticalTextAlignment = "Center" HorizontalOptions = "Center" FontAttributes = "Bold" FontSize = "26" Text = "{x:Static translations:Localization.Label_Title_Text}" />
 
         <Frame x:Name = "FramePlatformName" Grid.Row = "1" Grid.Column = "1" Padding = "10,0,10,0" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray600900mix}}" BorderColor = "Transparent" CornerRadius = "16">
-            <Entry x:Name = "EntryPlatformName" FontAttributes = "Bold" FontSize = "18" PlaceholderColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey500}}" TextColor = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource Grey50}}" Placeholder = "{x:Static translations:Localization.EntryPlaceholderPlatformNameText}" />
+            <Entry x:Name = "EntryPlatformName" FontAttributes = "Bold" FontSize = "18" PlaceholderColor = "{AppThemeBinding Light = {StaticResource Grey800}, Dark = {StaticResource Grey500}}" TextColor = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource Grey50}}" Placeholder = "{x:Static translations:Localization.Entry_Placeholder_Platform_Name_Text}" />
         </Frame>
 
-        <Button Grid.Row = "2" Grid.Column = "1" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue300}, Dark = {StaticResource LightBlue500}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Clicked = "ShowCreateNewAccountPage" Text = "{x:Static translations:Localization.ButtonOpenCreateAccountPageText}" CornerRadius = "16" />
+        <Button Grid.Row = "2" Grid.Column = "1" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue300}, Dark = {StaticResource LightBlue500}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Clicked = "ShowCreateNewAccountPage" Text = "{x:Static translations:Localization.Button_Open_Create_Account_Page_Text}" CornerRadius = "16" />
     </Grid>
 
 </toolkit:Popup>

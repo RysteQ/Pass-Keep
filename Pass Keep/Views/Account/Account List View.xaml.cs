@@ -5,9 +5,9 @@ using Pass_Keep.Models.Password_Models;
 
 namespace Pass_Keep.Views.Account;
 
-public partial class AccountListPage : ContentPage
+public partial class AccountListView : ContentPage
 {
-	public AccountListPage()
+	public AccountListView()
 	{
 		InitializeComponent();
 

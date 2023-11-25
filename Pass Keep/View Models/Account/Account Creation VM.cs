@@ -7,6 +7,7 @@ using Pass_Keep.Services.Local_DB_Controller.Controllers;
 using Microsoft.Maui.Graphics.Platform;
 using IImage = Microsoft.Maui.Graphics.IImage;
 using System.ComponentModel;
+using Pass_Keep.Resources.Translations.View_Models.Accounts.Account_Creation_Page;
 
 namespace Pass_Keep.View_Models.Account;
 
@@ -51,7 +52,7 @@ internal class AccountCreationVM : INotifyPropertyChanged
         try
         {
             await LocalDBAccountController.Create(LocalDBController.database_connection, AccountConverters.ConvertAccountToAccountDB(this.NewAccount, platform_icon));
-        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountCreationVM), nameof(CreateNewAccount), "", ex); }
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountCreationVM), nameof(CreateNewAccount), Localization.Error_Account_Creation, ex); }
 
         await Shell.Current.Navigation.PopAsync();
     }

@@ -63,36 +63,36 @@ namespace Pass_Keep.Resources.Translations.Popups.Change_Password {
         /// <summary>
         ///   Looks up a localized string similar to Change password.
         /// </summary>
-        internal static string ButtonChangePassword {
+        internal static string Button_Change_Password {
             get {
-                return ResourceManager.GetString("ButtonChangePassword", resourceCulture);
+                return ResourceManager.GetString("Button_Change_Password", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
-        internal static string EntryPasswordPlaceholder {
+        internal static string Entry_Password_Placeholder {
             get {
-                return ResourceManager.GetString("EntryPasswordPlaceholder", resourceCulture);
+                return ResourceManager.GetString("Entry_Password_Placeholder", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Repeat password.
         /// </summary>
-        internal static string EntryRepeatPasswordPlaceholder {
+        internal static string Entry_Repeat_Password_Placeholder {
             get {
-                return ResourceManager.GetString("EntryRepeatPasswordPlaceholder", resourceCulture);
+                return ResourceManager.GetString("Entry_Repeat_Password_Placeholder", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Passwords do not match.
         /// </summary>
-        internal static string ErrorNewPasswordIsNotTheSameWithRepeatPassword {
+        internal static string Error_New_Password_Is_Not_The_Same_With_Repeat_Password {
             get {
-                return ResourceManager.GetString("ErrorNewPasswordIsNotTheSameWithRepeatPassword", resourceCulture);
+                return ResourceManager.GetString("Error_New_Password_Is_Not_The_Same_With_Repeat_Password", resourceCulture);
             }
         }
     }

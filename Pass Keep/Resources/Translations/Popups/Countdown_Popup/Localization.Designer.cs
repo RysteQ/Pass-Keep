@@ -63,9 +63,9 @@ namespace Pass_Keep.Resources.Translations.Popups.Countdown_Popup {
         /// <summary>
         ///   Looks up a localized string similar to Delete ALL accounts.
         /// </summary>
-        internal static string ButtonDeleteDatabase {
+        internal static string Button_Delete_Database {
             get {
-                return ResourceManager.GetString("ButtonDeleteDatabase", resourceCulture);
+                return ResourceManager.GetString("Button_Delete_Database", resourceCulture);
             }
         }
     }

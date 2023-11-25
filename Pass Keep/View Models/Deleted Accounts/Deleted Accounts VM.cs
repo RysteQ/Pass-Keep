@@ -20,7 +20,7 @@ class DeletedAccountsVM : INotifyPropertyChanged
         try
         {
             accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
-        } catch (Exception ex) { await ErrorInformer.Inform(nameof(DeletedAccountsVM), nameof(LoadAccounts), Localization.ErrorLoadingAccounts, ex); return; }
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(DeletedAccountsVM), nameof(LoadAccounts), Localization.Error_Loading_Accounts, ex); return; }
 
         this.Accounts.Clear();
         this.all_accounts.Clear();

@@ -64,9 +64,9 @@ namespace Pass_Keep.Resources.Translations.View_Models.Accounts.Account_List_Pag
         /// <summary>
         ///   Looks up a localized string similar to An error was encountered while loading your accounts.
         /// </summary>
-        internal static string ErrorLoadingAccounts {
+        internal static string Error_Loading_Accounts {
             get {
-                return ResourceManager.GetString("ErrorLoadingAccounts", resourceCulture);
+                return ResourceManager.GetString("Error_Loading_Accounts", resourceCulture);
             }
         }
     }

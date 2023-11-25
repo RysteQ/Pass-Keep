@@ -29,7 +29,7 @@ internal class LoginVM : INotifyPropertyChanged
         }
 
         if (this.Password == Preferences.Get(Preference.Password, string.Empty))
-            await Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
+            await Shell.Current.GoToAsync($"//{nameof(AccountListView)}/{nameof(AccountListView)}/{nameof(AccountListView)}");
         else
             await Shell.Current.DisplayAlert(Popup.Warning, Localization.Username_Or_Password_Is_Incorrect, Popup.Okay);
     }
@@ -39,7 +39,7 @@ internal class LoginVM : INotifyPropertyChanged
         Preferences.Set(Preference.FirstTimeLogin, false);
         Preferences.Set(Preference.Password, this.Password);
 
-        await Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
+        await Shell.Current.GoToAsync($"//{nameof(AccountListView)}/{nameof(AccountListView)}/{nameof(AccountListView)}");
     }
 
     private void ShowPassword()

@@ -37,8 +37,8 @@ public partial class App : Application
 
         if (Preferences.Get(Preference.IsLoginEnabled, true) && Preferences.Get(Preference.IsReLoginEnabled, true))
         {
-            await Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
-            await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
+            await Shell.Current.GoToAsync($"//{nameof(AccountListView)}/{nameof(AccountListView)}/{nameof(AccountListView)}");
+            await Shell.Current.GoToAsync($"{nameof(LoginView)}");
         }
     }
 }

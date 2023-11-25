@@ -22,19 +22,19 @@ public partial class AccountActionSelection : Popup
 
     private async void OnDetailsButtonClicked(object sender, EventArgs e)
     {
-        await Shell.Current.Navigation.PushAsync(new AccountDetailsPage(this.account));
+        await Shell.Current.Navigation.PushAsync(new AccountDetailsView(this.account));
         await this.CloseAsync();
     }
 
     private async void OnEditButtonClicked(object sender, EventArgs e)
     {
-        await Shell.Current.Navigation.PushAsync(new AccountEditPage(this.account));
+        await Shell.Current.Navigation.PushAsync(new AccountEditView(this.account));
         await this.CloseAsync();
     }
     
     private async void OnDeleteButtonClicked(object sender, EventArgs e)
     {
-        if (await Shell.Current.DisplayAlert(Pass_Keep.Resources.Translations.Popup.Popup.Warning, Localization.AccountDeletion, Pass_Keep.Resources.Translations.Popup.Popup.Yes, Pass_Keep.Resources.Translations.Popup.Popup.No) == false)
+        if (await Shell.Current.DisplayAlert(Pass_Keep.Resources.Translations.Popup.Popup.Warning, Localization.Account_Deletion, Pass_Keep.Resources.Translations.Popup.Popup.Yes, Pass_Keep.Resources.Translations.Popup.Popup.No) == false)
             return;
 
         AccountModelDB to_delete = await LocalDBAccountController.Read(LocalDBController.database_connection, this.account.GUID) as AccountModelDB;
@@ -44,7 +44,7 @@ public partial class AccountActionSelection : Popup
         try
         {
             await LocalDBAccountController.Update(LocalDBController.database_connection, to_delete);
-        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountActionSelection), nameof(OnDeleteButtonClicked), Localization.ErrorAccountDeletion, ex); return; }
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountActionSelection), nameof(OnDeleteButtonClicked), Localization.Error_Account_Deletion, ex); return; }
 
         await this.CloseAsync();
     }

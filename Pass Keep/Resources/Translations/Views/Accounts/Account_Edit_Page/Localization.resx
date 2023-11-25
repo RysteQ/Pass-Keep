@@ -117,19 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AccountEditPageTitle" xml:space="preserve">
-    <value>Account Creation</value>
-  </data>
-  <data name="ButtonCreateAccount" xml:space="preserve">
+  <data name="Button_Create_Account" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="EntryPlaceholderEmail" xml:space="preserve">
+  <data name="Entry_Placeholder_Email" xml:space="preserve">
     <value>Email</value>
   </data>
-  <data name="EntryPlaceholderPassword" xml:space="preserve">
+  <data name="Entry_Placeholder_Password" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="EntryPlaceholderUsername" xml:space="preserve">
+  <data name="Entry_Placeholder_Username" xml:space="preserve">
     <value>Username</value>
   </data>
 </root>

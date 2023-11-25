@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
+namespace Pass_Keep.Resources.Translations.Popups.Mr_Fluffy {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Views.Deleted_Accounts.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pass_Keep.Resources.Translations.Popups.Mr_Fluffy.Localization", typeof(Localization).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,11 @@ namespace Pass_Keep.Resources.Translations.Views.Deleted_Accounts {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search.
+        ///   Looks up a localized string similar to Mr Fluffy.
         /// </summary>
-        internal static string Entry_Search_Placeholder_Text {
+        internal static string Label_Mr_Fluffy {
             get {
-                return ResourceManager.GetString("Entry_Search_Placeholder_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You don&apos;t have any deleted accounts.
-        /// </summary>
-        internal static string Label_No_Deleted_Accounts {
-            get {
-                return ResourceManager.GetString("Label_No_Deleted_Accounts", resourceCulture);
+                return ResourceManager.GetString("Label_Mr_Fluffy", resourceCulture);
             }
         }
     }

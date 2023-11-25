@@ -63,18 +63,18 @@ namespace Pass_Keep.Resources.Translations.Views.Accounts.Account_List_Page {
         /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
-        internal static string EntrySearchPlaceholderText {
+        internal static string Entry_Search_Placeholder_Text {
             get {
-                return ResourceManager.GetString("EntrySearchPlaceholderText", resourceCulture);
+                return ResourceManager.GetString("Entry_Search_Placeholder_Text", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to You have no accouts, go ahead and create one.
         /// </summary>
-        internal static string LabelNoAccountsDetected {
+        internal static string Label_No_Accounts_Detected {
             get {
-                return ResourceManager.GetString("LabelNoAccountsDetected", resourceCulture);
+                return ResourceManager.GetString("Label_No_Accounts_Detected", resourceCulture);
             }
         }
     }

@@ -29,14 +29,14 @@ public partial class RecoverAccount : Popup
         try
         {
             await LocalDBAccountController.Update(LocalDBController.database_connection, to_recover);
-        } catch (Exception ex) { await ErrorInformer.Inform(nameof(RecoverAccount), nameof(OnPermanentDeleteButtonClicked), Localization.ErrorRecoverAccount, ex); return; }
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(RecoverAccount), nameof(OnPermanentDeleteButtonClicked), Localization.Error_Recover_Account, ex); return; }
 
         await this.CloseAsync();
     }
 
     private async void OnPermanentDeleteButtonClicked(object sender, EventArgs e)
     {
-        if (await Shell.Current.DisplayAlert(Pass_Keep.Resources.Translations.Popup.Popup.Warning, Localization.QuestionPermanentlyDeleteAccount, Pass_Keep.Resources.Translations.Popup.Popup.Yes, Pass_Keep.Resources.Translations.Popup.Popup.No) == false)
+        if (await Shell.Current.DisplayAlert(Pass_Keep.Resources.Translations.Popup.Popup.Warning, Localization.Question_Permanently_Delete_Account, Pass_Keep.Resources.Translations.Popup.Popup.Yes, Pass_Keep.Resources.Translations.Popup.Popup.No) == false)
             return;
 
         AccountModelDB to_delete = await LocalDBAccountController.Read(LocalDBController.database_connection, this.account.GUID) as AccountModelDB;
@@ -44,7 +44,7 @@ public partial class RecoverAccount : Popup
         try
         {
             await LocalDBAccountController.Delete(LocalDBController.database_connection, to_delete);
-        } catch (Exception ex) { await ErrorInformer.Inform(nameof(RecoverAccount), nameof(OnPermanentDeleteButtonClicked), Localization.ErrorPermanentDeleteAccount, ex); return; }
+        } catch (Exception ex) { await ErrorInformer.Inform(nameof(RecoverAccount), nameof(OnPermanentDeleteButtonClicked), Localization.Error_Permanent_Delete_Account, ex); return; }
 
         await this.CloseAsync();
     }

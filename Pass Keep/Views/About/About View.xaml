@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Pass_Keep.Views.About.AboutPage"
+             x:Class="Pass_Keep.Views.About.AboutView"
              Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}"
              Title="">
 
@@ -10,7 +10,7 @@
             <VerticalStackLayout Grid.Row = "0" Grid.Column = "0" Padding = "16" Spacing = "16">
                 <Grid RowDefinitions = "*" ColumnDefinitions = "*,*">
                     <Frame Grid.Row = "0" Grid.Column = "0" Padding = "0" CornerRadius = "100">
-                        <Image Source = "https://avatars.githubusercontent.com/u/34135554?v=4" Aspect = "AspectFit" />
+                        <ImageButton Source = "https://avatars.githubusercontent.com/u/34135554?v=4" Aspect = "AspectFit" Clicked = "OnGithubProfileImageButtonClicked" />
                     </Frame>
 
                     <Grid Grid.Row = "0" Grid.Column = "1" RowDefinitions = "*,*" ColumnDefinitions = "*" VerticalOptions = "Center" HorizontalOptions = "Center">

@@ -22,8 +22,7 @@ internal class AccountListVM : INotifyPropertyChanged
             try
             {
                 accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
-            }
-            catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountListVM), nameof(LoadAccounts), Localization.ErrorLoadingAccounts, ex); return; }
+            } catch (Exception ex) { await ErrorInformer.Inform(nameof(AccountListVM), nameof(LoadAccounts), Localization.Error_Loading_Accounts, ex); return; }
 
             this.Accounts.Clear();
             this.all_accounts.Clear();
@@ -66,7 +65,6 @@ internal class AccountListVM : INotifyPropertyChanged
     public string SearchPassword
     {
         get => this.search_password;
-        
         set
         {
             this.search_password = value;

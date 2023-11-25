@@ -117,16 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ErrorDeletingAccounts" xml:space="preserve">
-    <value>Υπήρξε σφάλμα στην διαγραφή των λογαριασμών σας</value>
-  </data>
-  <data name="ErrorDeletingHiddenAccounts" xml:space="preserve">
-    <value>Υπήρξε σφάλμα στην διαγραφή των κρυφών λογαριασμών σας</value>
-  </data>
-  <data name="PopupDeleteAllAccounts" xml:space="preserve">
-    <value>Είστε σίγουρος ότι θέλετε να διαγράψετε ΟΛΟΥΣ του λογαριασμούς σας;</value>
-  </data>
-  <data name="PopupDeleteHiddenAccounts" xml:space="preserve">
-    <value>Είστε σίγουρος ότι θέλετε να διαγράψετε τους κρυφούς λογαριασμούς σας;</value>
-  </data>
 </root>

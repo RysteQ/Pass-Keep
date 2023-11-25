@@ -117,40 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonChangeLoginPassword" xml:space="preserve">
+  <data name="Button_Change_Login_Password" xml:space="preserve">
     <value>Change your login password</value>
   </data>
-  <data name="ButtonDarkTheme" xml:space="preserve">
+  <data name="Button_Dark_Theme" xml:space="preserve">
     <value>Dark theme</value>
   </data>
-  <data name="ButtonLightTheme" xml:space="preserve">
+  <data name="Button_Light_Theme" xml:space="preserve">
     <value>Light theme</value>
   </data>
-  <data name="LabelAutoThemeEnabled" xml:space="preserve">
+  <data name="Label_Auto_Theme_Enabled" xml:space="preserve">
     <value>Is auto theme enabled</value>
   </data>
-  <data name="LabelDangerZone" xml:space="preserve">
+  <data name="Label_Danger_Zone" xml:space="preserve">
     <value>Danger Zone</value>
   </data>
-  <data name="LabelDeleteAllAccounts" xml:space="preserve">
+  <data name="Label_Delete_All_Accounts" xml:space="preserve">
     <value>Delete ALL accounts</value>
   </data>
-  <data name="LabelDeleteHiddenAccounts" xml:space="preserve">
-    <value>Delete previously "deleted" accounts</value>
-  </data>
-  <data name="LabelIsLoginAfterSleepRequired" xml:space="preserve">
+  <data name="Label_Is_Login_After_Sleep_Required" xml:space="preserve">
     <value>Is login after sleep required ?</value>
   </data>
-  <data name="LabelKeepDeletedAccounts" xml:space="preserve">
-    <value>Actually delete accounts</value>
-  </data>
-  <data name="LabelLoginEnabled" xml:space="preserve">
+  <data name="Label_Login_Enabled" xml:space="preserve">
     <value>Is login required</value>
   </data>
-  <data name="LabelLoginSection" xml:space="preserve">
+  <data name="Label_Login_Section" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="LabelThemeSection" xml:space="preserve">
+  <data name="Label_Theme_Section" xml:space="preserve">
     <value>Theme</value>
   </data>
 </root>

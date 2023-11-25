@@ -5,9 +5,9 @@ using Pass_Keep.View_Models.Login;
 
 namespace Pass_Keep.Views.Login;
 
-public partial class LoginPage : ContentPage
+public partial class LoginView : ContentPage
 {
-	public LoginPage()
+	public LoginView()
 	{
 		InitializeComponent();
 

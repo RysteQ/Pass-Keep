@@ -3,9 +3,9 @@ using Pass_Keep.View_Models.Account;
 
 namespace Pass_Keep.Views.Account;
 
-public partial class AccountDetailsPage : ContentPage
+public partial class AccountDetailsView : ContentPage
 {
-	public AccountDetailsPage(AccountModel account)
+	public AccountDetailsView(AccountModel account)
 	{
 		InitializeComponent();
 

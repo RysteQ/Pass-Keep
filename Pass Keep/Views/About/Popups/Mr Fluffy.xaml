@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup 
+        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+        xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Popups.Mr_Fluffy"
+        x:Class="Pass_Keep.Views.About.Popups.MrFluffy">
+
+    <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" WidthRequest = "300" Padding = "20" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}" RowSpacing = "20">
+        <Label Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "3" Margin = "0" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" FontSize = "Title" FontAttributes = "Bold" TextColor = "{AppThemeBinding Light = {StaticResource Grey900}, Dark = {StaticResource Gray100}}" Text = "{x:Static translations:Localization.Label_Mr_Fluffy}" />
+
+        <Frame Grid.Row = "1" Grid.Column = "0" Padding = "0" BackgroundColor = "Transparent" BorderColor = "Transparent" CornerRadius = "1000">
+            <Image HeightRequest = "260" WidthRequest = "260" Source = "mr_fluffy" Aspect = "AspectFill" />
+        </Frame>
+    </Grid>
+
+</toolkit:Popup>

@@ -117,19 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Button_Permanent_Delete" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="Button_Recover" xml:space="preserve">
-    <value>Recover</value>
-  </data>
-  <data name="Error_Permanent_Delete_Account" xml:space="preserve">
-    <value>An error occured while permanently deleting the account</value>
-  </data>
-  <data name="Error_Recover_Account" xml:space="preserve">
-    <value>An error occured while recovering the account</value>
-  </data>
-  <data name="Question_Permanently_Delete_Account" xml:space="preserve">
-    <value>Are you sure you want to permanently delete your account ?</value>
+  <data name="Label_Mr_Fluffy" xml:space="preserve">
+    <value>Mr Fluffy</value>
   </data>
 </root>

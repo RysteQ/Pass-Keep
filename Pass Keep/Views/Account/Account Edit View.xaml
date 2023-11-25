@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:view_model="clr-namespace:Pass_Keep.View_Models.Account"
              xmlns:translations="clr-namespace:Pass_Keep.Resources.Translations.Views.Accounts.Account_Edit_Page"
-             x:Class="Pass_Keep.Views.Account.AccountEditPage"
+             x:Class="Pass_Keep.Views.Account.AccountEditView"
              x:DataType="view_model:AccountEditVM"
              Shell.BackgroundColor="{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}"
              Title="">
@@ -22,7 +22,7 @@
                         <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "Auto,*" RowSpacing = "0">
                             <Image Grid.Row = "1" Grid.Column = "0" HeightRequest = "32" WidthRequest = "32" Margin = "10,0,10,0" Aspect = "Fill" Source = "person" />
 
-                            <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.EntryPlaceholderUsername}" />
+                            <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.Entry_Placeholder_Username}" />
                             <Entry Grid.Row = "1" Grid.Column = "1" Margin = "0" TextColor = "{AppThemeBinding Light = {StaticResource Black}, Dark = {StaticResource White}}" FontAttributes = "Bold" FontSize = "18" Text = "{Binding Account.Username}" />
                         </Grid>
                     </Frame>
@@ -31,7 +31,7 @@
                         <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "Auto,*" RowSpacing = "0">
                             <Image Grid.Row = "1" Grid.Column = "0" HeightRequest = "32" WidthRequest = "32" Margin = "10,0,10,0" Aspect = "Fill" Source = "email" />
 
-                            <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.EntryPlaceholderEmail}" />
+                            <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.Entry_Placeholder_Email}" />
                             <Entry Grid.Row = "1" Grid.Column = "1" Margin = "0" Keyboard = "Email" TextColor = "{AppThemeBinding Light = {StaticResource Black}, Dark = {StaticResource White}}" FontAttributes = "Bold" FontSize = "18" Text = "{Binding Account.Email}" />
                         </Grid>
                     </Frame>
@@ -40,14 +40,14 @@
                         <Grid RowDefinitions = "*,*" ColumnDefinitions = "Auto,*,Auto" RowSpacing = "0">
                             <Image Grid.Row = "1" Grid.Column = "0" HeightRequest = "32" WidthRequest = "32" Margin = "10,0,10,0" Aspect = "Fill" Source = "key" />
 
-                            <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.EntryPlaceholderPassword}" />
+                            <Label Grid.Row = "0" Grid.Column = "1" Margin = "0" VerticalTextAlignment = "Center" TextColor = "{AppThemeBinding Light = {StaticResource Gray900}, Dark = {StaticResource Grey300}}" Text = "{x:Static translations:Localization.Entry_Placeholder_Password}" />
                             <Entry Grid.Row = "1" Grid.Column = "1" Margin = "0" TextColor = "{AppThemeBinding Light = {StaticResource Black}, Dark = {StaticResource White}}" IsPassword = "{Binding HidePassword}" FontAttributes = "Bold" FontSize = "18" Text = "{Binding Account.Password}" />
 
                             <ImageButton x:Name = "ImageButtonPasswordVisibility" Grid.Row = "1" Grid.Column = "2" HeightRequest = "32" WidthRequest = "32" Margin = "10,0,10,0" Aspect = "Fill" Source = "visibility_on" Clicked = "OnPasswordVisibilityImageButtonClicked" Command = "{Binding CommandHidePassword}" />
                         </Grid>
                     </Frame>
 
-                    <Button Grid.Row = "4" Grid.Column = "1" Margin = "0,20,0,0" Padding = "22" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue300}, Dark = {StaticResource LightBlue500}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.ButtonCreateAccount}" CornerRadius = "16" Clicked = "OnSaveEditsButtonClicked" />
+                    <Button Grid.Row = "4" Grid.Column = "1" Margin = "0,20,0,0" Padding = "22" BackgroundColor = "{AppThemeBinding Light = {StaticResource LightBlue300}, Dark = {StaticResource LightBlue500}}" FontAttributes = "Bold" FontSize = "24" TextColor = "White" Text = "{x:Static translations:Localization.Button_Create_Account}" CornerRadius = "16" Clicked = "OnSaveEditsButtonClicked" />
                 </Grid>
             </Grid>
         </Grid>

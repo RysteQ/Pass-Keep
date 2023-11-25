@@ -16,8 +16,8 @@
         <Label x:Name = "LabelAccountName" Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan = "3" HorizontalTextAlignment = "Center" FontSize = "16" TextColor = "{AppThemeBinding Light = {StaticResource Grey700}, Dark = {StaticResource Grey100}}" />
 
         <Grid RowDefinitions = "60" ColumnDefinitions = "*,*" Grid.Row = "3" Grid.Column = "0" Grid.ColumnSpan = "3">
-            <Button Grid.Row = "0" Grid.Column = "0" CornerRadius = "0" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDetailsBackgroundColour}" Text = "{x:Static translations:Localization.ButtonRecover}" Clicked = "OnRecoverButtonClicked" />
-            <Button Grid.Row = "0" Grid.Column = "1" CornerRadius = "0" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDeleteBackgroundColour}" Text = "{x:Static translations:Localization.ButtonPermanentDelete}" Clicked = "OnPermanentDeleteButtonClicked" />
+            <Button Grid.Row = "0" Grid.Column = "0" CornerRadius = "0" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDetailsBackgroundColour}" Text = "{x:Static translations:Localization.Button_Recover}" Clicked = "OnRecoverButtonClicked" />
+            <Button Grid.Row = "0" Grid.Column = "1" CornerRadius = "0" FontAttributes = "Bold" FontSize = "16" TextColor = "#222222" BackgroundColor = "{StaticResource ButtonDeleteBackgroundColour}" Text = "{x:Static translations:Localization.Button_Permanent_Delete}" Clicked = "OnPermanentDeleteButtonClicked" />
         </Grid>
     </Grid>
 

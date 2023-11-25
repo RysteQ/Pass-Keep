@@ -64,9 +64,9 @@ namespace Pass_Keep.Resources.Translations.View_Models.Accounts.Account_Edit_Pag
         /// <summary>
         ///   Looks up a localized string similar to An error was encountered while saving your changes.
         /// </summary>
-        internal static string ErrorSavingEdits {
+        internal static string Error_Saving_Edits {
             get {
-                return ResourceManager.GetString("ErrorSavingEdits", resourceCulture);
+                return ResourceManager.GetString("Error_Saving_Edits", resourceCulture);
             }
         }
     }

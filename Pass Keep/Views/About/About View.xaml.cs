@@ -1,8 +1,11 @@
+using CommunityToolkit.Maui.Views;
+using Pass_Keep.Views.About.Popups;
+
 namespace Pass_Keep.Views.About;
 
-public partial class AboutPage : ContentPage
+public partial class AboutView : ContentPage
 {
-	public AboutPage()
+	public AboutView()
 	{
 		InitializeComponent();
 	}
@@ -18,4 +21,17 @@ public partial class AboutPage : ContentPage
     {
         await Browser.Default.OpenAsync("https://github.com/RysteQ");
     }
+
+    private async void OnGithubProfileImageButtonClicked(object sender, EventArgs e)
+    {
+        this.remaining_taps--;
+
+        if (this.remaining_taps == 0)
+        {
+            await this.ShowPopupAsync(new MrFluffy());
+            this.remaining_taps = 13;
+        }
+    }
+
+    private int remaining_taps = 13;
 }

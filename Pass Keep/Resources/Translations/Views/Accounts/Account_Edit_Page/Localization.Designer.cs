@@ -61,47 +61,38 @@ namespace Pass_Keep.Resources.Translations.Views.Accounts.Account_Edit_Page {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Account Creation.
-        /// </summary>
-        internal static string AccountEditPageTitle {
-            get {
-                return ResourceManager.GetString("AccountEditPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
-        internal static string ButtonCreateAccount {
+        internal static string Button_Create_Account {
             get {
-                return ResourceManager.GetString("ButtonCreateAccount", resourceCulture);
+                return ResourceManager.GetString("Button_Create_Account", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Email.
         /// </summary>
-        internal static string EntryPlaceholderEmail {
+        internal static string Entry_Placeholder_Email {
             get {
-                return ResourceManager.GetString("EntryPlaceholderEmail", resourceCulture);
+                return ResourceManager.GetString("Entry_Placeholder_Email", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
-        internal static string EntryPlaceholderPassword {
+        internal static string Entry_Placeholder_Password {
             get {
-                return ResourceManager.GetString("EntryPlaceholderPassword", resourceCulture);
+                return ResourceManager.GetString("Entry_Placeholder_Password", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Username.
         /// </summary>
-        internal static string EntryPlaceholderUsername {
+        internal static string Entry_Placeholder_Username {
             get {
-                return ResourceManager.GetString("EntryPlaceholderUsername", resourceCulture);
+                return ResourceManager.GetString("Entry_Placeholder_Username", resourceCulture);
             }
         }
     }

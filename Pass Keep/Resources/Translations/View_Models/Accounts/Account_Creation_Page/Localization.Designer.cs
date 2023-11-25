@@ -64,9 +64,9 @@ namespace Pass_Keep.Resources.Translations.View_Models.Accounts.Account_Creation
         /// <summary>
         ///   Looks up a localized string similar to An error was encountered while saving the account Υπήρχε σφάλμα στην αποθήκευση του λογαριασμού.
         /// </summary>
-        internal static string ErrorAccountCreation {
+        internal static string Error_Account_Creation {
             get {
-                return ResourceManager.GetString("ErrorAccountCreation", resourceCulture);
+                return ResourceManager.GetString("Error_Account_Creation", resourceCulture);
             }
         }
     }

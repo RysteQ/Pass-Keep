@@ -11,7 +11,7 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
 
-        Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+        Routing.RegisterRoute(nameof(LoginView), typeof(LoginView));
     }
 
     protected override void OnAppearing()
@@ -21,8 +21,8 @@ public partial class AppShell : Shell
         LocalDBController.InitDatabase();
 
         if (Preferences.Get(Preference.IsLoginEnabled, true))
-            Shell.Current.GoToAsync($"{nameof(LoginPage)}");
+            Shell.Current.GoToAsync($"{nameof(LoginView)}");
         else
-            Shell.Current.GoToAsync($"//{nameof(AccountListPage)}/{nameof(AccountListPage)}/{nameof(AccountListPage)}");
+            Shell.Current.GoToAsync($"//{nameof(AccountListView)}/{nameof(AccountListView)}/{nameof(AccountListView)}");
     }
 }

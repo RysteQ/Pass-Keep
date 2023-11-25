@@ -16,26 +16,26 @@
         <Label Margin = "20" HorizontalOptions = "Center" FontSize = "Title" FontAttributes = "Bold" Text = "Pass Keep" />
     </Shell.FlyoutHeader>
     
-    <ShellContent FlyoutItemIsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginPage}" />
+    <ShellContent FlyoutItemIsVisible = "False" ContentTemplate = "{DataTemplate login_views:LoginView}" />
 
-    <FlyoutItem Route = "AccountListPage" Icon = "accounts" Title = "{x:Static translations:Localization.PasswordsTitle}">
-        <Tab Route = "AccountListPage">
-            <ShellContent Route = "AccountListPage" ContentTemplate = "{DataTemplate account_views:AccountListPage}" />
+    <FlyoutItem Route = "AccountListView" Icon = "accounts" Title = "{x:Static translations:Localization.PasswordsTitle}">
+        <Tab Route = "AccountListView">
+            <ShellContent Route = "AccountListView" ContentTemplate = "{DataTemplate account_views:AccountListView}" />
         </Tab>
     </FlyoutItem>
     <FlyoutItem Icon = "deleted_account" Title = "{x:Static translations:Localization.DeletedAccountsTitle}">
         <Tab>
-            <ShellContent ContentTemplate = "{DataTemplate deleted_account_views:DeletedAccountsPage}" />
+            <ShellContent ContentTemplate = "{DataTemplate deleted_account_views:DeletedAccountsView}" />
         </Tab>
     </FlyoutItem>
     <FlyoutItem Icon = "settings" Title = "{x:Static translations:Localization.SettingsTitle}">
         <Tab>
-            <ShellContent ContentTemplate = "{DataTemplate settings_views:SettingsPage}" />
+            <ShellContent ContentTemplate = "{DataTemplate settings_views:SettingsView}" />
         </Tab>
     </FlyoutItem>
     <FlyoutItem Icon = "about" Title = "{x:Static translations:Localization.AboutTitle}">
         <Tab>
-            <ShellContent ContentTemplate = "{DataTemplate about_views:AboutPage}" />
+            <ShellContent ContentTemplate = "{DataTemplate about_views:AboutView}" />
         </Tab>
     </FlyoutItem>
 
