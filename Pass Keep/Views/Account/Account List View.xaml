@@ -20,7 +20,7 @@
             </Grid>
         </Frame>
 
-        <ListView Grid.Row = "1" Grid.Column = "0" ItemsSource = "{Binding Accounts}" SelectionMode = "None" RowHeight = "100" SeparatorVisibility = "None" ItemTapped = "AccountTapped">
+        <ListView Grid.Row = "1" Grid.Column = "0" ItemsSource = "{Binding Accounts}" CachingStrategy = "RecycleElement" SelectionMode = "None" RowHeight = "100" SeparatorVisibility = "None" ItemTapped = "AccountTapped">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType = "account_model:AccountModel">
                     <ViewCell>
