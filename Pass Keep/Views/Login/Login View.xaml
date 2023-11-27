@@ -11,13 +11,19 @@
              BackgroundColor="{AppThemeBinding Light = {StaticResource BlueGrey50}, Dark = {StaticResource BlueGrey900}}"
              Title="">
 
-    <Grid BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}">
-        <Grid VerticalOptions = "Center" Margin = "20">
-            <Frame BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Gray900}}" Padding = "20">
+    <Grid BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}" RowDefinitions = "*,*" ColumnDefinitions = "*">
+        <Frame Grid.Row = "0" Grid.Column = "0" CornerRadius = "100" BackgroundColor = "Transparent" BorderColor = "Transparent" >
+            <Grid>
+                <Image VerticalOptions = "Center" Source = "publisher_icon" HeightRequest = "256" WidthRequest = "256" />
+            </Grid>
+        </Frame>
+        
+        <Grid Grid.Row = "1" Grid.Column = "0" Margin = "20">
+            <Frame VerticalOptions = "Center" BackgroundColor = "Transparent" BorderColor = "Transparent" Padding = "20">
                 <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "*" RowSpacing = "20">
-                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BorderColor = "Black" BackgroundColor = "Transparent" CornerRadius = "100">
+                    <Frame Grid.Row = "0" Grid.Column = "0" Padding = "10,5,10,5" BorderColor = "Transparent" BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange200}, Dark = {StaticResource Grey900}}" CornerRadius = "100">
                         <Grid RowDefinitions = "*" ColumnDefinitions = "*,Auto">
-                            <Entry x:Name = "EntryPassword" Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "FillAndExpand" IsPassword = "True" TextColor = "White" Placeholder = "{x:Static translations:Localization.Entry_Password_Placeholder}" Text = "{Binding Password}" />
+                            <Entry x:Name = "EntryPassword" Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "FillAndExpand" IsPassword = "True" TextColor = "{AppThemeBinding Light = {StaticResource Black}, Dark = {StaticResource White}}" PlaceholderColor = "{AppThemeBinding Light = {StaticResource Grey500}, Dark = {StaticResource Grey600}}" Placeholder = "{x:Static translations:Localization.Entry_Password_Placeholder}" Text = "{Binding Password}" />
                             <ImageButton x:Name = "ImageButtonPasswordVisibility" Grid.Row = "0" Grid.Column = "1" HorizontalOptions = "End" HeightRequest = "32" WidthRequest = "32" Source = "visibility_on" Clicked = "OnPasswordVisibilityImageButtonClicked" />
                         </Grid>
                     </Frame>
