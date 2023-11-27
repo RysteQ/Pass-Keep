@@ -95,5 +95,14 @@ namespace Pass_Keep.Resources.Translations.Popups.Change_Password {
                 return ResourceManager.GetString("Error_New_Password_Is_Not_The_Same_With_Repeat_Password", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password is empty.
+        /// </summary>
+        internal static string Error_Password_Does_Not_Contain_Any_Characters {
+            get {
+                return ResourceManager.GetString("Error_Password_Does_Not_Contain_Any_Characters", resourceCulture);
+            }
+        }
     }
 }

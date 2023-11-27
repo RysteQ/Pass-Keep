@@ -40,6 +40,12 @@ public partial class ChangePasswordPopup : Popup
 
     private async void OnSavePasswordButtonClicked(object sender, EventArgs e)
     {
+        if (string.IsNullOrEmpty(EntryPassword.Text))
+        {
+            await Shell.Current.DisplayAlert(PopupLocalization.Error, ChangePasswordPopupLocalization.Error_Password_Does_Not_Contain_Any_Characters, PopupLocalization.Aknowledge);
+            return;
+        }
+
         if (EntryPassword.Text != EntryRepeatPassword.Text)
         {
             await Shell.Current.DisplayAlert(PopupLocalization.Error, ChangePasswordPopupLocalization.Error_New_Password_Is_Not_The_Same_With_Repeat_Password, PopupLocalization.Aknowledge);

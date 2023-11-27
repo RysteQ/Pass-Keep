@@ -129,4 +129,7 @@
   <data name="Error_New_Password_Is_Not_The_Same_With_Repeat_Password" xml:space="preserve">
     <value>Passwords do not match</value>
   </data>
+  <data name="Error_Password_Does_Not_Contain_Any_Characters" xml:space="preserve">
+    <value>The password is empty</value>
+  </data>
 </root>
