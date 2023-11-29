@@ -46,7 +46,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" BaseSize="16,16" />
+		<MauiAppIcon Include="Resources\AppIcon\appicon.svg" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="White" />
@@ -67,6 +67,7 @@
 	  <None Remove="Resources\Images\accounts.svg" />
 	  <None Remove="Resources\Images\add_account.svg" />
 	  <None Remove="Resources\Images\add_new_account.png" />
+	  <None Remove="Resources\Images\appicon.svg" />
 	  <None Remove="Resources\Images\deleted_account.svg" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\email.svg" />
@@ -101,6 +102,9 @@
 
 	<ItemGroup>
 	  <MauiIcon Include="Resources\AppIcon\appicon.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiImage Include="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
