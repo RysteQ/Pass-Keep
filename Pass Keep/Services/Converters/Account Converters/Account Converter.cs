@@ -17,7 +17,7 @@ internal static class AccountConverters
         };
     }
 
-    // I have no clue on how to convert ImageSource to a byte array
+    // I have no clue on how to convert an ImageSource to a byte array
     public static AccountModelDB ConvertAccountToAccountDB(AccountModel account_model, byte[] image_bytes)
     {
         return new()
