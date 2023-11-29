@@ -36,7 +36,7 @@ public partial class CountdownPopup : Popup
         List<object> all_accounts = await LocalDBAccountController.ReadAll(LocalDBController.database_connection);
 
         foreach (object account in all_accounts)
-            await LocalDBAccountController.Delete(LocalDBController.database_connection, account);
+            await LocalDBAccountController.Delete(LocalDBController.database_connection, account as AccountModelDB);
 
         await CloseAsync();
     }
