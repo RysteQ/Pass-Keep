@@ -14,7 +14,9 @@
     <Grid BackgroundColor = "{AppThemeBinding Light = {StaticResource Orange100}, Dark = {StaticResource Gray950}}" RowDefinitions = "*,*" ColumnDefinitions = "*">
         <Frame Grid.Row = "0" Grid.Column = "0" CornerRadius = "100" BackgroundColor = "Transparent" BorderColor = "Transparent" >
             <Grid>
-                <Image VerticalOptions = "Center" Source = "appicon" HeightRequest = "256" WidthRequest = "256" />
+                <Frame Scale = "0.75" Padding = "0" BackgroundColor = "Transparent" CornerRadius = "1000">
+                    <Image Aspect = "Fill" Source = "appicon" />
+                </Frame>
             </Grid>
         </Frame>
         
